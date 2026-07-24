@@ -194,3 +194,14 @@ body{
     padding:25px;
     font-size:1.3rem;
 }
+/* Hero Banner */
+.hero-banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
