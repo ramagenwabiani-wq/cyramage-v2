@@ -42,20 +42,27 @@ a {
    HEADER
 ========================================= */
 header {
+    .top-bar {
+    background: #050505;
+    color: #d4af37;
+    text-align: center;
+    padding: 7px 15px;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+}
+
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-    background: rgba(17,17,17,.96);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212,175,55,.15);
-}
+    background: rgba(17, 17, 17, 0.97);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
 }
 
-.navbar,
-nav {
+.navbar {
     width: min(1180px, 90%);
-    height: 68px;
+    height: 72px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -66,35 +73,35 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 170px;
+    width: 150px;
     height: auto;
     display: block;
 }
 
-nav ul,
-.nav-links {
+.navbar nav {
+    width: auto;
+    height: auto;
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 34px;
-    list-style: none;
+    justify-content: flex-end;
+    gap: 30px;
 }
 
-nav a,
-.nav-links a {
+.navbar nav a {
     color: #ffffff;
-    font-size: 0.96rem;
+    font-size: 0.92rem;
     font-weight: 500;
-    transition: color 0.25s ease;
+    white-space: nowrap;
 }
 
-nav a:hover,
-.nav-links a:hover {
+.navbar nav a:hover {
     color: #d4af37;
 }
-
 
 /* =========================================
    HERO
