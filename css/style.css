@@ -37,12 +37,12 @@ a {
     margin: 0 auto;
 }
 
-
 /* =========================================
    HEADER
 ========================================= */
-header {
-    .top-bar {
+
+.top-bar {
+    width: 100%;
     background: #050505;
     color: #d4af37;
     text-align: center;
@@ -77,7 +77,7 @@ header {
 }
 
 .logo img {
-    width: 150px;
+    width: 130px;
     height: auto;
     display: block;
 }
