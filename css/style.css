@@ -81,42 +81,23 @@ body{
     align-items:center;
     justify-content:space-between;
     background:#0d0d0d;
-    padding:80px 8%;
+    padding:40px 5%;
+    min-height:85vh;
 }
-
 .hero-text{
-    width:40%;
+    width:35%;
     color:#fff;
 }
 
-.hero-logo{
-    width:170px;
-    margin-bottom:30px;
-}
-
-.hero-text h1{
-    color:#d4af37;
-    font-size:70px;
-    line-height:1.1;
-    font-family:"Playfair Display", serif;
-    margin-bottom:25px;
-}
-
-.hero-text p{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
 .hero-image{
-    width:58%;
+    width:65%;
 }
 
 .hero-image img{
     width:100%;
     display:block;
+    border-radius:12px;
 }
-
 .btn{
     display:inline-block;
     padding:16px 40px;
