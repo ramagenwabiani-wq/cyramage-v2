@@ -1,4 +1,4 @@
-
+f
 /* =========================================
    CYRAMAGE WEBSITE
    BLACK & GOLD LUXURY THEME
@@ -242,7 +242,7 @@ section h2::after {
 ========================================= */
 
 .collections {
-    padding: 85px 0 95px;
+    padding: 85px 0 120px;
     background:
         radial-gradient(
             circle at top left,
@@ -269,7 +269,7 @@ section h2::after {
 .collection-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 30px;
     width: 100%;
     margin: 0 auto;
     justify-content: center;
@@ -277,7 +277,7 @@ section h2::after {
 
 .collection-card {
     position: relative;
-    height: 285px;
+    height: 300px;
     overflow: hidden;
     border: 1px solid rgba(212, 175, 55, 0.32);
     border-radius: 10px;
