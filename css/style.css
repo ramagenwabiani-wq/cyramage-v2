@@ -64,16 +64,14 @@ nav {
 }
 
 .logo {
-    color: #d4af37;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.65rem;
-    font-weight: 700;
-    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    width: 145px;
+    width: 170px;
     height: auto;
+    display: block;
 }
 
 nav ul,
