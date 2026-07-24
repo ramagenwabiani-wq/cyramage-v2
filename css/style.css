@@ -40,15 +40,36 @@ a {
 /* =========================================
    HEADER
 ========================================= */
-
 .top-bar {
     width: 100%;
-    background: #050505;
-    color: #d4af37;
-    text-align: center;
-    padding: 7px 15px;
-    font-size: 0.78rem;
-    letter-spacing: 0.8px;
+    height: 40px;
+    background: #d4af37;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+}
+.top-bar-track {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    animation: scrollText 15s linear infinite;
+}
+
+.top-bar-track span {
+    padding-right: 80px;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 header {
