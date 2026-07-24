@@ -75,34 +75,46 @@ body{
 .nav a:hover{
     color:#d4af37;
 }
-
 /* Hero */
-
 .hero{
-    min-height:85vh;
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+    justify-content:space-between;
+    background:#0d0d0d;
+    padding:80px 8%;
 }
 
-.hero-content{
-    max-width:850px;
+.hero-text{
+    width:40%;
+    color:#fff;
 }
 
-.hero h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4rem;
+.hero-logo{
+    width:170px;
+    margin-bottom:30px;
+}
+
+.hero-text h1{
     color:#d4af37;
+    font-size:70px;
+    line-height:1.1;
+    font-family:"Playfair Display", serif;
     margin-bottom:25px;
 }
 
-.hero p{
-    font-size:1.2rem;
-    color:#ddd;
-    margin-bottom:40px;
+.hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-image{
+    width:58%;
+}
+
+.hero-image img{
+    width:100%;
+    display:block;
 }
 
 .btn{
