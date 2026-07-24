@@ -251,15 +251,28 @@ section h2::after {
         ),
         #0d0d0d;
 }
-
-.collections h2 {
-    margin-bottom: 42px;
+.collections .container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+    text-align: center;
 }
-
+.collections h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 42px;
+}
+.collections h2::after {
+    display: block;
+    margin: 14px auto 0;
+}
 .collection-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .collection-card {
