@@ -538,9 +538,8 @@ footer a:hover {
 /* =========================================
    BEST SELLERS
 ========================================= */
-
 .best-sellers {
-    padding: 1100px 0 110px;
+    padding: 20px 0 80px;
     background:
         radial-gradient(
             circle at top right,
@@ -549,15 +548,16 @@ footer a:hover {
         ),
         #0b0b0b;
 }
+}
 
 .best-sellers .container {
     width: min(1180px, 90%);
     margin: 0 auto;
 }
 
-.best-sellers-heading {
+.section-heading {
     width: 100%;
-    margin: 0 auto 38px;
+    margin: 0 auto 20px;
     text-align: center;
 }
 
