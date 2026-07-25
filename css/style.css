@@ -790,3 +790,52 @@ footer a:hover {
         min-height: auto;
     }
 }
+/* WHY CHOOSE */
+
+.why-choose{
+    background:#000;
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.why-choose h2{
+    color:#d4af37;
+    font-size:2.4rem;
+    margin-bottom:60px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#111;
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:18px;
+    padding:35px 25px;
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+    box-shadow:0 10px 30px rgba(212,175,55,.2);
+}
+
+.icon{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.feature h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#ddd;
+    line-height:1.7;
+}
