@@ -540,7 +540,7 @@ footer a:hover {
 ========================================= */
 
 .best-sellers {
-    padding: 70px 0 90px;
+    padding: 1100px 0 110px;
     background:
         radial-gradient(
             circle at top right,
@@ -795,7 +795,7 @@ footer a:hover {
 .why-choose{
     background:#000;
     color:#fff;
-    padding:90px 20px;
+    padding:110px 20px;
     text-align:center;
 }
 
@@ -845,7 +845,7 @@ footer a:hover {
     background:#0a0a0a;
     color:#fff;
     text-align:center;
-    padding:90px 20px;
+    padding:110px 20px;
 }
 
 .testimonials h2{
