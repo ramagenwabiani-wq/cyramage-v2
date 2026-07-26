@@ -612,6 +612,7 @@ footer a:hover {
 .product-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     overflow: hidden;
     border: 1px solid rgba(212, 175, 55, 0.42);
     border-radius: 14px;
@@ -634,7 +635,7 @@ footer a:hover {
 
 .product-image {
     position: relative;
-    height: 330px;
+    height: 220px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -649,7 +650,7 @@ footer a:hover {
     display: block;
    object-fit: contain;
     object-position: center;
-   padding: 20px;
+   padding: 10px;
     transition: transform 0.4s ease;
 }
 
