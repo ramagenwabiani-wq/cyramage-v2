@@ -396,7 +396,7 @@ f<!DOCTYPE html>
     </div>
 </section>
 
-    <!-- Newsletter -->
+  <!-- Newsletter -->
 <section class="newsletter">
     <div class="newsletter-container">
 
@@ -409,12 +409,23 @@ f<!DOCTYPE html>
             and luxury lifestyle inspiration.
         </p>
 
-        <form class="newsletter-form">
+        <form
+            class="newsletter-form"
+            action="YOUR_FORMSPREE_LINK"
+            method="POST"
+        >
             <input
                 type="email"
+                name="email"
                 placeholder="Enter your email address"
                 aria-label="Email address"
                 required
+            >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New CyRamage Newsletter Signup"
             >
 
             <button type="submit">Subscribe</button>
@@ -422,7 +433,6 @@ f<!DOCTYPE html>
 
     </div>
 </section>
-    
     <footer class="footer">
 
     <div class="footer-container">
