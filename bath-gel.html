@@ -29,8 +29,145 @@
 </header>
 
 <section class="product-page">
+<div class="product-gallery">
 
+    <div class="product-thumbnails">
+
+        <img
+            src="images/bath-gel-front.png"
+            alt="Bath Gel front view"
+            class="thumbnail active"
+            onclick="changeImage(this)"
+        >
+
+        <img
+            src="images/bath-gel-back.png"
+            alt="Bath Gel back view"
+            class="thumbnail"
+            onclick="changeImage(this)"
+        >
+
+        <img
+            src="images/bath-gel-pouring.png"
+            alt="White Bath Gel pouring"
+            class="thumbnail"
+            onclick="changeImage(this)"
+        >
+
+        <img
+            src="images/bath-gel-lifestyle.png"
+            alt="Bath Gel lifestyle in bath"
+            class="thumbnail"
+            onclick="changeImage(this)"
+        >
+
+        <img
+            src="images/bath-gel-label-closeup.png"
+            alt="Bath Gel label close-up"
+            class="thumbnail"
+            onclick="changeImage(this)"
+        >
+
+        <img
+            src="images/bath-gel-matching-products.png"
+            alt="Bath Gel with matching products"
+            class="thumbnail"
+            onclick="changeImage(this)"
+        >
+
+    </div>
+
+    <div class="main-product-image">
+        <img
+            id="mainImage"
+            src="images/bath-gel-front.png"
+            alt="CyRamage Luxury Bath Gel"
+        >
+    </div>
+
+</div>
+
+<div class="product-information">
+
+    <p class="product-label">
+        CyRamage Luxury Self-Care
+    </p>
+
+    <h1>Luxury Bath Gel</h1>
+
+    <div class="product-rating">
+        ★★★★★
+        <span>A gentle bath and shower gel</span>
+    </div>
+
+    <p class="product-price">£10.99</p>
+
+    <p class="product-description">
+        A gentle bath and shower gel created for a relaxing
+        self-care routine. Its smooth white formula cleanses
+        the skin and leaves it feeling fresh, comfortable and
+        beautifully cared for.
+    </p>
+
+    <ul class="product-benefits">
+        <li>Gentle everyday cleansing</li>
+        <li>Rich, creamy white gel texture</li>
+        <li>Suitable for bath or shower use</li>
+        <li>Beautifully presented for gifting</li>
+    </ul>
+
+    <div class="purchase-area">
+
+        <div class="quantity-selector">
+            <button type="button" onclick="changeQuantity(-1)">−</button>
+
+            <input
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                max="10"
+            >
+
+            <button type="button" onclick="changeQuantity(1)">+</button>
+        </div>
+
+        <button class="add-cart-button" type="button">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
 </section>
+<script>
+function changeImage(thumbnail) {
+    const mainImage = document.getElementById("mainImage");
 
+    mainImage.src = thumbnail.src;
+    mainImage.alt = thumbnail.alt;
+
+    document.querySelectorAll(".thumbnail").forEach(function(image) {
+        image.classList.remove("active");
+    });
+
+    thumbnail.classList.add("active");
+}
+
+function changeQuantity(amount) {
+    const quantity = document.getElementById("quantity");
+    let newQuantity = Number(quantity.value) + amount;
+
+    if (newQuantity < 1) {
+        newQuantity = 1;
+    }
+
+    if (newQuantity > 10) {
+        newQuantity = 10;
+    }
+
+    quantity.value = newQuantity;
+}
+</script>
 </body>
 </html>
