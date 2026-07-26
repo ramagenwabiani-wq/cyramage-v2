@@ -912,3 +912,109 @@ footer a:hover {
     color:#999;
     font-size:.9rem;
 }
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.newsletter {
+    padding: 90px 20px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212, 175, 55, 0.1),
+            transparent 55%
+        ),
+        #080808;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    text-align: center;
+}
+
+.newsletter-container {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+.newsletter-label {
+    margin: 0 0 10px;
+    color: #d4af37;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.newsletter h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.newsletter-text {
+    max-width: 620px;
+    margin: 20px auto 30px;
+    color: #d1d1d1;
+    line-height: 1.7;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 620px;
+    margin: 0 auto;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #111111;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 18px;
+    color: #ffffff;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+.newsletter-form input::placeholder {
+    color: #999999;
+}
+
+.newsletter-form button {
+    padding: 16px 28px;
+    color: #080808;
+    background: #d4af37;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background: #f0c94d;
+}
+
+@media (max-width: 600px) {
+    .newsletter {
+        padding: 70px 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        border: 0;
+        background: transparent;
+        gap: 12px;
+        overflow: visible;
+    }
+
+    .newsletter-form input[type="email"] {
+        border: 1px solid rgba(212, 175, 55, 0.6);
+        border-radius: 7px;
+        background: #111111;
+    }
+
+    .newsletter-form button {
+        border-radius: 7px;
+    }
+}
