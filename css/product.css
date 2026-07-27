@@ -1554,3 +1554,37 @@ ul {
     font-size: 0.9rem;
     font-weight: 700;
 }
+/* Product gallery arrows */
+
+.main-image-wrapper{
+    position:relative;
+}
+
+.gallery-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    border:2px solid #c89b2d;
+    background:rgba(0,0,0,.75);
+    color:#c89b2d;
+    font-size:24px;
+    cursor:pointer;
+    z-index:20;
+    transition:.3s;
+}
+
+.gallery-arrow:hover{
+    background:#c89b2d;
+    color:#111;
+}
+
+.gallery-arrow.left{
+    left:18px;
+}
+
+.gallery-arrow.right{
+    right:18px;
+}
