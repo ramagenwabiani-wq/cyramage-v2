@@ -699,6 +699,42 @@ footer a:hover {
     font-weight: 700;
 }
 
+.product-price {
+    margin: 0 0 18px;
+    color: #d4af37;
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.old-price {
+    color: #969696;
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.current-price {
+    color: #d4af37;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.save-badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #d4af37;
+    color: #111;
+    font-size: 0.68rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
 .product-btn {
     display: block;
     width: 100%;
