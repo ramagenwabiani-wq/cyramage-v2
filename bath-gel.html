@@ -2,179 +2,258 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Luxury Bath Gel | CyRamage</title>
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/product.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-<div class="logo">
-<img src="images/logo.png" alt="CyRamage">
-</div>
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<h2>CyRamage</h2>
+
+</a>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="collections.html">Collections</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="shop.html">Shop</a></li>
+
+<li><a href="gift-boxes.html">Gift Boxes</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
 </nav>
+
+</div>
 
 </header>
 
 <section class="product-page">
+
 <div class="product-gallery">
 
-    <div class="product-thumbnails">
+<div class="product-thumbnails">
 
-        <img
-            src="images/bath-gel-front.png"
-            alt="Bath Gel front view"
-            class="thumbnail active"
-            onclick="changeImage(this)"
-        >
+<img
+src="images/bath-gel-front.png"
+alt="Luxury Bath Gel Front"
+class="thumbnail active"
+onclick="changeImage(this)">
 
-        <img
-            src="images/bath-gel-back.png"
-            alt="Bath Gel back view"
-            class="thumbnail"
-            onclick="changeImage(this)"
-        >
+<img
+src="images/bath-gel-back.png"
+alt="Luxury Bath Gel Back"
+class="thumbnail"
+onclick="changeImage(this)">
 
-        <img
-            src="images/bath-gel-pouring.png"
-            alt="White Bath Gel pouring"
-            class="thumbnail"
-            onclick="changeImage(this)"
-        >
+<img
+src="images/bath-gel-lather.png"
+alt="Bath Gel Lather"
+class="thumbnail"
+onclick="changeImage(this)">
 
-        <img
-            src="images/bath-gel-lifestyle.png"
-            alt="Bath Gel lifestyle in bath"
-            class="thumbnail"
-            onclick="changeImage(this)"
-        >
+</div>
 
-        <img
-            src="images/bath-gel-label-closeup.png"
-            alt="Bath Gel label close-up"
-            class="thumbnail"
-            onclick="changeImage(this)"
-        >
+<div class="main-product-image">
 
-        <img
-            src="images/bath-gel-matching-products.png"
-            alt="Bath Gel with matching products"
-            class="thumbnail"
-            onclick="changeImage(this)"
-        >
+<img
+id="mainImage"
+src="images/bath-gel-front.png"
+alt="CyRamage Luxury Bath Gel">
 
-         <img
-            src="images/bath-gel-lather.png"
-            alt="White Bath Gel lather"
-            class="thumbnail"
-            onclick="changeImage(this)"
-    </div>
-
-    <div class="main-product-image">
-       <img
-    id="mainImage"
-    src="images/bath-gel-front.png"
-    alt="CyRamage Luxury Bath Gel"
-    width="700"
-    height="700">
-        
-    </div>
+</div>
 
 </div>
 
 <div class="product-information">
 
-    <p class="product-label">
-        CyRamage Luxury Self-Care
-    </p>
+<p class="product-category">
 
-    <h1>Luxury Bath Gel</h1>
+CYRAMAGE LUXURY SELF-CARE
 
-    <div class="product-rating">
-        ★★★★★
-        <span>A gentle bath and shower gel</span>
+</p>
+
+<h1>
+
+Luxury Bath Gel
+
+</h1>
+
+<div class="product-rating">
+
+★★★★★
+
+<span>(126 Reviews)</span>
+
+</div>
+
+<div class="product-price">
+
+<span class="current-price">
+
+£18.99
+
+</span>
+
+<span class="old-price">
+
+£24.99
+
+</span>
+
+</div>
+
+<p class="product-description">
+
+Transform your bath into a luxurious spa experience with CyRamage Luxury Bath Gel. Enriched with nourishing ingredients, it gently cleanses while leaving your skin feeling silky smooth, hydrated and beautifully fragranced.
+
+</p>
+<ul class="product-benefits">
+
+    <li>Luxury foaming formula</li>
+
+    <li>Infused with Aloe Vera & Lavender</li>
+
+    <li>Leaves skin soft and hydrated</li>
+
+    <li>Suitable for all skin types</li>
+
+    <li>Vegan & Cruelty Free</li>
+
+</ul>
+
+<div class="purchase-section">
+
+    <div class="quantity-selector">
+
+        <button onclick="decreaseQuantity()">−</button>
+
+        <input
+            type="text"
+            id="quantity"
+            value="1"
+            readonly>
+
+        <button onclick="increaseQuantity()">+</button>
+
     </div>
 
-    <p class="product-price">£10.99</p>
+    <button class="add-to-cart">
 
-    <p class="product-description">
-        A gentle bath and shower gel created for a relaxing
-        self-care routine. Its smooth white formula cleanses
-        the skin and leaves it feeling fresh, comfortable and
-        beautifully cared for.
-    </p>
+        Add to Cart
 
-    <ul class="product-benefits">
-        <li>Gentle everyday cleansing</li>
-        <li>Rich, creamy white gel texture</li>
-        <li>Suitable for bath or shower use</li>
-        <li>Beautifully presented for gifting</li>
-    </ul>
+    </button>
 
-    <div class="purchase-area">
+    <button class="buy-now">
 
-        <div class="quantity-selector">
-            <button type="button" onclick="changeQuantity(-1)">−</button>
+        Buy Now
 
-            <input
-                type="number"
-                id="quantity"
-                value="1"
-                min="1"
-                max="10"
-            >
+    </button>
 
-            <button type="button" onclick="changeQuantity(1)">+</button>
-        </div>
+</div>
 
-        <button class="add-cart-button" type="button">
-            Add to Cart
-        </button>
+<div class="delivery-box">
+
+    <div class="delivery-item">
+
+        <h4>🚚 Free UK Delivery</h4>
+
+        <p>Free delivery on orders over £50.</p>
+
+    </div>
+
+    <div class="delivery-item">
+
+        <h4>🔒 Secure Checkout</h4>
+
+        <p>Protected payments with secure checkout.</p>
+
+    </div>
+
+    <div class="delivery-item">
+
+        <h4>🎁 Luxury Packaging</h4>
+
+        <p>Beautifully packaged for gifting.</p>
 
     </div>
 
 </div>
+
+</div>
+
 </section>
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>&copy; 2026 CyRamage. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<script src="js/product.js"></script>
+
 <script>
-function changeImage(thumbnail) {
-    const mainImage = document.getElementById("mainImage");
 
-    mainImage.src = thumbnail.src;
-    mainImage.alt = thumbnail.alt;
+function changeImage(thumbnail){
 
-    document.querySelectorAll(".thumbnail").forEach(function(image) {
-        image.classList.remove("active");
+    document.getElementById("mainImage").src = thumbnail.src;
+
+    document.querySelectorAll(".thumbnail").forEach(function(img){
+
+        img.classList.remove("active");
+
     });
 
     thumbnail.classList.add("active");
+
 }
 
-function changeQuantity(amount) {
-    const quantity = document.getElementById("quantity");
-    let newQuantity = Number(quantity.value) + amount;
+function increaseQuantity(){
 
-    if (newQuantity < 1) {
-        newQuantity = 1;
-    }
+    let qty = document.getElementById("quantity");
 
-    if (newQuantity > 10) {
-        newQuantity = 10;
-    }
+    qty.value = parseInt(qty.value) + 1;
 
-    quantity.value = newQuantity;
 }
+
+function decreaseQuantity(){
+
+    let qty = document.getElementById("quantity");
+
+    if(parseInt(qty.value) > 1){
+
+        qty.value = parseInt(qty.value) - 1;
+
+    }
+
+}
+
 </script>
+
 </body>
 </html>
