@@ -289,3 +289,39 @@ if (newsletterForm) {
         newsletterForm.reset();
     });
 }
+/* ==========================
+   PRODUCT IMAGE ARROWS
+========================== */
+
+const images = [
+    "images/bath-gel-front.png",
+    "images/bath-gel-back.png",
+    "images/bath-gel-pouring.png",
+    "images/bath-gel-closeup.png",
+    "images/bath-gel-lather.png",
+    "images/bath-gel-lifestyle.png"
+];
+
+let currentImage = 0;
+
+const prevButton = document.getElementById("prevImage");
+const nextButton = document.getElementById("nextImage");
+
+function showImage(index) {
+    if (!mainProductImage) return;
+
+    currentImage = (index + images.length) % images.length;
+    mainProductImage.src = images[currentImage];
+}
+
+if (prevButton) {
+    prevButton.addEventListener("click", () => {
+        showImage(currentImage - 1);
+    });
+}
+
+if (nextButton) {
+    nextButton.addEventListener("click", () => {
+        showImage(currentImage + 1);
+    });
+}
