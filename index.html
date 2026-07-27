@@ -531,6 +531,24 @@ method="POST"
 </footer>
     
     <script src="js/script.js"></script>
+<script>
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
 
+    const mainNavigation =
+        document.getElementById("mainNavigation");
+
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen =
+                mainNavigation.classList.toggle("open");
+
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        });
+    }
+</script>
 </body>
 </html>
