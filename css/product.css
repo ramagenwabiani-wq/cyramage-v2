@@ -1475,3 +1475,53 @@ ul {
     }
 
 }
+/* =========================================================
+   FINAL BATH GEL PAGE ADJUSTMENTS
+========================================================= */
+
+@media (min-width: 1181px) {
+
+    .main-image-wrapper {
+        min-height: 680px;
+        height: 680px;
+    }
+
+    .main-product-image {
+        max-height: 680px;
+        object-fit: contain;
+    }
+
+    .product-information h1 {
+        font-size: clamp(2.2rem, 3.2vw, 3.15rem);
+        max-width: 520px;
+    }
+
+    .product-summary {
+        line-height: 1.75;
+    }
+
+    .product-details-section {
+        align-items: stretch;
+    }
+
+    .detail-card {
+        min-height: 390px;
+        line-height: 1.7;
+    }
+}
+
+.product-section {
+    padding-top: 0.5rem;
+}
+
+.thumbnail-button img {
+    object-fit: cover;
+}
+
+.detail-card ul {
+    margin-top: 0.25rem;
+}
+
+.detail-card li {
+    line-height: 1.55;
+}
