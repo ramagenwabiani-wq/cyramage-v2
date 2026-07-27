@@ -1,92 +1,155 @@
-/* =========================
-   PRODUCT PAGE
-========================= */
+/*====================================
+    CYRAMAGE PRODUCT PAGE V2
+====================================*/
 
-.product-page {
-    width: min(1200px, 92%);
-    margin: 45px auto 80px;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 55px;
-    align-items: start;
+.product-page{
+
+    max-width:1450px;
+
+    margin:70px auto;
+
+    padding:0 35px 80px;
+
+    display:grid;
+
+    grid-template-columns:700px 1fr;
+
+    gap:70px;
+
+    align-items:start;
+
 }
 
-.product-gallery {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 18px;
+/*=========================
+      PRODUCT GALLERY
+=========================*/
+
+.product-gallery{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:25px;
+
+    align-items:start;
+
 }
 
-.product-thumbnails {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/*=========================
+      THUMBNAILS
+=========================*/
+
+.product-thumbnails{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
 }
 
-.thumbnail {
-    width: 90px;
-    height: 105px;
-    object-fit: cover;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    border-radius: 9px;
-    background: #151515;
-    cursor: pointer;
-    opacity: 0.75;
-    transition: 0.25s ease;
+.thumbnail{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    border-radius:14px;
+
+    background:#111;
+
+    cursor:pointer;
+
+    transition:.35s;
+
 }
 
-.thumbnail:hover,
-.thumbnail.active {
-    opacity: 1;
-    border: 2px solid #d4af37;
-    transform: translateY(-2px);
+.thumbnail:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 12px 25px rgba(212,175,55,.25);
+
 }
 
-.main-product-image {
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+.thumbnail.active{
+
+    border:2px solid #D4AF37;
+
+}
+
+/*=========================
+      MAIN IMAGE
+=========================*/
+
+.main-product-image{
+
+    min-height:620px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px;
+
     background:
-        radial-gradient(
-            circle at center,
-            rgba(212, 175, 55, 0.12),
-            transparent 58%
-        ),
-        #111111;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    border-radius: 18px;
-    overflow: hidden;
+    radial-gradient(circle at center,
+    rgba(212,175,55,.08),
+    transparent 60%),
+    #111;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
 }
 
-.main-product-image img {
-    width: 100%;
-    max-height: 580px;
-    object-fit: contain;
+.main-product-image img{
+
+    width:100%;
+
+    max-height:560px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
 }
 
-.product-information {
+.main-product-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/*=========================
+      PRODUCT INFO
+=========================*/
+
+.product-information{
+
+    position:sticky;
+
+    top:110px;
+
+}
+.product-information{
     position: sticky;
     top: 110px;
-    padding-top: 10px;
-}
-
-.product-label {
-    margin: 0 0 12px;
-    color: #d4af37;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.product-information h1 {
-    margin: 0;
-    color: #ffffff;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.7rem, 5vw, 4.6rem);
-    line-height: 1.05;
+    padding-left: 30px;
+    max-width: 520px;
 }
 
 .product-rating {
