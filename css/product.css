@@ -1525,3 +1525,32 @@ ul {
 .detail-card li {
     line-height: 1.55;
 }
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.old-price {
+    color: #8c8c8c;
+    text-decoration: line-through;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.new-price {
+    color: #d4af37;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.save-price {
+    background: #d4af37;
+    color: #111;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
