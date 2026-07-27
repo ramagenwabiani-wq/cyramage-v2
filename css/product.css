@@ -402,3 +402,21 @@ body{
 .product-page{
     padding-top:60px;
 }
+.offer-text{
+    margin-top:12px;
+    color:#D4AF37;
+    font-size:0.95rem;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.save-badge{
+    background:#D4AF37;
+    color:#000;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:0.85rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
