@@ -1,882 +1,491 @@
-<!DOCTYPE html>
+f<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyRamage | Luxury Lifestyle & Self-Care</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <link rel="stylesheet" href="css/style.css">
 
-    <meta
-        name="description"
-        content="Shop CyRamage Signature Luxury Exfoliating Bath Gel, enriched with botanical extracts, fruit enzymes and exfoliating acids."
-    >
-
-    <title>Luxury Bath Gel | CyRamage</title>
-
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ANNOUNCEMENT BAR -->
-    <div class="announcement-bar">
-        <div class="announcement-track">
-            <span>★ Luxury Self-Care</span>
-            <span>★ Premium Ingredients</span>
-            <span>★ Elevate Your Everyday Rituals</span>
-            <span>★ Free UK Delivery on Orders Over £50</span>
-            <span>★ Luxury Self-Care</span>
-            <span>★ Premium Ingredients</span>
-        </div>
+    <!-- Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
     </div>
+</div>
 
-    <!-- HEADER -->
-    <header class="site-header">
-
-        <a href="index.html" class="brand">
-            <img
-                src="images/logo.png"
-                alt="CyRamage"
-                class="brand-logo"
-            >
-
-            <span class="brand-name">CyRamage</span>
+<header>
+    <div class="navbar">
+        <a href="#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
         </a>
 
-        <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="main-navigation" id="mainNavigation">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="collections.html">Collections</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
+    </div>
+</header>
 
-        <div class="header-actions">
-            <button
-                class="header-icon"
-                type="button"
-                aria-label="Search"
-            >
-                ⌕
-            </button>
+    <!-- Hero -->
+ <section class="hero">
+    <div class="hero-text">
 
-            <a
-                href="account.html"
-                class="header-icon"
-                aria-label="Account"
-            >
-                ♙
-            </a>
+        <h1>Luxury for<br>Every Moment</h1>
 
-            <a
-                href="cart.html"
-                class="cart-link"
-                aria-label="Shopping cart"
-            >
-                <span class="header-icon">🛍</span>
-                <span class="cart-count" id="cartCount">0</span>
-            </a>
-        </div>
+        <p>
+            Premium self-care, fashion, gifts and curated lifestyle essentials.
+        </p>
 
-    </header>
+        <a href="#collections" class="btn">Shop Collection</a>
 
+    </div>
+</section>
+    
+    <!-- Shop by Collection -->
+<section class="collections" id="collections">
+    <div class="container">
+        <h2>Shop by Collection</h2>
 
-    <main>
+        <div class="collection-grid">
 
-        <!-- BREADCRUMBS -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <span>›</span>
+           <div class="collection-card">
+    <img src="images/pamper-pouch-banner.png" alt="Pamper Pouch">
+    <h3>Pamper Pouch</h3>
+</div>
 
-            <a href="shop.html">Shop</a>
-            <span>›</span>
-
-            <a href="self-care.html">Self-Care</a>
-            <span>›</span>
-
-            <span aria-current="page">Luxury Bath Gel</span>
-        </nav>
-
-
-        <!-- PRODUCT HERO -->
-        <section class="product-section">
-
-            <!-- PRODUCT GALLERY -->
-            <div class="product-gallery">
-
-                <div
-                    class="product-thumbnails"
-                    role="list"
-                    aria-label="Product images"
-                >
-
-                    <button
-                        class="thumbnail-button active"
-                        type="button"
-                        data-image="images/bath-gel-front.png"
-                        data-alt="Front view of CyRamage Luxury Bath Gel"
-                    >
-                        <img
-                            src="images/bath-gel-front.png"
-                            alt="CyRamage Luxury Bath Gel front"
-                        >
-
-                        <span class="thumbnail-number">01</span>
-                        <span class="thumbnail-label">Front</span>
-                    </button>
-
-
-                    <button
-                        class="thumbnail-button"
-                        type="button"
-                        data-image="images/bath-gel-back.png"
-                        data-alt="Back label of CyRamage Luxury Bath Gel"
-                    >
-                        <img
-                            src="images/bath-gel-back.png"
-                            alt="CyRamage Luxury Bath Gel back label"
-                        >
-
-                        <span class="thumbnail-number">02</span>
-                        <span class="thumbnail-label">Back</span>
-                    </button>
-
-
-                    <button
-                        class="thumbnail-button"
-                        type="button"
-                        data-image="images/bath-gel-pouring.png"
-                        data-alt="CyRamage Luxury Bath Gel pouring texture"
-                    >
-                        <img
-                            src="images/bath-gel-pouring.png"
-                            alt="CyRamage Luxury Bath Gel pouring"
-                        >
-
-                        <span class="thumbnail-number">03</span>
-                        <span class="thumbnail-label">Pouring</span>
-                    </button>
-
-
-                    <button
-                        class="thumbnail-button"
-                        type="button"
-                        data-image="images/bath-gel-closeup.png"
-                        data-alt="Close-up of CyRamage Luxury Bath Gel texture"
-                    >
-                        <img
-                            src="images/bath-gel-closeup.png"
-                            alt="CyRamage Luxury Bath Gel close-up"
-                        >
-
-                        <span class="thumbnail-number">04</span>
-                        <span class="thumbnail-label">Close-Up</span>
-                    </button>
-
-
-                    <button
-                        class="thumbnail-button"
-                        type="button"
-                        data-image="images/bath-gel-lather.png"
-                        data-alt="Rich lather created with CyRamage Luxury Bath Gel"
-                    >
-                        <img
-                            src="images/bath-gel-lather.png"
-                            alt="CyRamage Luxury Bath Gel lather"
-                        >
-
-                        <span class="thumbnail-number">05</span>
-                        <span class="thumbnail-label">Lather</span>
-                    </button>
-
-
-                    <button
-                        class="thumbnail-button"
-                        type="button"
-                        data-image="images/bath-gel-lifestyle.png"
-                        data-alt="CyRamage Luxury Bath Gel in a luxury bathroom"
-                    >
-                        <img
-                            src="images/bath-gel-lifestyle.png"
-                            alt="CyRamage Luxury Bath Gel lifestyle"
-                        >
-
-                        <span class="thumbnail-number">06</span>
-                        <span class="thumbnail-label">Lifestyle</span>
-                    </button>
-
-                </div>
-
-
-                <div class="main-image-wrapper">
-
-                    <button
-                        class="image-expand-button"
-                        id="imageExpandButton"
-                        type="button"
-                        aria-label="View larger product image"
-                    >
-                        ⛶
-                    </button>
-
-                    <img
-                        src="images/bath-gel-front.png"
-                        alt="Front view of CyRamage Luxury Bath Gel"
-                        class="main-product-image"
-                        id="mainProductImage"
-                    >
-
-                </div>
-
+            <div class="collection-card">
+                <img src="images/luxury-gift-banner.png" alt="Gift Boxes">
+                <h3>Luxury Gift Sets</h3>
             </div>
 
-
-            <!-- PRODUCT INFORMATION -->
-            <div class="product-information">
-
-                <span class="product-badge">Signature Collection</span>
-
-                <p class="product-category">
-                    Luxury Self-Care
-                </p>
-
-                <h1>CyRamage Signature Bath Gel</h1>
-
-                <p class="product-subtitle">
-                    Luxury Exfoliating Body Cleanser
-                </p>
-
-
-                <div class="rating-row">
-
-                    <div
-                        class="stars"
-                        aria-label="Rated 5 out of 5"
-                    >
-                        ★★★★★
-                    </div>
-
-                    <a href="#reviews" class="review-link">
-                        5.0
-                    </a>
-
-                </div>
-
-
-                <p class="product-price">£10.99</p>
-
-
-                <p class="product-summary">
-                    A luxurious exfoliating bath and shower gel enriched with
-                    botanical extracts, fruit enzymes and gentle exfoliating
-                    acids. It cleanses, smooths and refreshes the skin while
-                    creating a rich, indulgent lather.
-                </p>
-
-
-                <ul class="product-highlights">
-                    <li>Gently cleanses and refreshes the skin</li>
-                    <li>Helps unclog and cleanse pores</li>
-                    <li>Smooths rough and uneven skin texture</li>
-                    <li>Enriched with botanical extracts and fruit acids</li>
-                    <li>Suitable for bath or shower use</li>
-                    <li>Presented in a luxury 200 ml bottle</li>
-                </ul>
-
-
-                <!-- QUANTITY AND CART -->
-                <div class="purchase-area">
-
-                    <div class="quantity-section">
-
-                        <label for="quantity">Quantity</label>
-
-                        <div class="quantity-selector">
-
-                            <button
-                                type="button"
-                                class="quantity-button"
-                                id="decreaseQuantity"
-                                aria-label="Decrease quantity"
-                            >
-                                −
-                            </button>
-
-                            <input
-                                type="number"
-                                id="quantity"
-                                value="1"
-                                min="1"
-                                max="10"
-                                inputmode="numeric"
-                                aria-label="Product quantity"
-                            >
-
-                            <button
-                                type="button"
-                                class="quantity-button"
-                                id="increaseQuantity"
-                                aria-label="Increase quantity"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <button
-                        class="primary-button"
-                        id="addToCartButton"
-                        type="button"
-                    >
-                        Add to Cart
-                    </button>
-
-                </div>
-
-
-                <button
-                    class="secondary-button"
-                    id="buyNowButton"
-                    type="button"
-                >
-                    Buy It Now
-                </button>
-
-
-                <p
-                    class="cart-message"
-                    id="cartMessage"
-                    aria-live="polite"
-                ></p>
-
-
-                <!-- PRODUCT TRUST ITEMS -->
-                <div class="trust-grid">
-
-                    <div class="trust-item">
-                        <span class="trust-icon">🚚</span>
-                        <strong>Free UK Delivery</strong>
-                        <small>On orders over £50</small>
-                    </div>
-
-                    <div class="trust-item">
-                        <span class="trust-icon">♙</span>
-                        <strong>Secure Payment</strong>
-                        <small>Protected checkout</small>
-                    </div>
-
-                    <div class="trust-item">
-                        <span class="trust-icon">◇</span>
-                        <strong>Premium Quality</strong>
-                        <small>Carefully selected</small>
-                    </div>
-
-                    <div class="trust-item">
-                        <span class="trust-icon">↻</span>
-                        <strong>30-Day Returns</strong>
-                        <small>Terms apply</small>
-                    </div>
-
-                </div>
-
+            <div class="collection-card">
+                <img src="images/home-fragrance-banner.png" alt="Home Fragrance">
+                <h3>Home Fragrance</h3>
             </div>
 
-        </section>
-
-
-        <!-- PRODUCT DETAIL CARDS -->
-        <section class="product-details-section">
-
-            <article class="detail-card">
-                <span class="detail-icon">♢</span>
-
-                <h2>Description</h2>
-
-                <p>
-                    CyRamage Signature Bath Gel transforms everyday cleansing
-                    into a luxurious self-care ritual. Its botanical formula
-                    helps remove impurities while leaving the skin feeling
-                    smooth, soft and beautifully refreshed.
-                </p>
-            </article>
-
-
-            <article class="detail-card">
-                <span class="detail-icon">⌁</span>
-
-                <h2>Key Benefits</h2>
-
-                <ul>
-                    <li>Gently cleanses and refreshes the skin</li>
-                    <li>Helps cleanse congested pores</li>
-                    <li>Smooths rough skin texture</li>
-                    <li>Provides gentle exfoliation</li>
-                    <li>Leaves skin feeling soft and hydrated</li>
-                    <li>Suitable for regular use</li>
-                </ul>
-            </article>
-
-
-            <article class="detail-card">
-                <span class="detail-icon">✿</span>
-
-                <h2>Ingredient Highlights</h2>
-
-                <ul class="ingredient-list">
-                    <li>Orange Enzyme</li>
-                    <li>Salicylic Acid</li>
-                    <li>Glycolic Acid</li>
-                    <li>Lactic Acid</li>
-                    <li>Mandelic Acid</li>
-                    <li>Turmeric Extract</li>
-                    <li>Peach Extract</li>
-                    <li>Chamomile Extract</li>
-                    <li>Lavender Extract</li>
-                    <li>Rose Extract</li>
-                    <li>Sea Salt</li>
-                </ul>
-            </article>
-
-
-            <article class="detail-card">
-                <span class="detail-icon">♨</span>
-
-                <h2>How to Use</h2>
-
-                <p>
-                    Apply a small amount to damp skin, your hands or a bath
-                    sponge. Massage gently in circular motions to create a rich
-                    lather, then rinse thoroughly with warm water.
-                </p>
-
-                <p>
-                    Avoid contact with the eyes. For external use only.
-                </p>
-            </article>
-
-        </section>
-
-
-        <!-- ACCORDION -->
-        <section class="accordion-section">
-
-            <details open>
-                <summary>
-                    Full Ingredients
-                    <span>+</span>
-                </summary>
-
-                <div class="accordion-content">
-                    <p>
-                        Aqua (Water), Glycerin, Sodium Methyl Cocoyl Taurate,
-                        Coco-Betaine, Sodium Cocoyl Isethionate, Sodium
-                        Chloride, Niacinamide, Sodium Hyaluronate, Salicylic
-                        Acid, Glycolic Acid, Lactic Acid, Mandelic Acid,
-                        Citrus Sinensis (Orange) Fruit Extract, Curcuma Longa
-                        (Turmeric) Root Extract, Prunus Persica (Peach) Fruit
-                        Extract, Chamomilla Recutita (Matricaria) Flower
-                        Extract, Lavandula Angustifolia (Lavender) Extract,
-                        Rosa Damascena Flower Extract, Maris Sal (Sea Salt),
-                        Kaolin, Coconut Acid, Propylene Glycol,
-                        2-Oleamido-1,3-Octadecanediol, Caprylyl Glycol,
-                        Citric Acid, Polyquaternium-53, Acrylates/C10-30 Alkyl
-                        Acrylate Crosspolymer, Sodium Hydroxide, Sodium
-                        Benzoate and Parfum (Fragrance).
-                    </p>
-
-                    <p class="ingredient-warning">
-                        Final ingredients must be confirmed by your product
-                        manufacturer and listed in the correct descending order
-                        before the product is sold.
-                    </p>
-                </div>
-            </details>
-
-
-            <details>
-                <summary>
-                    Size
-                    <span>+</span>
-                </summary>
-
-                <div class="accordion-content">
-                    <p>200 ml / 6.76 fl. oz.</p>
-                </div>
-            </details>
-
-
-            <details>
-                <summary>
-                    Caution
-                    <span>+</span>
-                </summary>
-
-                <div class="accordion-content">
-                    <p>
-                        For external use only. Avoid contact with the eyes.
-                        Discontinue use if irritation occurs. Keep out of reach
-                        of children. Store in a cool, dry place away from direct
-                        sunlight.
-                    </p>
-                </div>
-            </details>
-
-
-            <details>
-                <summary>
-                    Delivery and Returns
-                    <span>+</span>
-                </summary>
-
-                <div class="accordion-content">
-                    <p>
-                        Free UK delivery is available on qualifying orders over
-                        £50. Delivery times and return conditions will be shown
-                        at checkout.
-                    </p>
-                </div>
-            </details>
-
-        </section>
-
-
-        <!-- RELATED PRODUCTS -->
-        <section class="related-products-section">
-
-            <p class="section-eyebrow">Complete the Ritual</p>
-
-            <h2>You May Also Like</h2>
-
-            <div class="related-products-grid">
-
-
-                <article class="related-product-card">
-
-                    <a href="bath-oil.html" class="related-image-link">
-                        <img
-                            src="images/bath-oil.png"
-                            alt="CyRamage Luxury Bath Oil"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Luxury Bath Oil</h3>
-                        <p>£7.99</p>
-
-                        <a
-                            href="bath-oil.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
-
-                <article class="related-product-card">
-
-                    <a href="bath-salt.html" class="related-image-link">
-                        <img
-                            src="images/bath-salt.png"
-                            alt="CyRamage Luxury Bath Salt"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Luxury Bath Salt</h3>
-                        <p>£5.99</p>
-
-                        <a
-                            href="bath-salt.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
-
-                <article class="related-product-card">
-
-                    <a href="bath-tea.html" class="related-image-link">
-                        <img
-                            src="images/bath-tea.png"
-                            alt="CyRamage Luxury Bath Tea"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Luxury Bath Tea</h3>
-                        <p>£4.99</p>
-
-                        <a
-                            href="bath-tea.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
-
-                <article class="related-product-card">
-
-                    <a href="bath-bomb.html" class="related-image-link">
-                        <img
-                            src="images/bath-bomb.png"
-                            alt="CyRamage Luxury Bath Bomb"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Luxury Bath Bomb</h3>
-                        <p>£3.99</p>
-
-                        <a
-                            href="bath-bomb.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
-
-                <article class="related-product-card">
-
-                    <a href="bath-sponge.html" class="related-image-link">
-                        <img
-                            src="images/bath-sponge.png"
-                            alt="CyRamage Luxury Bath Sponge"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Luxury Bath Sponge</h3>
-                        <p>£3.49</p>
-
-                        <a
-                            href="bath-sponge.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
-
-                <article class="related-product-card">
-
-                    <a href="flower-candle.html" class="related-image-link">
-                        <img
-                            src="images/flower-candle.png"
-                            alt="CyRamage Flower Candle"
-                        >
-                    </a>
-
-                    <div class="related-product-content">
-                        <h3>Flower Candle</h3>
-                        <p>£8.99</p>
-
-                        <a
-                            href="flower-candle.html"
-                            class="small-button"
-                        >
-                            View Product
-                        </a>
-                    </div>
-
-                </article>
-
+            <div class="collection-card">
+                <img src="images/fashion-banner.png" alt="Women's Fashion">
+                <h3>Women's Fashion</h3>
             </div>
 
-        </section>
-
-
-        <!-- BRAND BENEFITS -->
-        <section class="brand-benefits">
-
-            <div>
-                <span>⌁</span>
-                <strong>Natural Ingredients</strong>
-                <small>Carefully selected for your skin</small>
+            <div class="collection-card">
+                <img src="images/accessories-banner.png" alt="Accessories">
+                <h3>Luxury Accessories</h3>
             </div>
 
-            <div>
-                <span>♢</span>
-                <strong>Dermatologically Tested</strong>
-                <small>Safe and gentle for daily use</small>
-            </div>
-
-            <div>
-                <span>✿</span>
-                <strong>Luxury Experience</strong>
-                <small>Elevate your self-care ritual</small>
-            </div>
-
-            <div>
-                <span>♡</span>
-                <strong>Made with Love</strong>
-                <small>Created with care for you</small>
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-                <img
-                    src="images/logo.png"
-                    alt="CyRamage"
-                    class="footer-logo"
-                >
-
-                <h2>CyRamage</h2>
-
-                <p>
-                    Luxury self-care, gifts, books and lifestyle essentials
-                    created to make every moment feel special.
-                </p>
-            </div>
-
-
-            <div>
-                <h3>Shop</h3>
-
-                <a href="self-care.html">Self-Care</a>
-                <a href="accessories.html">Accessories</a>
-                <a href="home-fragrance.html">Home Fragrance</a>
-                <a href="fashion.html">Fashion</a>
-                <a href="books-digital.html">Books &amp; Digital</a>
-                <a href="gift-boxes.html">Gift Boxes</a>
-            </div>
-
-
-            <div>
-                <h3>Customer Care</h3>
-
-                <a href="contact.html">Contact Us</a>
-                <a href="shipping.html">Shipping Information</a>
-                <a href="returns.html">Returns &amp; Refunds</a>
-                <a href="faq.html">FAQs</a>
-                <a href="track-order.html">Track Your Order</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
-            </div>
-
-
-            <div>
-                <h3>About Us</h3>
-
-                <a href="about.html">Our Story</a>
-                <a href="ingredients.html">Ingredients</a>
-                <a href="sustainability.html">Sustainability</a>
-                <a href="blog.html">Blog</a>
-            </div>
-
-
-            <div class="newsletter">
-                <h3>Newsletter</h3>
-
-                <p>
-                    Subscribe for special offers, free giveaways and
-                    once-in-a-lifetime deals.
-                </p>
-
-                <form id="newsletterForm">
-
-                    <label class="sr-only" for="newsletterEmail">
-                        Email address
-                    </label>
-
-                    <input
-                        id="newsletterEmail"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                    <button type="submit">
-                        Subscribe
-                    </button>
-
-                </form>
-
-                <p
-                    class="newsletter-message"
-                    id="newsletterMessage"
-                    aria-live="polite"
-                ></p>
+            <div class="collection-card">
+                <img src="images/books-banner.png" alt="Books">
+                <h3>Books & Digital</h3>
             </div>
 
         </div>
 
-
-        <div class="footer-bottom">
-            <p>© 2026 CyRamage. All Rights Reserved.</p>
-
-            <div class="payment-methods">
-                <span>VISA</span>
-                <span>Mastercard</span>
-                <span>Apple Pay</span>
-                <span>PayPal</span>
-            </div>
-        </div>
-
-    </footer>
-
-
-    <!-- IMAGE LIGHTBOX -->
-    <div
-        class="image-lightbox"
-        id="imageLightbox"
-        aria-hidden="true"
-    >
-        <button
-            class="lightbox-close"
-            id="lightboxClose"
-            type="button"
-            aria-label="Close enlarged image"
-        >
-            ×
-        </button>
-
-        <img
-            src="images/bath-gel-front.png"
-            alt="CyRamage Luxury Bath Gel"
-            id="lightboxImage"
-        >
     </div>
 
+</section>
+<!-- =========================
+     BEST SELLERS
+========================= -->
 
-    <script src="js/product.js"></script>
+<section class="best-sellers" id="shop">
+
+    <div class="best-sellers-container">
+
+        <div class="section-heading">
+            <p class="section-label">Customer Favourites</p>
+            <h2>Best Sellers</h2>
+            <p class="section-description">
+                Discover some of our most-loved CyRamage self-care products.
+            </p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- Bath Gel -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Best Seller</span>
+                    <img src="images/bath-gel.png" alt="CyRamage Luxury Bath Gel">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Gel</h3>
+
+                    <p class="product-description">
+                        A gentle bath and shower gel for a relaxing self-care routine.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£10.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Oil -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Popular</span>
+                    <img src="images/bath-oil.png" alt="CyRamage Luxury Bath Oil">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Oil</h3>
+
+                    <p class="product-description">
+                        A soothing bath oil created to leave your skin feeling soft.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£7.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Salt -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Customer Favourite</span>
+                    <img src="images/bath-salt.png" alt="CyRamage Luxury Bath Salt">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Salt</h3>
+
+                    <p class="product-description">
+                        Mineral bath salts designed for a calm and indulgent soak.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£5.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Tea -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Featured</span>
+                    <img src="images/bath-tea.png" alt="CyRamage Luxury Bath Tea">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Tea</h3>
+
+                    <p class="product-description">
+                        A botanical bath blend for a peaceful and comforting experience.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£4.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Bomb -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">New</span>
+                    <img src="images/bath-bomb.png" alt="CyRamage Luxury Bath Bomb">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Bomb</h3>
+
+                    <p class="product-description">
+                        A colourful bath bomb created for a fragrant and indulgent soak.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£8.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Sponge -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Self-Care Essential</span>
+                    <img src="images/bath-sponge.png" alt="CyRamage Luxury Bath Sponge">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Sponge</h3>
+
+                    <p class="product-description">
+                        A soft cleansing sponge designed to create a rich lather.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£3.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Flower Candle -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Popular Gift</span>
+                    <img src="images/flower-candle.png" alt="CyRamage Luxury Flower Candle">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Flower Candle</h3>
+
+                    <p class="product-description">
+                        An elegant decorative candle that brings warmth and calm to your space.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£4.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Gift Box -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Luxury Gift</span>
+                    <img src="images/gift-box.png" alt="CyRamage Luxury Gift Box">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Gift Box</h3>
+
+                    <p class="product-description">
+                        A beautifully presented CyRamage gift box for special occasions.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                    <p class="product-price">£23.99</p>
+
+                    <a href="#" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="why-choose">
+    <div class="container">
+
+        <h2>Why Choose CyRamage</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">✨</div>
+                <h3>Premium Quality</h3>
+                <p>Luxury products carefully selected to bring elegance and relaxation into your everyday life.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🚚</div>
+                <h3>Fast UK Delivery</h3>
+                <p>Reliable delivery across the UK with carefully packaged orders.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🎁</div>
+                <h3>Perfect Gifts</h3>
+                <p>Beautiful gift collections for birthdays, anniversaries and special occasions.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Secure Shopping</h3>
+                <p>Shop with confidence using trusted and secure payment methods.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+ <section class="testimonials">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Beautiful products and lovely packaging. It felt like opening a luxury gift."</p>
+            <h4>— Emma R.</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"The bath products smell amazing. I'll definitely order again."</p>
+            <h4>— Sarah M.</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent quality and fast delivery. The perfect gift for my wife."</p>
+            <h4>— James T.</h4>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Newsletter -->
+<section class="newsletter">
+    <div class="newsletter-container">
+
+        <p class="newsletter-label">Stay Connected</p>
+
+        <h2>Join the CyRamage Community</h2>
+
+        <p class="newsletter-text">
+            Be the first to discover new collections, exclusive offers
+            and luxury lifestyle inspiration.
+        </p>
+
+        <form
+            class="newsletter-form"
+           action="https://formspree.io/f/xjgnjbzk"
+method="POST"
+            method="POST"
+        >
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required
+            >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New CyRamage Newsletter Signup"
+            >
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+</section>
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
+
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+
+            <a href="self-care.html">Self-Care</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="fashion.html">Women's Fashion</a>
+            <a href="books.html">Books & Digital</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Care</h3>
+
+            <a href="#">Contact Us</a>
+            <a href="#">Delivery</a>
+            <a href="#">Returns</a>
+            <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 CyRamage. All Rights Reserved.
+
+    </div>
+
+</footer>
+    
+    <script src="js/script.js"></script>
 
 </body>
 </html>
