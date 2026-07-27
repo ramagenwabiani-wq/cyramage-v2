@@ -33,17 +33,12 @@ body{
 ========================================================== */
 
 .product-page{
-
-    width:min(1450px,94%);
-    margin:70px auto;
-
+    width:min(1600px,96%);
+    margin:50px auto;
     display:grid;
-    grid-template-columns:720px 1fr;
-
-    gap:70px;
-
+    grid-template-columns:780px 1fr;
+    gap:80px;
     align-items:start;
-
 }
 
 /* ==========================================================
@@ -126,7 +121,7 @@ body{
 
 .main-product-image{
 
-    height:680px;
+    height:760px;
 
     background:
         radial-gradient(circle at center,
