@@ -176,11 +176,11 @@
                     <button
                         class="thumbnail-button"
                         type="button"
-                        data-image="images/bath-gel-closeup.png"
+                        data-image="images/bath-gel-label-closeup.png"
                         data-alt="Close-up of CyRamage Luxury Bath Gel texture"
                     >
                         <img
-                            src="images/bath-gel-closeup.png"
+                            src="images/bath-gel-label-closeup.png"
                             alt="CyRamage Luxury Bath Gel close-up"
                         >
 
@@ -222,26 +222,30 @@
 
                 </div>
 
+<div class="main-image-wrapper">
 
-                <div class="main-image-wrapper">
+<button
+    class="image-expand-button"
+    id="imageExpandButton"
+    type="button"
+    aria-label="View larger product image">
+</button>
 
-                    <button
-                        class="image-expand-button"
-                        id="imageExpandButton"
-                        type="button"
-                        aria-label="View larger product image"
-                    >
-                        ⛶
-                    </button>
+<button class="gallery-arrow left" onclick="previousImage()">
+    &#10094;
+</button>
 
-                    <img
-                        src="images/bath-gel-front.png"
-                        alt="Front view of CyRamage Luxury Bath Gel"
-                        class="main-product-image"
-                        id="mainProductImage"
-                    >
+<img
+    src="images/bath-gel-front.png"
+    alt="Front view of CyRamage Luxury Bath Gel"
+    class="main-product-image"
+    id="mainProductImage">
 
-                </div>
+<button class="gallery-arrow right" onclick="nextImage()">
+    &#10095;
+</button>
+
+</div>
 
             </div>
 
