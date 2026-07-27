@@ -119,17 +119,12 @@
 }
 
 .main-product-image img{
-
     width:100%;
-
-    max-height:560px;
-
+    height:100%;
+    max-height:none;
+    display:block;
     object-fit:contain;
-
-    transition:.4s;
-    
-filter: drop-shadow(0 20px 40px rgba(212,175,55,.25));
-transform: scale(1.02);
+    margin:auto;
 }
 
 .main-product-image:hover img{
