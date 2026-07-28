@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Shopping Cart | CyRamage</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+background:#0d0d0d;
+color:#fff;
+font-family:Poppins,sans-serif;
+margin:0;
+}
+
+.cart-page{
+max-width:1100px;
+margin:60px auto;
+padding:20px;
+}
+
+.cart-page h1{
+text-align:center;
+margin-bottom:40px;
+}
+
+.cart-item{
+display:flex;
+align-items:center;
+gap:20px;
+background:#161616;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.cart-item img{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.cart-info{
+flex:1;
+}
+
+.cart-info h3{
+margin:0 0 10px;
+}
+
+.quantity{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:15px;
+}
+
+.quantity button{
+width:35px;
+height:35px;
+border:none;
+background:#d4af37;
+color:#000;
+font-size:18px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.remove-btn{
+margin-top:15px;
+background:#333;
+color:#fff;
+border:none;
+padding:8px 14px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.summary{
+margin-top:40px;
+background:#161616;
+padding:25px;
+border-radius:12px;
+}
+
+.summary-row{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+font-size:18px;
+}
+
+.checkout-btn{
+display:block;
+width:100%;
+padding:16px;
+background:#d4af37;
+color:#000;
+text-align:center;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+margin-top:25px;
+}
+
+.continue{
+display:inline-block;
+margin-top:20px;
+color:#d4af37;
+text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="cart-page">
+
+<h1>Your Shopping Bag</h1>
+
+<div id="cartItems"></div>
+
+<div class="summary">
+
+<div class="summary-row">
+<span>Subtotal</span>
+<span id="subtotal">£0.00</span>
+</div>
+
+<div class="summary-row">
+<span>Delivery</span>
+<span>FREE</span>
+</div>
+
+<hr>
+
+<div class="summary-row">
+<strong>Total</strong>
+<strong id="total">£0.00</strong>
+</div>
+
+<a href="#" class="checkout-btn">
+Proceed to Checkout
+</a>
+
+<a href="index.html#shop" class="continue">
+← Continue Shopping
+</a>
+
+</div>
+
+</section>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItems = document.getElementById("cartItems");
+const subtotal = document.getElementById("subtotal");
+const total = document.getElementById("total");
+
+function renderCart(){
+
+cartItems.innerHTML="";
+
+if(cart.length===0){
+
+cartItems.innerHTML=`
+<h2>Your shopping bag is empty.</h2>
+<p>Discover our luxury self-care collection.</p>
+`;
+
+subtotal.textContent="£0.00";
+total.textContent="£0.00";
+
+return;
+
+}
+
+let orderTotal=0;
+
+cart.forEach((item,index)=>{
+
+orderTotal+=item.price*item.quantity;
+
+cartItems.innerHTML+=`
+
+<div class="cart-item">
+
+<img src="${item.image}" alt="${item.name}">
+
+<div class="cart-info">
+
+<h3>${item.name}</h3>
+
+<p>£${item.price.toFixed(2)}</p>
+
+<div class="quantity">
+
+<button onclick="changeQuantity(${index},-1)">−</button>
+
+<span>${item.quantity}</span>
+
+<button onclick="changeQuantity(${index},1)">+</button>
+
+</div>
+
+<button class="remove-btn" onclick="removeItem(${index})">
+Remove
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+subtotal.textContent="£"+orderTotal.toFixed(2);
+total.textContent="£"+orderTotal.toFixed(2);
+
+}
+
+function changeQuantity(index,amount){
+
+cart[index].quantity+=amount;
+
+if(cart[index].quantity<1){
+
+cart[index].quantity=1;
+
+}
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+renderCart();
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+renderCart();
+
+}
+
+renderCart();
+
+</script>
+
+</body>
+</html>
