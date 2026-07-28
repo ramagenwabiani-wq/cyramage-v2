@@ -158,7 +158,7 @@ Proceed to Checkout
 
 <script>
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cyramageCart")) || [];
 
 const cartItems = document.getElementById("cartItems");
 const subtotal = document.getElementById("subtotal");
@@ -237,7 +237,7 @@ cart[index].quantity=1;
 
 }
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem("cyramageCart"
 
 renderCart();
 
