@@ -115,27 +115,40 @@
     const checkoutTotal =
         document.getElementById("checkoutTotal");
 
-    let cart = [];
+   let cart = [];
 
-    try {
-        const savedCart =
-    localStorage.getItem("cyramageCart") ||
-    localStorage.getItem("cart") ||
-    "[]";
+try {
+    const urlParameters =
+        new URLSearchParams(window.location.search);
 
-        const parsedCart = JSON.parse(savedCart);
+    const cartFromUrl =
+        urlParameters.get("cart");
 
-        cart = Array.isArray(parsedCart)
-            ? parsedCart
-            : [];
-        
-        localStorage.setItem(
-    "cyramageCart",
-    JSON.stringify(cart)
-);
-    } catch (error) {
-        console.error("Unable to read checkout cart:", error);
-    }
+    const savedCart =
+        cartFromUrl
+            ? decodeURIComponent(cartFromUrl)
+            : localStorage.getItem("cyramageCart") ||
+              localStorage.getItem("cart") ||
+              "[]";
+
+    const parsedCart = JSON.parse(savedCart);
+
+    cart = Array.isArray(parsedCart)
+        ? parsedCart
+        : [];
+
+    localStorage.setItem(
+        "cyramageCart",
+        JSON.stringify(cart)
+    );
+} catch (error) {
+    console.error(
+        "Unable to read checkout cart:",
+        error
+    );
+
+    cart = [];
+}
 
     let orderTotal = 0;
 
