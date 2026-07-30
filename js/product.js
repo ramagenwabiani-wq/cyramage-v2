@@ -158,7 +158,7 @@ const buyNowButton = document.getElementById("buyNowButton");
 const cartCount = document.getElementById("cartCount");
 const cartMessage = document.getElementById("cartMessage");
 
-const product = {
+const product = window.CYRAMAGE_PRODUCT || {
     id: "cyramage-bath-gel-200ml",
     name: "CyRamage Signature Bath Gel",
     price: 12.99,
