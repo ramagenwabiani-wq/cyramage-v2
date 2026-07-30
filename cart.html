@@ -144,10 +144,10 @@ text-decoration:none;
 <strong id="total">£0.00</strong>
 </div>
 
-<a href="checkout.html" class="checkout-btn">
+<a href="#" class="checkout-btn" id="proceedToCheckout">
     Proceed to Checkout
 </a>
-
+    
 <a href="index.html#shop" class="continue">
 ← Continue Shopping
 </a>
@@ -280,6 +280,33 @@ function removeItem(index) {
 }
 
 renderCart();
+
+    renderCart();
+
+const proceedToCheckout =
+    document.getElementById("proceedToCheckout");
+
+proceedToCheckout.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (!Array.isArray(cart) || cart.length === 0) {
+        alert("Your shopping bag is empty.");
+        return;
+    }
+
+    localStorage.setItem(
+        "cyramageCart",
+        JSON.stringify(cart)
+    );
+
+    const cartData =
+        encodeURIComponent(JSON.stringify(cart));
+
+    window.location.href =
+        `checkout.html?cart=${cartData}`;
+});
+
+</script>
 </script>
 
 </body>
