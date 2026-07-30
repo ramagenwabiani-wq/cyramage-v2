@@ -119,13 +119,20 @@
 
     try {
         const savedCart =
-            localStorage.getItem(CART_KEY) || "[]";
+    localStorage.getItem("cyramageCart") ||
+    localStorage.getItem("cart") ||
+    "[]";
 
         const parsedCart = JSON.parse(savedCart);
 
         cart = Array.isArray(parsedCart)
             ? parsedCart
             : [];
+        
+        localStorage.setItem(
+    "cyramageCart",
+    JSON.stringify(cart)
+);
     } catch (error) {
         console.error("Unable to read checkout cart:", error);
     }
