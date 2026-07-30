@@ -158,14 +158,32 @@ const buyNowButton = document.getElementById("buyNowButton");
 const cartCount = document.getElementById("cartCount");
 const cartMessage = document.getElementById("cartMessage");
 
-const product = window.CYRAMAGE_PRODUCT || {
-    id: "cyramage-bath-gel-200ml",
-    name: "CyRamage Signature Bath Gel",
-    price: 12.99,
-    image: "images/bath-gel-front.png",
-    page: "bath-gel.html",
-    size: "200 ml"
-};
+const currentPage = window.location.pathname
+    .split("/")
+    .pop()
+    .toLowerCase();
+
+let product;
+
+if (currentPage === "bath-oil.html") {
+    product = {
+        id: "cyramage-bath-oil-80ml",
+        name: "CyRamage Signature Bath Oil",
+        price: 7.99,
+        image: "images/bath-oil-front.png",
+        page: "bath-oil.html",
+        size: "80 ml"
+    };
+} else {
+    product = {
+        id: "cyramage-bath-gel-200ml",
+        name: "CyRamage Signature Bath Gel",
+        price: 12.99,
+        image: "images/bath-gel-front.png",
+        page: "bath-gel.html",
+        size: "200 ml"
+    };
+}
 
 function getCart() {
     try {
