@@ -157,104 +157,129 @@ Proceed to Checkout
 </section>
 
 <script>
+const CART_KEY = "cyramageCart";
 
-let cart = JSON.parse(localStorage.getItem("cyramageCart")) || [];
+let cart = [];
+
+try {
+    const savedCart =
+        localStorage.getItem(CART_KEY) ||
+        localStorage.getItem("cart") ||
+        "[]";
+
+    const parsedCart = JSON.parse(savedCart);
+
+    cart = Array.isArray(parsedCart) ? parsedCart : [];
+
+    // Move any old cart data into the correct CyRamage storage key.
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+} catch (error) {
+    console.error("Unable to read cart:", error);
+    cart = [];
+}
 
 const cartItems = document.getElementById("cartItems");
 const subtotal = document.getElementById("subtotal");
 const total = document.getElementById("total");
 
-function renderCart(){
-
-cartItems.innerHTML="";
-
-if(cart.length===0){
-
-cartItems.innerHTML=`
-<h2>Your shopping bag is empty.</h2>
-<p>Discover our luxury self-care collection.</p>
-`;
-
-subtotal.textContent="£0.00";
-total.textContent="£0.00";
-
-return;
-
+function saveCart() {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
-let orderTotal=0;
+function renderCart() {
+    cartItems.innerHTML = "";
 
-cart.forEach((item,index)=>{
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                <h2>Your shopping bag is empty.</h2>
+                <p>Discover our luxury self-care collection.</p>
+                <a href="index.html#shop" class="btn">
+                    Continue Shopping
+                </a>
+            </div>
+        `;
 
-orderTotal+=item.price*item.quantity;
+        subtotal.textContent = "£0.00";
+        total.textContent = "£0.00";
+        return;
+    }
 
-cartItems.innerHTML+=`
+    let orderTotal = 0;
 
-<div class="cart-item">
+    cart.forEach((item, index) => {
+        const price = Number(item.price) || 0;
+        const quantity = Number(item.quantity) || 1;
 
-<img src="${item.image}" alt="${item.name}">
+        orderTotal += price * quantity;
 
-<div class="cart-info">
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
 
-<h3>${item.name}</h3>
+                <div class="cart-info">
+                    <h3>${item.name}</h3>
+                    <p>£${price.toFixed(2)}</p>
 
-<p>£${item.price.toFixed(2)}</p>
+                    <div class="quantity">
+                        <button
+                            type="button"
+                            onclick="changeQuantity(${index}, -1)"
+                            aria-label="Decrease quantity"
+                        >
+                            −
+                        </button>
 
-<div class="quantity">
+                        <span>${quantity}</span>
 
-<button onclick="changeQuantity(${index},-1)">−</button>
+                        <button
+                            type="button"
+                            onclick="changeQuantity(${index}, 1)"
+                            aria-label="Increase quantity"
+                        >
+                            +
+                        </button>
+                    </div>
 
-<span>${item.quantity}</span>
+                    <button
+                        type="button"
+                        class="remove-btn"
+                        onclick="removeItem(${index})"
+                    >
+                        Remove
+                    </button>
+                </div>
+            </div>
+        `;
+    });
 
-<button onclick="changeQuantity(${index},1)">+</button>
-
-</div>
-
-<button class="remove-btn" onclick="removeItem(${index})">
-Remove
-</button>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-subtotal.textContent="£"+orderTotal.toFixed(2);
-total.textContent="£"+orderTotal.toFixed(2);
-
+    subtotal.textContent = `£${orderTotal.toFixed(2)}`;
+    total.textContent = `£${orderTotal.toFixed(2)}`;
 }
 
-function changeQuantity(index,amount){
+function changeQuantity(index, amount) {
+    const currentQuantity = Number(cart[index].quantity) || 1;
 
-cart[index].quantity+=amount;
+    cart[index].quantity = currentQuantity + amount;
 
-if(cart[index].quantity<1){
+    if (cart[index].quantity < 1) {
+        cart.splice(index, 1);
+    }
 
-cart[index].quantity=1;
-
+    saveCart();
+    renderCart();
 }
 
-localStorage.setItem("cyramageCart"
+function removeItem(index) {
+    cart.splice(index, 1);
+    saveCart();
+    renderCart();
+}
 
 renderCart();
-
-}
-
-function removeItem(index){
-
-cart.splice(index,1);
-
-localStorage.setItem("cart",JSON.stringify(cart));
-
-renderCart();
-
-}
-
-renderCart();
-
 </script>
 
 </body>
