@@ -52,6 +52,8 @@
     font-family:'Playfair Display',serif; color:var(--gold); font-size:15px;
   }
   .logo-text{font-family:'Playfair Display', serif; letter-spacing:2px; font-size:13px; color:var(--gold-light);}
+  .logo img{height:46px; width:auto; display:block;}
+  .footer-about .logo img{height:70px; width:auto;}
   .logo-text small{display:block; font-size:8px; letter-spacing:3px; color:var(--gray); font-family:'Poppins',sans-serif;}
   .header-icons{display:flex; align-items:center; gap:22px;}
   .header-icons button{background:none; border:none; color:var(--gold-light); cursor:pointer; font-size:17px;}
@@ -80,6 +82,22 @@
     overflow:hidden; background:#000; aspect-ratio:1/1;
   }
   .gallery-main img{width:100%; height:100%; object-fit:contain; background:#000;}
+  .gallery-nav{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+    width:40px; height:40px; border-radius:50%; border:1px solid var(--gold);
+    background:rgba(0,0,0,0.55); color:var(--gold-light); font-size:20px;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .gallery-nav.prev{left:14px;}
+  .gallery-nav.next{right:14px;}
+  .gallery-nav:hover{background:rgba(212,175,55,0.18);}
+  .gallery-expand{
+    position:absolute; top:14px; right:14px; z-index:5;
+    width:34px; height:34px; border-radius:50%; border:1px solid var(--gold);
+    background:rgba(0,0,0,0.55); color:var(--gold-light); font-size:14px;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .gallery-expand:hover{background:rgba(212,175,55,0.18);}
   .gallery-thumbs{display:flex; gap:10px; margin-top:12px;}
   .gallery-thumbs img{
     width:64px; height:64px; object-fit:cover; border-radius:3px;
@@ -251,10 +269,9 @@
 
 <header>
   <div class="wrap">
-    <div class="logo">
-      <div class="logo-mark">CR</div>
-      <div class="logo-text">CYRAMAGE<small>SIGNATURE COLLECTION</small></div>
-    </div>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="CyRamage — Luxury Self-Care">
+    </a>
     <div class="header-icons">
       <button aria-label="Menu">&#9776;</button>
       <button aria-label="Search">&#128269;</button>
@@ -274,6 +291,9 @@
     <div class="gallery">
       <div class="gallery-main">
         <img id="mainImage" src="images/bath-gel-front.png" alt="CyRamage Signature Bath Gel">
+        <button class="gallery-nav prev" onclick="navImage(-1)" aria-label="Previous image">‹</button>
+        <button class="gallery-nav next" onclick="navImage(1)" aria-label="Next image">›</button>
+        <button class="gallery-expand" onclick="expandImage()" aria-label="Expand image">⛶</button>
       </div>
       <div class="gallery-thumbs">
         <img src="images/bath-gel-front.png" class="active" onclick="swapImage(this)" alt="Front of bottle">
@@ -490,9 +510,8 @@
     <div class="footer-grid">
       <div class="footer-about">
         <div class="logo">
-          <div class="logo-mark">CR</div>
+          <img src="images/logo.png" alt="CyRamage — Luxury Self-Care">
         </div>
-        <p class="serif" style="font-size:22px; color:var(--gold-light); margin-bottom:10px;">CyRamage</p>
         <p>Luxury self-care, gifts, books and lifestyle essentials created to make every moment feel special.</p>
       </div>
       <div>
@@ -582,6 +601,17 @@
     document.getElementById('mainImage').src = el.src;
     document.querySelectorAll('.gallery-thumbs img').forEach(i=>i.classList.remove('active'));
     el.classList.add('active');
+  }
+  function navImage(direction){
+    const thumbs = Array.from(document.querySelectorAll('.gallery-thumbs img'));
+    const current = thumbs.findIndex(t => t.classList.contains('active'));
+    let next = current + direction;
+    if(next < 0) next = thumbs.length - 1;
+    if(next >= thumbs.length) next = 0;
+    swapImage(thumbs[next]);
+  }
+  function expandImage(){
+    window.open(document.getElementById('mainImage').src, '_blank');
   }
   function changeQty(delta){
     const input = document.getElementById('qty');
