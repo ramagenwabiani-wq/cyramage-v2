@@ -164,6 +164,7 @@
             align-items: center;
             justify-content: center;
             padding: 40px;
+            position: relative;
         }
 
         .product-page-image img {
@@ -171,6 +172,67 @@
             max-width: 360px;
             height: auto;
             display: block;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(13, 13, 13, 0.55);
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover {
+            background: rgba(212, 175, 55, 0.9);
+            color: #0d0d0d;
+        }
+
+        .gallery-arrow.prev {
+            left: 16px;
+        }
+
+        .gallery-arrow.next {
+            right: 16px;
+        }
+
+        .gallery-arrow.hidden {
+            display: none;
+        }
+
+        .gallery-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .gallery-dots .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(13, 13, 13, 0.25);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .gallery-dots .dot.active {
+            background: #d4af37;
+        }
+
+        .gallery-dots.hidden {
+            display: none;
         }
 
         .product-page-details h1 {
@@ -395,7 +457,12 @@
   <main class="product-page">
 
       <div class="product-page-image">
-          <img src="images/bath-oil.png" alt="CyRamage Luxury Bath Oil">
+          <img id="productImage" src="images/bath-oil.png" alt="CyRamage Luxury Bath Oil">
+
+          <button type="button" class="gallery-arrow prev hidden" id="galleryPrev" aria-label="Previous image">&#8249;</button>
+          <button type="button" class="gallery-arrow next hidden" id="galleryNext" aria-label="Next image">&#8250;</button>
+
+          <div class="gallery-dots hidden" id="galleryDots"></div>
       </div>
 
       <div class="product-page-details">
@@ -521,6 +588,8 @@
         name: "Luxury Bath Oil",
         price: 7.99
     };
+
+    const PRODUCT_IMAGES = ['bath-oil.png'];
 </script>
 <script>
     const mobileMenuButton = document.getElementById("mobileMenuButton");
@@ -570,6 +639,49 @@
     }
 
     updateNavCartBadge();
+
+    // Image gallery
+    (function initGallery() {
+        if (typeof PRODUCT_IMAGES === "undefined" || !Array.isArray(PRODUCT_IMAGES)) {
+            return;
+        }
+
+        let currentIndex = 0;
+        const imageEl = document.getElementById("productImage");
+        const prevBtn = document.getElementById("galleryPrev");
+        const nextBtn = document.getElementById("galleryNext");
+        const dotsContainer = document.getElementById("galleryDots");
+
+        if (!imageEl || PRODUCT_IMAGES.length < 2) {
+            return;
+        }
+
+        PRODUCT_IMAGES.forEach(function (_, i) {
+            const dot = document.createElement("span");
+            dot.className = "dot" + (i === 0 ? " active" : "");
+            dot.addEventListener("click", function () {
+                showImage(i);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        function showImage(index) {
+            currentIndex = (index + PRODUCT_IMAGES.length) % PRODUCT_IMAGES.length;
+            imageEl.src = "images/" + PRODUCT_IMAGES[currentIndex];
+
+            dotsContainer.querySelectorAll(".dot").forEach(function (dot, i) {
+                dot.classList.toggle("active", i === currentIndex);
+            });
+        }
+
+        prevBtn.addEventListener("click", function () {
+            showImage(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener("click", function () {
+            showImage(currentIndex + 1);
+        });
+    })();
 
     // Accordion
     document.querySelectorAll(".accordion-header").forEach(function (btn) {
