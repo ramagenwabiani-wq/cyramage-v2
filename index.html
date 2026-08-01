@@ -10,6 +10,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        #mainNavigation {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        #mainNavigation a {
+            position: relative;
+            letter-spacing: 0.03em;
+            transition: color 0.2s ease;
+            padding-bottom: 4px;
+        }
+
+        #mainNavigation a:hover {
+            color: #d4af37;
+        }
+
+        #mainNavigation a.active {
+            color: #d4af37;
+        }
+
+        #mainNavigation a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: #d4af37;
+        }
+
+        .nav-cart {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+        }
+
+        .nav-cart svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            fill: none;
+            transition: stroke 0.2s ease;
+        }
+
+        .nav-cart:hover svg {
+            stroke: #d4af37;
+        }
+
+        .nav-cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #d4af37;
+            color: #0d0d0d;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 3px 5px;
+            border-radius: 999px;
+            min-width: 16px;
+            text-align: center;
+        }
+
+        .nav-cart-badge.hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,11 +113,21 @@
         </button>
 
         <nav id="mainNavigation">
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#shop">Shop</a>
             <a href="#collections">Collections</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
         </nav>
 
     </div>
@@ -562,6 +643,35 @@ method="POST"
   });
 }); 
     }
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
 </script>
 </body>
 </html>
