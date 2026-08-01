@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        #mainNavigation {
-            display: flex;
-            align-items: center;
-            gap: 36px;
+        @media (min-width: 769px) {
+            #mainNavigation {
+                display: flex;
+                align-items: center;
+                gap: 36px;
+            }
         }
 
         #mainNavigation a {
@@ -79,6 +81,110 @@
 
         .nav-cart-badge.hidden {
             display: none;
+        }
+
+        /* Mobile menu: stacked, spacious, easy to tap */
+        @media (max-width: 768px) {
+            #mainNavigation.open {
+                display: flex !important;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                width: 100%;
+                padding: 8px 24px 24px;
+                box-sizing: border-box;
+            }
+
+            #mainNavigation.open a {
+                width: 100%;
+                padding: 16px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                font-size: 1.05rem;
+            }
+
+            #mainNavigation.open a.active::after {
+                display: none;
+            }
+
+            #mainNavigation.open .nav-cart {
+                border-bottom: none;
+                margin-left: 0;
+                padding: 16px 0;
+                width: auto;
+                gap: 10px;
+            }
+
+            #mainNavigation.open .nav-cart::after {
+                content: "Cart";
+                font-size: 1.05rem;
+                letter-spacing: 0.03em;
+                color: inherit;
+            }
+        }
+
+        /* Jo Malone-style generous spacing */
+        .collections, .best-sellers, .why-choose, .testimonials {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .editorial-banner {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 8%;
+        }
+
+        .editorial-banner .editorial-text {
+            max-width: 420px;
+        }
+
+        .editorial-banner .editorial-eyebrow {
+            color: #d4af37;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .editorial-banner h2 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .editorial-banner a.editorial-link {
+            color: #d4af37;
+            text-decoration: none;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 4px;
+            font-size: 15px;
+            letter-spacing: 0.03em;
+        }
+
+        .editorial-banner a.editorial-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .editorial-banner {
+                min-height: 320px;
+                padding: 0 6%;
+            }
+
+            .editorial-banner h2 {
+                font-size: 1.6rem;
+            }
+
+            .editorial-banner .editorial-text {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -194,6 +300,19 @@
     </div>
 
 </section>
+
+<!-- Editorial Banner -->
+<section
+    class="editorial-banner"
+    style="background-image: url('images/collection-home-fragrance.png');"
+>
+    <div class="editorial-text">
+        <p class="editorial-eyebrow">The CyRamage Ritual</p>
+        <h2>Light. Breathe. Unwind.</h2>
+        <a href="#shop" class="editorial-link">Discover Home Fragrance</a>
+    </div>
+</section>
+
 <!-- =========================
      BEST SELLERS
 ========================= -->
