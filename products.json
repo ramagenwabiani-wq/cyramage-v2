@@ -22,8 +22,226 @@
       }
     },
     {
+      "id": "bath-oil",
+      "name": "Luxury Bath Oil",
+      "category": "self-care",
+      "priceOld": 10.99,
+      "priceCurrent": 7.99,
+      "priceSave": 3,
+      "description": "A soothing bath oil created to leave your skin feeling soft.",
+      "images": [
+        "bath-oil-front.png",
+        "bath-oil-back.png",
+        "bath-oil-label-closeup.png",
+        "bath-oil-pouring.png",
+        "bath-oil-shine-skin.png",
+        "bath-oil-lifestyle.png"
+      ],
+      "accordion": {
+        "details": "A rich, silky bath oil that disperses into warm water to soften and nourish the skin. Ideal for an indulgent evening soak, leaving skin smooth and lightly fragranced.",
+        "ingredients": "Helianthus Annuus (Sunflower) Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Fragrance, Tocopherol (Vitamin E), Limonene."
+      }
+    },
+    {
+      "id": "bath-bomb",
+      "name": "Luxury Mini Bath Bombs (12 Pack, 6 Scents)",
+      "category": "self-care",
+      "priceOld": 11.99,
+      "priceCurrent": 8.99,
+      "priceSave": 3,
+      "description": "A set of 12 mini bath bombs across 6 fragrances, each one fizzing into a colourful, indulgent soak.",
+      "images": [
+        "mini-bath-bombs-front.png",
+        "mini-bath-bombs-back.png",
+        "mini-bath-bombs-open.png",
+        "mini-bath-bomb-in-water.png",
+        "mini-bath-bombs-lifestyle.png",
+        "mini-bath-bomb-held.png"
+      ],
+      "accordion": {
+        "details": "Drop one into warm water and watch it fizz into a fragrant, colourful soak enriched with moisturising oils. Comes as a set of 12 mini bath bombs across 6 fragrances â a playful, indulgent addition to any self-care routine.",
+        "ingredients": "Sodium Bicarbonate, Citric Acid, Butyrospermum Parkii (Shea) Butter, Fragrance, Colorant, Sodium Laureth Sulfate."
+      }
+    },
+    {
+      "id": "bath-salt",
+      "name": "Luxury Bath Salt",
+      "category": "self-care",
+      "priceOld": 8.99,
+      "priceCurrent": 5.99,
+      "priceSave": 3,
+      "description": "Mineral bath salts designed for a calm and indulgent soak.",
+      "images": [
+        "bath-salt-lavender-front.png",
+        "bath-salt-lavender-open.png",
+        "bath-salt-lavender-ingredients.png",
+        "bath-salt-lavender-pour.png",
+        "bath-salt-lavender-tray-scene.png",
+        "bath-salt-lavender-candle-scene.png"
+      ],
+      "accordion": {
+        "details": "Enriched with natural mineral salts and lavender essential oil, this calming blend transforms your bath into a soothing, detoxifying ritual. Sprinkle generously under warm running water.",
+        "ingredients": "Maris Sal (Sea Salt), Magnesium Sulfate, Lavandula Angustifolia (Lavender) Oil, Fragrance, Colorant."
+      }
+    },
+    {
+      "id": "bath-sponge",
+      "name": "Luxury Bath Sponge",
+      "category": "self-care",
+      "priceOld": 6.99,
+      "priceCurrent": 3.99,
+      "priceSave": 3,
+      "description": "A soft cleansing sponge designed to create a rich lather.",
+      "images": [
+        "bath-sponge-front.png",
+        "bath-sponge-back.png",
+        "bath-sponge-open.png",
+        "bath-sponge-in-use.png",
+        "bath-sponge-hanging.png",
+        "bath-gel-in-bath-sponge.png",
+        "bath-sponge-before-after.png"
+      ],
+      "accordion": {
+        "details": "A soft, gentle sponge designed to work your favourite CyRamage bath gel into a rich, luxurious lather while lightly exfoliating the skin.",
+        "ingredients": "Polyurethane Foam (Body-Safe, Latex-Free)."
+      }
+    },
+    {
+      "id": "bath-tea",
+      "name": "Luxury Bath Tea",
+      "category": "self-care",
+      "priceOld": 8.99,
+      "priceCurrent": 5.99,
+      "priceSave": 3,
+      "description": "A botanical bath blend for a peaceful and comforting experience.",
+      "images": [
+        "bath-tea-front.png",
+        "bath-tea-back.png",
+        "bath-tea-open.png",
+        "bath-tea-pouring.png",
+        "bath-tea-in-bath.png",
+        "bath-tea-lifestyle.png"
+      ],
+      "accordion": {
+        "details": "A botanical bath tea blend of dried flowers and herbs, steeped directly in your bathwater for a peaceful, comforting soak. Each pouch contains reusable bath tea bags.",
+        "ingredients": "Chamomilla Recutita (Chamomile) Flower, Lavandula Angustifolia (Lavender) Flower, Rosa Damascena (Rose) Petals, Calendula Officinalis Flower."
+      }
+    },
+    {
+      "id": "gift-box",
+      "name": "Luxury Gift Box",
+      "category": "gift-sets",
+      "variants": [
+        {
+          "id": "signature-self-care",
+          "name": "The Signature Self-Care Box",
+          "badge": "Best Seller",
+          "priceOld": 26.99,
+          "priceCurrent": 24.99,
+          "priceSave": 2,
+          "description": "Our most complete self-care set, in a black magnetic CyRamage gift box with gold ribbon and a luxury gift card.",
+          "image": "gift-box-signature.png",
+          "contents": [
+            "Bath Shower Gel",
+            "Bath Oil",
+            "Lavender Bath Salt",
+            "Peachy Chamomile Bath Tea",
+            "1 Flower Candle",
+            "Mini 3 Bath Bombs",
+            "Luxury gift card",
+            "Black magnetic CyRamage gift box with gold ribbon"
+          ]
+        },
+        {
+          "id": "relax-unwind",
+          "name": "The Relax & Unwind Box",
+          "priceOld": 24.89,
+          "priceCurrent": 20.67,
+          "priceSave": 4.22,
+          "description": "A calming lavender-led set with a dried lavender bundle. Perfect for birthdays and Mother's Day.",
+          "image": "gift-box-relax-unwind.png",
+          "contents": [
+            "Lavender Bath Salt",
+            "Bath Tea",
+            "1 Flower Candle",
+            "Mini Bath Bombs",
+            "Soft luxury sponge",
+            "Dried lavender bundle"
+          ]
+        },
+        {
+          "id": "spa-night",
+          "name": "The Spa Night Box",
+          "priceOld": 30.50,
+          "priceCurrent": 28.59,
+          "priceSave": 1.91,
+          "description": "An indulgent evening-in set complete with a luxury towel and wooden bath scoop.",
+          "image": "gift-box-spa-night.png",
+          "contents": [
+            "Bath Gel",
+            "Bath Oil",
+            "Bath Salt",
+            "Bath Tea",
+            "1 Flower Candle",
+            "Face sponge",
+            "Wooden scoop",
+            "Luxury towel"
+          ]
+        },
+        {
+          "id": "couples-pamper",
+          "name": "The Couples Pamper Box",
+          "priceOld": 50.98,
+          "priceCurrent": 45.98,
+          "priceSave": 5,
+          "description": "Two of everything, for a shared self-care evening. Perfect for anniversaries and weddings.",
+          "image": "gift-box-couples-pamper.png",
+          "contents": [
+            "2 Bath Gels",
+            "2 Bath Oils",
+            "2 Bath Teas",
+            "2 Bath Salts",
+            "2 Flower Candles",
+            "6 Mini Bath Bombs"
+          ]
+        },
+        {
+          "id": "home-spa-collection",
+          "name": "The Home Spa Collection",
+          "priceOld": 18.97,
+          "priceCurrent": 15.98,
+          "priceSave": 2.99,
+          "description": "A large flower candle with four minis, designed for a relaxing evening at home.",
+          "image": "gift-box-home-spa.png",
+          "contents": [
+            "Flower Candle (large)",
+            "4 Mini Flower Candles",
+            "Bath Salt",
+            "Bath Tea",
+            "Bath Oil"
+          ]
+        },
+        {
+          "id": "luxury-candle",
+          "name": "The Luxury Candle Gift Box",
+          "priceOld": 15.58,
+          "priceCurrent": 12.67,
+          "priceSave": 2.91,
+          "description": "Four flower candles with matches and a satin ribbon finish, ready to gift.",
+          "image": "gift-box-luxury-candle.png",
+          "contents": [
+            "4 Flower Candles",
+            "Matches",
+            "Thank You card",
+            "Care card",
+            "Satin ribbon"
+          ]
+        }
+      ]
+    },
+    {
       "id": "candle",
-      "name": "Flower Candle — Pink Peony (4 Pack)",
+      "name": "Flower Candle â Pink Peony (4 Pack)",
       "category": "home-fragrance",
       "priceOld": 9.99,
       "priceCurrent": 7.99,
@@ -39,7 +257,7 @@
         "bath-candle-collection.png"
       ],
       "accordion": {
-        "details": "Hand-poured in a premium soy wax blend with an elegant flower design. Clean, long-lasting burn of approximately 25–35 hours per candle. Cotton wick. Net wt. (each) approx. 50g / 1.76oz — total net wt. 200g / 7.05oz.",
+        "details": "Hand-poured in a premium soy wax blend with an elegant flower design. Clean, long-lasting burn of approximately 25â35 hours per candle. Cotton wick. Net wt. (each) approx. 50g / 1.76oz â total net wt. 200g / 7.05oz.",
         "ingredients": "Natural Soy Wax, Paraffin Wax, Fragrance (Parfum), Cotton Wick, Dye."
       }
     }
