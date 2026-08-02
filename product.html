@@ -485,6 +485,74 @@
         .product-page-error a {
             color: #d4af37;
         }
+
+        /* Variant selector (used by multi-variant products like Gift Box) */
+        .variant-selector {
+            margin-bottom: 20px;
+        }
+
+        .variant-label {
+            display: block;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 10px;
+        }
+
+        .variant-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .variant-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.85);
+            padding: 9px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+        }
+
+        .variant-btn:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        .variant-btn.active {
+            background: #d4af37;
+            border-color: #d4af37;
+            color: #0d0d0d;
+            font-weight: bold;
+        }
+
+        .variant-badge {
+            display: inline-block;
+            margin-left: 10px;
+            background: #d4af37;
+            color: #0d0d0d;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 2px 9px;
+            border-radius: 999px;
+            vertical-align: middle;
+        }
+
+        .contents-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contents-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .contents-list li:last-child {
+            border-bottom: none;
+        }
     </style>
 
 </head>
@@ -563,6 +631,11 @@
       <div class="product-page-details">
           <h1 id="productName"></h1>
 
+          <div class="variant-selector" id="variantSelector" style="display:none;">
+              <span class="variant-label">Choose your box:</span>
+              <div class="variant-options" id="variantOptions"></div>
+          </div>
+
           <p class="product-page-price">
               <span class="old-price" id="priceOld"></span>
               <span class="current-price" id="priceCurrent"></span>
@@ -595,7 +668,7 @@
 
               <div class="accordion-item">
                   <button type="button" class="accordion-header">
-                      Ingredients
+                      <span id="accordionIngredientsLabel">Ingredients</span>
                       <span class="accordion-icon">+</span>
                   </button>
                   <div class="accordion-panel">
@@ -687,7 +760,9 @@
 <script>
     // ===== Load product data from products.json based on ?id= URL param =====
     let CURRENT_PRODUCT = null;
+    let CURRENT_CART_ITEM = null; // {id, name, price} — what Add to Bag actually adds
     let ALL_PRODUCTS = [];
+    let CURRENT_IMAGES = [];
     let currentImageIndex = 0;
 
     function getProductIdFromUrl() {
@@ -746,43 +821,113 @@
     function renderProduct(product) {
         document.getElementById("pageTitle").textContent = product.name + " | CyRamage";
         document.getElementById("breadcrumbCurrent").textContent = product.name;
-
         document.getElementById("productName").textContent = product.name;
-        document.getElementById("productDescription").textContent = product.description;
 
-        document.getElementById("priceOld").textContent = formatPrice(product.priceOld);
-        document.getElementById("priceCurrent").textContent = formatPrice(product.priceCurrent);
-        document.getElementById("priceSave").textContent = "SAVE £" + product.priceSave;
+        const variantSelector = document.getElementById("variantSelector");
+        const variantOptions = document.getElementById("variantOptions");
 
-        document.getElementById("accordionDetails").textContent = product.accordion.details;
-        document.getElementById("accordionIngredients").textContent = product.accordion.ingredients;
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            variantSelector.style.display = "block";
+            variantOptions.innerHTML = "";
 
-        currentImageIndex = 0;
-        const imageEl = document.getElementById("productImage");
-        imageEl.src = "images/" + product.images[0];
-        imageEl.alt = product.name;
+            const defaultVariant = product.variants.find(function (v) {
+                return v.badge;
+            }) || product.variants[0];
 
-        const dotsContainer = document.getElementById("galleryDots");
-        dotsContainer.innerHTML = "";
-        product.images.forEach(function (_, i) {
-            const dot = document.createElement("span");
-            dot.className = "dot" + (i === 0 ? " active" : "");
-            dot.addEventListener("click", function () {
-                showImage(i);
+            product.variants.forEach(function (variant) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "variant-btn" + (variant.id === defaultVariant.id ? " active" : "");
+                btn.textContent = variant.name;
+                btn.addEventListener("click", function () {
+                    document.querySelectorAll(".variant-btn").forEach(function (b) {
+                        b.classList.remove("active");
+                    });
+                    btn.classList.add("active");
+                    selectVariant(product, variant);
+                });
+                variantOptions.appendChild(btn);
             });
-            dotsContainer.appendChild(dot);
-        });
+
+            selectVariant(product, defaultVariant);
+        } else {
+            variantSelector.style.display = "none";
+            selectVariant(product, null);
+        }
 
         renderRelated(product);
     }
 
-    function showImage(index) {
-        if (!CURRENT_PRODUCT) return;
-        const images = CURRENT_PRODUCT.images;
-        currentImageIndex = (index + images.length) % images.length;
+    function selectVariant(product, variant) {
+        const active = variant || product;
+
+        document.getElementById("productDescription").textContent = active.description;
+
+        document.getElementById("priceOld").textContent = formatPrice(active.priceOld);
+        document.getElementById("priceCurrent").textContent = formatPrice(active.priceCurrent);
+        document.getElementById("priceSave").textContent = "SAVE £" + active.priceSave;
+
+        document.getElementById("accordionDetails").textContent = variant
+            ? active.description
+            : (product.accordion && product.accordion.details) || active.description;
+
+        const ingredientsLabel = document.getElementById("accordionIngredientsLabel");
+        const ingredientsPanel = document.getElementById("accordionIngredients");
+
+        if (variant && Array.isArray(variant.contents)) {
+            ingredientsLabel.textContent = "What's Inside";
+            ingredientsPanel.innerHTML =
+                '<ul class="contents-list">' +
+                variant.contents.map(function (item) {
+                    return "<li>" + item + "</li>";
+                }).join("") +
+                "</ul>";
+        } else {
+            ingredientsLabel.textContent = "Ingredients";
+            ingredientsPanel.textContent = (product.accordion && product.accordion.ingredients) || "";
+        }
+
+        CURRENT_IMAGES = variant ? [variant.image] : product.images;
+        currentImageIndex = 0;
 
         const imageEl = document.getElementById("productImage");
-        imageEl.src = "images/" + images[currentImageIndex];
+        imageEl.src = "images/" + CURRENT_IMAGES[0];
+        imageEl.alt = active.name || product.name;
+
+        const dotsContainer = document.getElementById("galleryDots");
+        const prevBtn = document.getElementById("galleryPrev");
+        const nextBtn = document.getElementById("galleryNext");
+        dotsContainer.innerHTML = "";
+
+        if (CURRENT_IMAGES.length < 2) {
+            dotsContainer.classList.add("hidden");
+            prevBtn.classList.add("hidden");
+            nextBtn.classList.add("hidden");
+        } else {
+            dotsContainer.classList.remove("hidden");
+            prevBtn.classList.remove("hidden");
+            nextBtn.classList.remove("hidden");
+            CURRENT_IMAGES.forEach(function (_, i) {
+                const dot = document.createElement("span");
+                dot.className = "dot" + (i === 0 ? " active" : "");
+                dot.addEventListener("click", function () {
+                    showImage(i);
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        CURRENT_CART_ITEM = variant
+            ? { id: product.id + "-" + variant.id, name: variant.name, price: variant.priceCurrent }
+            : { id: product.id, name: product.name, price: product.priceCurrent };
+    }
+
+    function showImage(index) {
+        if (!CURRENT_IMAGES.length) return;
+        currentImageIndex = (index + CURRENT_IMAGES.length) % CURRENT_IMAGES.length;
+
+        const imageEl = document.getElementById("productImage");
+        imageEl.src = "images/" + CURRENT_IMAGES[currentImageIndex];
 
         document.querySelectorAll("#galleryDots .dot").forEach(function (dot, i) {
             dot.classList.toggle("active", i === currentImageIndex);
@@ -804,16 +949,20 @@
         const related = sameCategory.concat(others).slice(0, 3);
 
         related.forEach(function (p) {
+            const thumb = Array.isArray(p.images) ? p.images[0] : (p.variants && p.variants[0].image);
+            const priceOld = p.priceOld !== undefined ? p.priceOld : p.variants[0].priceOld;
+            const priceCurrent = p.priceCurrent !== undefined ? p.priceCurrent : p.variants[0].priceCurrent;
+
             const card = document.createElement("a");
             card.href = "product.html?id=" + p.id;
             card.className = "related-card";
             card.innerHTML =
-                '<div class="related-card-image"><img src="images/' + p.images[0] + '" alt="' + p.name + '"></div>' +
+                '<div class="related-card-image"><img src="images/' + thumb + '" alt="' + p.name + '"></div>' +
                 '<div class="related-card-details">' +
                     '<h3>' + p.name + '</h3>' +
                     '<p class="related-card-price">' +
-                        '<span class="old-price">' + formatPrice(p.priceOld) + '</span>' +
-                        '<span class="current-price">' + formatPrice(p.priceCurrent) + '</span>' +
+                        '<span class="old-price">' + formatPrice(priceOld) + '</span>' +
+                        '<span class="current-price">' + formatPrice(priceCurrent) + '</span>' +
                     '</p>' +
                 '</div>';
             grid.appendChild(card);
@@ -909,7 +1058,7 @@
 
     if (addToBagBtn) {
         addToBagBtn.addEventListener("click", function () {
-            if (!CURRENT_PRODUCT) return;
+            if (!CURRENT_CART_ITEM) return;
 
             try {
                 const savedCart =
@@ -925,16 +1074,16 @@
                 const quantity = Math.max(1, parseInt(qtyInput ? qtyInput.value : "1", 10) || 1);
 
                 const existing = cart.find(function (item) {
-                    return item.id === CURRENT_PRODUCT.id;
+                    return item.id === CURRENT_CART_ITEM.id;
                 });
 
                 if (existing) {
                     existing.quantity = (Number(existing.quantity) || 1) + quantity;
                 } else {
                     cart.push({
-                        id: CURRENT_PRODUCT.id,
-                        name: CURRENT_PRODUCT.name,
-                        price: CURRENT_PRODUCT.priceCurrent,
+                        id: CURRENT_CART_ITEM.id,
+                        name: CURRENT_CART_ITEM.name,
+                        price: CURRENT_CART_ITEM.price,
                         quantity: quantity
                     });
                 }
@@ -960,4 +1109,3 @@
 </script>
 </body>
 </html>
-
