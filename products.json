@@ -99,7 +99,7 @@
         "bath-sponge-in-use.png",
         "bath-sponge-hanging.png",
         "bath-gel-in-bath-sponge.png",
-        "bath-sponge-before-after.png"
+        "bath-sponge-closeup.png"
       ],
       "accordion": {
         "details": "A soft, gentle sponge designed to work your favourite CyRamage bath gel into a rich, luxurious lather while lightly exfoliating the skin.",
@@ -274,11 +274,7 @@
           "priceSave": 59.18,
           "description": "A delicate tennis-style bracelet in 925 sterling silver, set with 9 round moissanite stones.",
           "images": [
-            "bracelet.png",
-            "bracelet-silver.png",
-            "silver-bracelet.png",
-            "silver-bracelet-m.png",
-            "silver-bracelet-length.png"
+            "bracelet.png"
           ],
           "materials": "925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
         },
@@ -290,10 +286,7 @@
           "priceSave": 59.18,
           "description": "A delicate tennis-style bracelet in gold, set with 9 round moissanite stones.",
           "images": [
-            "bracelet-gold.png",
-            "gold-bracelet.png",
-            "gold-bracelet-m.png",
-            "gold-bracelet-length.png"
+            "bracelet.png"
           ],
           "materials": "Gold-Plated 925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
         }
