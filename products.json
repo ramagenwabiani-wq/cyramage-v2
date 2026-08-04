@@ -1,4 +1,4 @@
-{
+
   "products": [
     {
       "id": "bath-gel",
@@ -236,6 +236,104 @@
             "Care card",
             "Satin ribbon"
           ]
+        }
+      ]
+    },
+    {
+      "id": "earrings",
+      "name": "Gold Oval Bezel Earrings",
+      "category": "accessories",
+      "priceOld": 128.24,
+      "priceCurrent": 55.67,
+      "priceSave": 72.57,
+      "description": "Bezel-set oval stud earrings with a brilliant centre stone, available in gold and silver finishes.",
+      "images": [
+        "gold-earrings.png",
+        "gold-earrings-set.png",
+        "gold-silver-earrings.png",
+        "silver-earrings.png",
+        "gold-earrings-on-ear.png",
+        "gold-earrings-m.png",
+        "silver-earrings-set.png"
+      ],
+      "accordion": {
+        "details": "Elegant bezel-set oval stud earrings finished with a secure butterfly back. Lightweight enough for everyday wear, polished enough for evening.",
+        "ingredients": "Total 1ct/pair, 4x6mm (0.5ct) centre stone. Available in gold-plated and 925 sterling silver finishes."
+      }
+    },
+    {
+      "id": "bracelet",
+      "name": "Luxury Bracelet",
+      "category": "accessories",
+      "variants": [
+        {
+          "id": "silver",
+          "name": "Silver",
+          "priceOld": 106.06,
+          "priceCurrent": 46.88,
+          "priceSave": 59.18,
+          "description": "A delicate tennis-style bracelet in 925 sterling silver, set with 9 round moissanite stones.",
+          "images": [
+            "bracelet.png",
+            "bracelet-silver.png",
+            "silver-bracelet.png",
+            "silver-bracelet-m.png",
+            "silver-bracelet-length.png"
+          ],
+          "materials": "925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "priceOld": 106.06,
+          "priceCurrent": 46.88,
+          "priceSave": 59.18,
+          "description": "A delicate tennis-style bracelet in gold, set with 9 round moissanite stones.",
+          "images": [
+            "bracelet-gold.png",
+            "gold-bracelet.png",
+            "gold-bracelet-m.png",
+            "gold-bracelet-length.png"
+          ],
+          "materials": "Gold-Plated 925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
+        }
+      ]
+    },
+    {
+      "id": "necklace",
+      "name": "Moissanite Station Necklace",
+      "category": "accessories",
+      "variants": [
+        {
+          "id": "gold",
+          "name": "Gold",
+          "priceOld": 105.87,
+          "priceCurrent": 46.15,
+          "priceSave": 59.72,
+          "description": "A delicate station necklace in gold, set with 7 moissanite stones along a fine chain.",
+          "images": [
+            "gold-necklace.png",
+            "gold-necklace-show.png",
+            "gold-necklace-hook.png",
+            "gold-necklace-neck.png",
+            "gold-necklace-m.png"
+          ],
+          "materials": "Real 925 Sterling Silver (gold-plated), Real Moissanite. Size: 0.1ct/3mm x 7pcs. Chain length: 40+5cm."
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "priceOld": 105.87,
+          "priceCurrent": 46.15,
+          "priceSave": 59.72,
+          "description": "A delicate station necklace in silver, set with 7 moissanite stones along a fine chain.",
+          "images": [
+            "silver-necklace.png",
+            "silver-necklace-show.png",
+            "silver-necklace-hook.png",
+            "silver-necklace-neck.png"
+          ],
+          "materials": "Real 925 Sterling Silver, Real Moissanite. Size: 0.1ct/3mm x 7pcs. Chain length: 40+5cm."
         }
       ]
     },
