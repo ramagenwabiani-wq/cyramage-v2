@@ -882,12 +882,17 @@
                     return "<li>" + item + "</li>";
                 }).join("") +
                 "</ul>";
+        } else if (variant && variant.materials) {
+            ingredientsLabel.textContent = "Materials";
+            ingredientsPanel.textContent = variant.materials;
         } else {
             ingredientsLabel.textContent = "Ingredients";
             ingredientsPanel.textContent = (product.accordion && product.accordion.ingredients) || "";
         }
 
-        CURRENT_IMAGES = variant ? [variant.image] : product.images;
+        CURRENT_IMAGES = variant
+            ? (Array.isArray(variant.images) ? variant.images : [variant.image])
+            : product.images;
         currentImageIndex = 0;
 
         const imageEl = document.getElementById("productImage");
@@ -949,7 +954,9 @@
         const related = sameCategory.concat(others).slice(0, 3);
 
         related.forEach(function (p) {
-            const thumb = Array.isArray(p.images) ? p.images[0] : (p.variants && p.variants[0].image);
+            const thumb = Array.isArray(p.images)
+                ? p.images[0]
+                : (p.variants && (Array.isArray(p.variants[0].images) ? p.variants[0].images[0] : p.variants[0].image));
             const priceOld = p.priceOld !== undefined ? p.priceOld : p.variants[0].priceOld;
             const priceCurrent = p.priceCurrent !== undefined ? p.priceCurrent : p.variants[0].priceCurrent;
 
