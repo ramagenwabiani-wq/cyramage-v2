@@ -1,4 +1,4 @@
-
+{
   "products": [
     {
       "id": "bath-gel",
@@ -334,6 +334,67 @@
             "silver-necklace-neck.png"
           ],
           "materials": "Real 925 Sterling Silver, Real Moissanite. Size: 0.1ct/3mm x 7pcs. Chain length: 40+5cm."
+        }
+      ]
+    },
+    {
+      "id": "wristwatch",
+      "name": "Luxury Wristwatch",
+      "category": "accessories",
+      "variants": [
+        {
+          "id": "bronze-bead",
+          "name": "Bronze Bead Bracelet",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "A bead-bracelet watch in a warm bronze finish with a brown dial.",
+          "images": ["wristwatch.png", "wristwatch-coffee.png"]
+        },
+        {
+          "id": "gold-green",
+          "name": "Gold Bead Bracelet, Green Dial",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "A bead-bracelet watch in gold with a green dial.",
+          "images": ["gold-wristwatch-green.png"]
+        },
+        {
+          "id": "gold-white",
+          "name": "Gold Bead Bracelet, White Dial",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "A bead-bracelet watch in gold with a white dial.",
+          "images": ["gold-wristwatch-white.png"]
+        },
+        {
+          "id": "silver-white",
+          "name": "Silver Bead Bracelet, White Dial",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "A bead-bracelet watch in silver with a mother-of-pearl white dial.",
+          "images": ["silver-wristwatch-white.png"]
+        },
+        {
+          "id": "silver-pastel",
+          "name": "Silver Bead Bracelet, Pastel Dials",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "A bead-bracelet watch in silver, available with taupe, mint, or lilac dial.",
+          "images": ["silver-wristwatch-coffee-blue-purple.png"]
+        },
+        {
+          "id": "leather-brown",
+          "name": "Brown Leather Strap",
+          "priceOld": 42.58,
+          "priceCurrent": 34.60,
+          "priceSave": 7.98,
+          "description": "An oval-face watch on a soft brown leather strap with a matching brown dial.",
+          "images": ["leather-wristwatch-coffee.png"]
         }
       ]
     },
