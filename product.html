@@ -923,8 +923,8 @@
         }
 
         CURRENT_CART_ITEM = variant
-            ? { id: product.id + "-" + variant.id, name: variant.name, price: variant.priceCurrent }
-            : { id: product.id, name: product.name, price: product.priceCurrent };
+            ? { id: product.id + "-" + variant.id, name: variant.name, price: variant.priceCurrent, image: "images/" + CURRENT_IMAGES[0] }
+            : { id: product.id, name: product.name, price: product.priceCurrent, image: "images/" + CURRENT_IMAGES[0] };
     }
 
     function showImage(index) {
@@ -1091,6 +1091,7 @@
                         id: CURRENT_CART_ITEM.id,
                         name: CURRENT_CART_ITEM.name,
                         price: CURRENT_CART_ITEM.price,
+                        image: CURRENT_CART_ITEM.image,
                         quantity: quantity
                     });
                 }
