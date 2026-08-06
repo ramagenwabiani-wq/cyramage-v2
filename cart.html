@@ -6,9 +6,121 @@
 
 <title>Shopping Cart | CyRamage</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+    @media (min-width: 769px) {
+        #mainNavigation {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+    }
+
+    #mainNavigation a {
+        position: relative;
+        letter-spacing: 0.03em;
+        transition: color 0.2s ease;
+        padding-bottom: 4px;
+    }
+
+    #mainNavigation a:hover {
+        color: #d4af37;
+    }
+
+    #mainNavigation a.active {
+        color: #d4af37;
+    }
+
+    #mainNavigation a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: #d4af37;
+    }
+
+    .nav-cart {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        margin-left: 8px;
+    }
+
+    .nav-cart svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        fill: none;
+        transition: stroke 0.2s ease;
+    }
+
+    .nav-cart:hover svg {
+        stroke: #d4af37;
+    }
+
+    .nav-cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -10px;
+        background: #d4af37;
+        color: #0d0d0d;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 3px 5px;
+        border-radius: 999px;
+        min-width: 16px;
+        text-align: center;
+    }
+
+    .nav-cart-badge.hidden {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        #mainNavigation.open {
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+            width: 100%;
+            padding: 8px 24px 24px;
+            box-sizing: border-box;
+        }
+
+        #mainNavigation.open a {
+            width: 100%;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 1.05rem;
+        }
+
+        #mainNavigation.open a.active::after {
+            display: none;
+        }
+
+        #mainNavigation.open .nav-cart {
+            border-bottom: none;
+            margin-left: 0;
+            padding: 16px 0;
+            width: auto;
+            gap: 10px;
+        }
+
+        #mainNavigation.open .nav-cart::after {
+            content: "Cart";
+            font-size: 1.05rem;
+            letter-spacing: 0.03em;
+            color: inherit;
+        }
+    }
+
 body{
 background:#0d0d0d;
 color:#fff;
@@ -42,6 +154,7 @@ width:120px;
 height:120px;
 object-fit:cover;
 border-radius:10px;
+background:#fff;
 }
 
 .cart-info{
@@ -119,6 +232,53 @@ text-decoration:none;
 
 <body>
 
+  <div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+  </div>
+
+<header>
+    <div class="navbar">
+
+        <a href="index.html#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
+        </a>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNavigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart active" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
 <section class="cart-page">
 
 <h1>Your Shopping Bag</h1>
@@ -157,7 +317,27 @@ text-decoration:none;
 </section>
 
 <script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mainNavigation.classList.remove("open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+</script>
+
+<script>
 const CART_KEY = "cyramageCart";
+const FALLBACK_IMAGE = "images/logo.png";
 
 let cart = [];
 
@@ -182,12 +362,34 @@ const cartItems = document.getElementById("cartItems");
 const subtotal = document.getElementById("subtotal");
 const total = document.getElementById("total");
 
+function updateNavCartBadge() {
+    try {
+        const count = cart.reduce(function (sum, item) {
+            return sum + (Number(item.quantity) || 1);
+        }, 0);
+
+        const badge = document.getElementById("navCartBadge");
+
+        if (badge) {
+            if (count > 0) {
+                badge.textContent = String(count);
+                badge.classList.remove("hidden");
+            } else {
+                badge.classList.add("hidden");
+            }
+        }
+    } catch (error) {
+        console.error("Unable to update nav cart badge:", error);
+    }
+}
+
 function saveCart() {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
 function renderCart() {
     cartItems.innerHTML = "";
+    updateNavCartBadge();
 
     if (cart.length === 0) {
         cartItems.innerHTML = `
@@ -210,14 +412,18 @@ function renderCart() {
     cart.forEach((item, index) => {
         const price = Number(item.price) || 0;
         const quantity = Number(item.quantity) || 1;
+        // Cart items added from product pages only store {id, name, price, quantity} —
+        // no image field — so fall back to the logo rather than showing a broken icon.
+        const imageSrc = item.image ? item.image : FALLBACK_IMAGE;
 
         orderTotal += price * quantity;
 
         cartItems.innerHTML += `
             <div class="cart-item">
                 <img
-                    src="${item.image}"
+                    src="${imageSrc}"
                     alt="${item.name}"
+                    onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';"
                 >
 
                 <div class="cart-info">
@@ -281,8 +487,6 @@ function removeItem(index) {
 
 renderCart();
 
-    renderCart();
-
 const proceedToCheckout =
     document.getElementById("proceedToCheckout");
 
@@ -306,7 +510,6 @@ proceedToCheckout.addEventListener("click", function (event) {
         `checkout.html?cart=${cartData}`;
 });
 
-</script>
 </script>
 
 </body>
