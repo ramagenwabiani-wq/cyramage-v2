@@ -294,10 +294,10 @@
           "priceSave": 59.18,
           "description": "A delicate tennis-style bracelet in gold, set with 9 round moissanite stones.",
           "images": [
-            "bracelet-gold-1.jpg",
-            "bracelet-gold-2.jpg",
-            "bracelet-gold-3.jpg",
-            "bracelet-gold-4.jpg"
+            "bracelet-gold.png",
+            "gold-bracelet.png",
+            "gold-bracelet-m.png",
+            "gold-bracelet-length.png"
           ],
           "materials": "Gold-Plated 925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
         },
@@ -309,10 +309,10 @@
           "priceSave": 59.18,
           "description": "A delicate tennis-style bracelet in 925 sterling silver, set with 9 round moissanite stones.",
           "images": [
-            "bracelet-silver-1.jpg",
-            "bracelet-silver-2.jpg",
-            "bracelet-silver-3.jpg",
-            "bracelet-silver-4.jpg"
+            "bracelet-silver.png",
+            "silver-bracelet.png",
+            "silver-bracelet-m.png",
+            "silver-bracelet-length.png"
           ],
           "materials": "925 Sterling Silver, Full Moissanite 3mm x 9pcs. Length: 16.5+2cm."
         }
@@ -443,4 +443,3 @@
     }
   ]
 }
-
