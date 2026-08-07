@@ -1,1 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyRamage | Luxury Lifestyle & Self-Care</title>
+
+ <link rel="stylesheet" href="css/style.css?v=9">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        @media (min-width: 769px) {
+            #mainNavigation {
+                display: flex;
+                align-items: center;
+                gap: 36px;
+            }
+        }
+
+        #mainNavigation a {
+            position: relative;
+            letter-spacing: 0.03em;
+            transition: color 0.2s ease;
+            padding-bottom: 4px;
+        }
+
+        #mainNavigation a:hover {
+            color: #d4af37;
+        }
+
+        #mainNavigation a.active {
+            color: #d4af37;
+        }
+
+        #mainNavigation a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: #d4af37;
+        }
+
+        .nav-cart {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+        }
+
+        .nav-cart svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            fill: none;
+            transition: stroke 0.2s ease;
+        }
+
+        .nav-cart:hover svg {
+            stroke: #d4af37;
+        }
+
+        .nav-cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #d4af37;
+            color: #0d0d0d;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 3px 5px;
+            border-radius: 999px;
+            min-width: 16px;
+            text-align: center;
+        }
+
+        .nav-cart-badge.hidden {
+            display: none;
+        }
+
+        /* Mobile menu: stacked, spacious, easy to tap */
+        @media (max-width: 768px) {
+            #mainNavigation.open {
+                display: flex !important;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                width: 100%;
+                padding: 8px 24px 24px;
+                box-sizing: border-box;
+            }
+
+            #mainNavigation.open a {
+                width: 100%;
+                padding: 16px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                font-size: 1.05rem;
+            }
+
+            #mainNavigation.open a.active::after {
+                display: none;
+            }
+
+            #mainNavigation.open .nav-cart {
+                border-bottom: none;
+                margin-left: 0;
+                padding: 16px 0;
+                width: auto;
+                gap: 10px;
+            }
+
+            #mainNavigation.open .nav-cart::after {
+                content: "Cart";
+                font-size: 1.05rem;
+                letter-spacing: 0.03em;
+                color: inherit;
+            }
+        }
+
+        /* Jo Malone-style generous spacing */
+        .collections, .best-sellers, .why-choose, .testimonials {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .editorial-banner {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 8%;
+        }
+
+        .editorial-banner .editorial-text {
+            max-width: 420px;
+        }
+
+        .editorial-banner .editorial-eyebrow {
+            color: #d4af37;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .editorial-banner h2 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .editorial-banner a.editorial-link {
+            color: #d4af37;
+            text-decoration: none;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 4px;
+            font-size: 15px;
+            letter-spacing: 0.03em;
+        }
+
+        .editorial-banner a.editorial-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .editorial-banner {
+                min-height: 320px;
+                padding: 0 6%;
+            }
+
+            .editorial-banner h2 {
+                font-size: 1.6rem;
+            }
+
+            .editorial-banner .editorial-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
+
+<header>
+    <div class="navbar">
+
+        <a href="#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
+        </a>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNavigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
+            <a href="books.html">Digital Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+    <!-- Hero -->
+ <section
+    class="hero"
+    id="home"
+    style="background-image: url('images/hero-lavender-bathsalt.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+ >
+    <div class="hero-text">
+
+        <h1>Luxury for<br>Every Moment</h1>
+
+        <p>
+            Premium self-care, fashion, gifts and curated lifestyle essentials.
+        </p>
+
+        <a href="#collections" class="btn">Shop Collection</a>
+
+    </div>
+</section>
+    
+    <!-- Shop by Collection -->
+<section class="collections" id="collections">
+    <div class="container">
+        <h2>Shop by Collection</h2>
+
+        <div class="collection-grid">
+
+           <a href="self-care.html" class="collection-card">
+    <img src="images/collection-pamper-pouch.png" alt="Pamper Pouch">
+    <h3>Pamper Pouch</h3>
+</a>
+
+            <a href="product.html?id=gift-box" class="collection-card">
+                <img src="images/collection-gift-sets.png" alt="Luxury Gift Sets">
+                <h3>Luxury Gift Sets</h3>
+            </a>
+
+            <a href="product.html?id=candle" class="collection-card">
+                <img src="images/collection-home-fragrance.png" alt="Home Fragrance">
+                <h3>Home Fragrance</h3>
+            </a>
+
+            <a href="#shop" class="collection-card">
+                <img src="images/collection-womens-fashion.png" alt="Women's Fashion">
+                <h3>Women's Fashion</h3>
+            </a>
+
+            <a href="accessories.html" class="collection-card">
+                <img src="images/collection-accessories.png" alt="Luxury Accessories">
+                <h3>Luxury Accessories</h3>
+            </a>
+
+            <a href="books.html" class="collection-card">
+                <img src="images/collection-books-digital.png" alt="Books & Digital">
+                <h3>Books & Digital</h3>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Editorial Banner -->
+<section
+    class="editorial-banner"
+    style="background-image: url('images/collection-home-fragrance.png');"
+>
+    <div class="editorial-text">
+        <p class="editorial-eyebrow">The CyRamage Ritual</p>
+        <h2>Light. Breathe. Unwind.</h2>
+        <a href="product.html?id=candle" class="editorial-link">Discover Home Fragrance</a>
+    </div>
+</section>
+
+<!-- =========================
+     BEST SELLERS
+========================= -->
+
+<section class="best-sellers" id="shop">
+
+    <div class="best-sellers-container">
+
+        <div class="section-heading">
+            <p class="section-label">Customer Favourites</p>
+            <h2>Best Sellers</h2>
+            <p class="section-description">
+                Three CyRamage favourites, loved again and again.
+            </p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- Bath Gel -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Best Seller</span>
+                    <img src="images/bath-gel-front.png" alt="CyRamage Luxury Bath Gel">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Gel</h3>
+
+                    <p class="product-description">
+                        A gentle bath and shower gel for a relaxing self-care routine.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                   <p class="product-price">
+    <span class="old-price">£15.99</span>
+    <span class="current-price">£12.99</span>
+    <span class="save-badge">SAVE £3</span>
+</p>
+
+                   <a href="product.html?id=bath-gel" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Salt -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Customer Favourite</span>
+                    <img src="images/bath-salt.png" alt="CyRamage Luxury Bath Salt">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Salt</h3>
+
+                    <p class="product-description">
+                        Mineral bath salts designed for a calm and indulgent soak.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                  <p class="product-price">
+    <span class="old-price">£8.99</span>
+    <span class="current-price">£5.99</span>
+    <span class="save-badge">SAVE £3</span>
+</p>
+
+                    <a href="product.html?id=bath-salt" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+            <!-- Bath Tea -->
+            <article class="product-card">
+
+                <div class="product-image">
+                    <span class="product-badge">Featured</span>
+                    <img src="images/bath-tea.png" alt="CyRamage Luxury Bath Tea">
+                </div>
+
+                <div class="product-details">
+                    <h3>Luxury Bath Tea</h3>
+
+                    <p class="product-description">
+                        A botanical bath blend for a peaceful and comforting experience.
+                    </p>
+
+                    <div class="product-rating" aria-label="Rated 5 out of 5">
+                        <span>★★★★★</span>
+                    </div>
+
+                   <p class="product-price">
+    <span class="old-price">£8.99</span>
+    <span class="current-price">£5.99</span>
+    <span class="save-badge">SAVE £3</span>
+</p>
+
+                    <a href="product.html?id=bath-tea" class="product-btn">Shop Now</a>
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+<section class="why-choose">
+    <div class="container">
+
+        <h2>Why Choose CyRamage</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">✨</div>
+                <h3>Premium Quality</h3>
+                <p>Luxury products carefully selected to bring elegance and relaxation into your everyday life.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🚚</div>
+                <h3>Fast UK Delivery</h3>
+                <p>Reliable delivery across the UK with carefully packaged orders.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🎁</div>
+                <h3>Perfect Gifts</h3>
+                <p>Beautiful gift collections for birthdays, anniversaries and special occasions.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Secure Shopping</h3>
+                <p>Shop with confidence using trusted and secure payment methods.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Editorial Banner: Women's Fashion -->
+<section
+    class="editorial-banner"
+    style="background-image: url('images/editorial-fashion-dress.png');"
+>
+    <div class="editorial-text">
+        <p class="editorial-eyebrow">Women's Fashion</p>
+        <h2>Effortless. Elegant. Yours.</h2>
+        <a href="#shop" class="editorial-link">Discover Women's Fashion</a>
+    </div>
+</section>
+
+ <section class="testimonials">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Beautiful products and lovely packaging. It felt like opening a luxury gift."</p>
+            <h4>— Emma R.</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"The bath products smell amazing. I'll definitely order again."</p>
+            <h4>— Sarah M.</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent quality and fast delivery. The perfect gift for my wife."</p>
+            <h4>— James T.</h4>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Newsletter -->
+<section class="newsletter">
+    <div class="newsletter-container">
+
+        <p class="newsletter-label">Stay Connected</p>
+
+        <h2>Join the CyRamage Community</h2>
+
+        <p class="newsletter-text">
+            Be the first to discover new collections, exclusive offers
+            and luxury lifestyle inspiration.
+        </p>
+
+        <form
+            class="newsletter-form"
+           action="https://formspree.io/f/xjgnjbzk"
+method="POST"
+            method="POST"
+        >
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required
+            >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New CyRamage Newsletter Signup"
+            >
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- Editorial Banner: Digital Products -->
+<section
+    class="editorial-banner"
+    style="background-image:none; background:#0d0d0d; min-height:auto; display:flex; align-items:center; justify-content:center; gap:48px; padding:60px 8%; flex-wrap:wrap;"
+>
+    <img
+        src="images/100-ai-side-hustles.png"
+        alt="100 AI Side Hustles"
+        style="max-height:340px; width:auto; border-radius:6px; box-shadow:0 20px 40px rgba(0,0,0,0.6); display:block;"
+    >
+    <div class="editorial-text" style="max-width:420px;">
+        <p class="editorial-eyebrow">Books &amp; Digital</p>
+        <h2>100 AI Side Hustles</h2>
+        <a href="books.html" class="editorial-link">Discover Digital Guides</a>
+    </div>
+</section>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
+
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+
+            <a href="self-care.html">Self-Care</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="fashion.html">Women's Fashion</a>
+            <a href="books.html">Books & Digital</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Care</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+
+            <!-- TODO: add real Instagram URL once brand account is live -->
+            <a href="#">Instagram</a>
+            <!-- TODO: add real Facebook URL once brand account is live -->
+            <a href="#">Facebook</a>
+            <!-- TODO: add real Pinterest URL once brand account is live -->
+            <a href="#">Pinterest</a>
+            <!-- TODO: add real TikTok URL once brand account is live -->
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 CyRamage. All Rights Reserved.
+
+    </div>
+
+</footer>
+    
+<script>
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mainNavigation =
+        document.getElementById("mainNavigation");
+
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen =
+                mainNavigation.classList.toggle("open");
+
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+      });
+  mainNavigation.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    mainNavigation.classList.remove("open");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+  });
+}); 
+    }
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
+</script>
+</body>
+</html>
 
