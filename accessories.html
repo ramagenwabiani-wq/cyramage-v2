@@ -3,160 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyRamage | Luxury Accessories</title>
+<title>Luxury Accessories | CyRamage</title>
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+    :root {
+        --ivory: #F5F2EC;
+        --near-black: #1A1816;
+        --olive: #3F4A3A;
+        --bronze: #A68A5B;
+        --grey: #75716A;
+        --line: #E2DDD2;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+        background: var(--ivory) !important;
+        color: var(--near-black) !important;
+        margin: 0;
+    }
+
+    .top-bar { background: var(--near-black) !important; color: var(--ivory) !important; }
+    header, .navbar { background: var(--ivory) !important; border-bottom: 1px solid var(--line); }
+
+    @media (min-width: 769px) {
+        #mainNavigation { display: flex; align-items: center; gap: 36px; }
+    }
+    #mainNavigation a {
+        position: relative; letter-spacing: 0.03em; transition: color 0.2s ease;
+        padding-bottom: 4px; color: var(--near-black) !important; font-size: 0.85rem; text-transform: uppercase;
+    }
+    #mainNavigation a:hover { color: var(--olive) !important; }
+    #mainNavigation a.active { color: var(--olive) !important; }
+    #mainNavigation a.active::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--olive);
+    }
+    .nav-cart { position: relative; display: inline-flex; align-items: center; margin-left: 8px; color: var(--near-black); }
+    .nav-cart svg { width: 22px; height: 22px; stroke: currentColor; fill: none; transition: stroke 0.2s ease; }
+    .nav-cart:hover svg { stroke: var(--olive); }
+    .nav-cart-badge {
+        position: absolute; top: -8px; right: -10px; background: var(--bronze); color: var(--near-black);
+        font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 999px;
+        min-width: 16px; text-align: center;
+    }
+    .nav-cart-badge.hidden { display: none; }
+
+    @media (max-width: 768px) {
+        #mainNavigation.open {
+            display: flex !important; flex-direction: column; align-items: flex-start; gap: 0;
+            width: 100%; padding: 8px 24px 24px; box-sizing: border-box; background: var(--ivory);
+        }
+        #mainNavigation.open a { width: 100%; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+        #mainNavigation.open a.active::after { display: none; }
+        #mainNavigation.open .nav-cart { border-bottom: none; margin-left: 0; padding: 16px 0; width: auto; gap: 10px; }
+        #mainNavigation.open .nav-cart::after { content: "Cart"; font-size: 1.05rem; letter-spacing: 0.03em; color: inherit; }
+    }
+
+    /* Page intro */
+    .page-hero {
+        text-align: center;
+        padding: 100px 8% 70px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .page-hero .eyebrow {
+        display: block; color: var(--bronze); text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        color: var(--near-black) !important;
+        margin-bottom: 18px;
+        line-height: 1.1;
+    }
+    .page-hero p {
+        color: var(--grey);
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    /* Product grid */
+    .accessories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 6% 120px;
+    }
+    .accessory-card {
+        display: block;
+        text-decoration: none;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        transition: border-color 0.2s ease;
+        color: var(--near-black);
+        position: relative;
+    }
+    .accessory-card:hover { border-color: var(--near-black); }
+    .accessory-badge {
+        position: absolute;
+        top: 16px; left: 16px;
+        background: var(--bronze);
+        color: var(--near-black);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        z-index: 2;
+    }
+    .accessory-card-image {
+        background: #ffffff;
+        padding: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--line);
+    }
+    .accessory-card-image img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        display: block;
+    }
+    .accessory-card-details {
+        padding: 20px 22px 26px;
+        text-align: center;
+    }
+    .accessory-card-details h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.15rem;
+        margin: 0 0 12px;
+        color: var(--near-black) !important;
+    }
+    .accessory-price .old-price {
+        text-decoration: line-through;
+        color: var(--grey);
+        font-size: 0.85rem;
+        margin-right: 8px;
+    }
+    .accessory-price .current-price {
+        color: var(--olive);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
+    .footer h3 { color: var(--ivory) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+    .footer a { color: rgba(245,242,236,0.75) !important; }
+    .footer a:hover { color: var(--bronze) !important; }
+    .footer-bottom { color: rgba(245,242,236,0.5) !important; border-top: 1px solid rgba(245,242,236,0.15); }
+</style>
 </head>
-
 <body>
 
-<header class="header">
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
 
-<a href="index.html" class="logo">
-<img src="images/logo.png" alt="CyRamage Logo">
-</a>
+<header>
+    <div class="navbar">
 
-<nav>
+        <a href="index.html#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
+        </a>
 
-<a href="index.html">Home</a>
-<a href="self-care.html">Self-Care</a>
-<a href="accessories.html">Accessories</a>
-<a href="home-fragrance.html">Home Fragrance</a>
-<a href="fashion.html">Fashion</a>
-<a href="books.html">Books & Digital</a>
-<a href="contact.html">Contact</a>
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-</nav>
+        <nav id="mainNavigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
 
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
 </header>
 
-
-<section class="collection-hero" style="position:relative; width:100%; height:320px; overflow:hidden;">
-
-<img src="images/collection-accessories.png" alt="Luxury Accessories" style="width:100%; height:100%; object-fit:cover; display:block;">
-
-<div class="collection-overlay">
-
-<h1>Luxury Accessories Collection</h1>
-
-<p>
-Timeless jewellery and elegant accessories designed
-to elevate every look with effortless luxury.
-</p>
-
-</div>
-
+<section class="page-hero">
+    <span class="eyebrow">CyRamage Signature</span>
+    <h1>Luxury Accessories</h1>
+    <p>Fine jewellery pieces designed to be worn daily &mdash; moissanite, sterling silver, and gold-plated finishes, crafted for everyday elegance.</p>
 </section>
 
+<div class="accessories-grid">
 
-<section class="products">
+    <!-- Necklace -->
+    <a href="product.html?id=necklace" class="accessory-card">
+        <span class="accessory-badge">Best Seller</span>
+        <div class="accessory-card-image">
+            <img src="images/gold-necklace.png" alt="Moissanite Station Necklace">
+        </div>
+        <div class="accessory-card-details">
+            <h3>Moissanite Station Necklace</h3>
+            <p class="accessory-price">
+                <span class="old-price">£105.87</span>
+                <span class="current-price">£46.15</span>
+            </p>
+        </div>
+    </a>
 
-<div class="product-grid">
+    <!-- Earrings -->
+    <a href="product.html?id=earrings" class="accessory-card">
+        <span class="accessory-badge">Popular</span>
+        <div class="accessory-card-image">
+            <img src="images/gold-earrings.png" alt="Oval Bezel Earrings">
+        </div>
+        <div class="accessory-card-details">
+            <h3>Oval Bezel Earrings</h3>
+            <p class="accessory-price">
+                <span class="old-price">£128.24</span>
+                <span class="current-price">£55.67</span>
+            </p>
+        </div>
+    </a>
 
-<!-- Necklace -->
+    <!-- Bracelet -->
+    <a href="product.html?id=bracelet" class="accessory-card">
+        <span class="accessory-badge">Luxury</span>
+        <div class="accessory-card-image">
+            <img src="images/bracelet-gold.png" alt="Moissanite Tennis Bracelet">
+        </div>
+        <div class="accessory-card-details">
+            <h3>Moissanite Tennis Bracelet</h3>
+            <p class="accessory-price">
+                <span class="old-price">£106.06</span>
+                <span class="current-price">£46.88</span>
+            </p>
+        </div>
+    </a>
 
-<article class="product-card">
-
-<div class="product-image">
-
-<span class="product-badge">Best Seller</span>
-
-<img src="images/gold-necklace.png" alt="Gold Necklace">
-
-</div>
-
-<div class="product-details">
-
-<h3>Gold Necklace</h3>
-
-<p>
-Elegant gold necklace crafted to complete every outfit.
-</p>
-
-<a href="product.html?id=necklace" class="product-btn">Shop Now</a>
-
-</div>
-
-</article>
-
-
-<!-- Earrings -->
-
-<article class="product-card">
-
-<div class="product-image">
-
-<span class="product-badge">Popular</span>
-
-<img src="images/gold-earrings.png" alt="Gold Earrings">
-
-</div>
-
-<div class="product-details">
-
-<h3>Gold Earrings</h3>
-
-<p>
-Beautiful luxury earrings perfect for every occasion.
-</p>
-
-<a href="product.html?id=earrings" class="product-btn">Shop Now</a>
-
-</div>
-
-</article>
-
-
-<!-- Bracelet -->
-
-<article class="product-card">
-
-<div class="product-image">
-
-<span class="product-badge">Luxury</span>
-
-<img src="images/bracelet.png" alt="Bracelet">
+    <!-- Wristwatch -->
+    <a href="product.html?id=wristwatch" class="accessory-card">
+        <span class="accessory-badge">Featured</span>
+        <div class="accessory-card-image">
+            <img src="images/wristwatch.png" alt="Luxury Wristwatch">
+        </div>
+        <div class="accessory-card-details">
+            <h3>Luxury Wristwatch</h3>
+            <p class="accessory-price">
+                <span class="old-price">£42.58</span>
+                <span class="current-price">£34.60</span>
+            </p>
+        </div>
+    </a>
 
 </div>
 
-<div class="product-details">
+<footer class="footer">
 
-<h3>Luxury Bracelet</h3>
+    <div class="footer-container">
 
-<p>
-A timeless bracelet with a sophisticated finish.
-</p>
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
 
-<a href="product.html?id=bracelet" class="product-btn">Shop Now</a>
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
 
-</div>
+        <div class="footer-column">
+            <h3>Shop</h3>
 
-</article>
+            <a href="self-care.html">Self-Care</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="digital-products.html">Books & Digital</a>
+        </div>
 
+        <div class="footer-column">
+            <h3>Customer Care</h3>
 
-<!-- Watch -->
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
 
-<article class="product-card">
+        <div class="footer-column">
+            <h3>Follow Us</h3>
 
-<div class="product-image">
+            <!-- TODO: add real Instagram URL once brand account is live -->
+            <a href="#">Instagram</a>
+            <!-- TODO: add real Facebook URL once brand account is live -->
+            <a href="#">Facebook</a>
+            <!-- TODO: add real Pinterest URL once brand account is live -->
+            <a href="#">Pinterest</a>
+            <!-- TODO: add real TikTok URL once brand account is live -->
+            <a href="#">TikTok</a>
+        </div>
 
-<span class="product-badge">Featured</span>
+    </div>
 
-<img src="images/wristwatch.png" alt="Luxury Wristwatch">
+    <div class="footer-bottom">
 
-</div>
+        © 2026 CyRamage. All Rights Reserved.
 
-<div class="product-details">
+    </div>
 
-<h3>Luxury Wristwatch</h3>
+</footer>
 
-<p>
-Premium timepiece combining elegance and precision.
-</p>
+<script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
 
-<a href="product.html?id=wristwatch" class="product-btn">Shop Now</a>
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mainNavigation.classList.remove("open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
+</script>
 
 </body>
-
 </html>
