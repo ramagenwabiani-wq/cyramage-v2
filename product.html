@@ -10,6 +10,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
+        /* ============================================= */
+        /* RESTYLED — ivory / near-black / olive / bronze  */
+        /* Matches the rebuilt index.html. JS untouched.    */
+        /* ============================================= */
+        :root {
+            --ivory: #F5F2EC;
+            --near-black: #1A1816;
+            --olive: #3F4A3A;
+            --bronze: #A68A5B;
+            --grey: #75716A;
+            --line: #E2DDD2;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: var(--ivory) !important;
+            color: var(--near-black) !important;
+        }
+
+        .top-bar {
+            background: var(--near-black) !important;
+            color: var(--ivory) !important;
+        }
+
+        header, .navbar {
+            background: var(--ivory) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
         @media (min-width: 769px) {
             #mainNavigation {
                 display: flex;
@@ -23,14 +53,17 @@
             letter-spacing: 0.03em;
             transition: color 0.2s ease;
             padding-bottom: 4px;
+            color: var(--near-black) !important;
+            font-size: 0.85rem;
+            text-transform: uppercase;
         }
 
         #mainNavigation a:hover {
-            color: #d4af37;
+            color: var(--olive) !important;
         }
 
         #mainNavigation a.active {
-            color: #d4af37;
+            color: var(--olive) !important;
         }
 
         #mainNavigation a.active::after {
@@ -40,7 +73,7 @@
             right: 0;
             bottom: 0;
             height: 1px;
-            background: #d4af37;
+            background: var(--olive);
         }
 
         .nav-cart {
@@ -48,6 +81,7 @@
             display: inline-flex;
             align-items: center;
             margin-left: 8px;
+            color: var(--near-black);
         }
 
         .nav-cart svg {
@@ -59,15 +93,15 @@
         }
 
         .nav-cart:hover svg {
-            stroke: #d4af37;
+            stroke: var(--olive);
         }
 
         .nav-cart-badge {
             position: absolute;
             top: -8px;
             right: -10px;
-            background: #d4af37;
-            color: #0d0d0d;
+            background: var(--bronze);
+            color: var(--near-black);
             font-size: 11px;
             font-weight: 700;
             line-height: 1;
@@ -90,12 +124,13 @@
                 width: 100%;
                 padding: 8px 24px 24px;
                 box-sizing: border-box;
+                background: var(--ivory);
             }
 
             #mainNavigation.open a {
                 width: 100%;
                 padding: 16px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                border-bottom: 1px solid var(--line);
                 font-size: 1.05rem;
             }
 
@@ -120,50 +155,55 @@
         }
 
         .breadcrumb {
-            max-width: 1100px;
-            margin: 32px auto 0;
-            padding: 0 24px;
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
+            max-width: 1160px;
+            margin: 40px auto 0;
+            padding: 0 6%;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+            color: var(--grey);
         }
 
         .breadcrumb a {
-            color: rgba(255,255,255,0.6);
+            color: var(--grey);
             text-decoration: none;
         }
 
         .breadcrumb a:hover {
-            color: #d4af37;
+            color: var(--olive);
         }
 
         .breadcrumb .current {
-            color: #d4af37;
+            color: var(--near-black);
         }
 
+        /* ============================================= */
+        /* Product layout — more air, sharper edges         */
+        /* ============================================= */
         .product-page {
-            max-width: 1100px;
-            margin: 32px auto 100px;
-            padding: 0 24px;
+            max-width: 1160px;
+            margin: 40px auto 130px;
+            padding: 0 6%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 80px;
             align-items: flex-start;
         }
 
         @media (max-width: 860px) {
             .product-page {
                 grid-template-columns: 1fr;
-                gap: 32px;
+                gap: 40px;
             }
         }
 
         .product-page-image {
             background: #ffffff;
-            border-radius: 8px;
+            border: 1px solid var(--line);
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px;
+            padding: 60px;
             position: relative;
         }
 
@@ -178,12 +218,12 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            background: rgba(13, 13, 13, 0.55);
+            background: rgba(26, 24, 22, 0.6);
             border: none;
-            color: #ffffff;
+            color: var(--ivory);
             font-size: 18px;
             cursor: pointer;
             display: flex;
@@ -193,8 +233,8 @@
         }
 
         .gallery-arrow:hover {
-            background: rgba(212, 175, 55, 0.9);
-            color: #0d0d0d;
+            background: var(--bronze);
+            color: var(--near-black);
         }
 
         .gallery-arrow.prev {
@@ -211,7 +251,7 @@
 
         .gallery-dots {
             position: absolute;
-            bottom: 14px;
+            bottom: 18px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -219,90 +259,103 @@
         }
 
         .gallery-dots .dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            background: rgba(13, 13, 13, 0.25);
+            background: var(--line);
             cursor: pointer;
             transition: background 0.2s ease;
         }
 
         .gallery-dots .dot.active {
-            background: #d4af37;
+            background: var(--bronze);
         }
 
         .gallery-dots.hidden {
             display: none;
         }
 
+        .product-page-details .eyebrow-static {
+            display: block;
+            color: var(--bronze);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-size: 0.75rem;
+            margin-bottom: 14px;
+        }
+
         .product-page-details h1 {
-            font-size: 2rem;
-            margin: 0 0 16px;
-            color: #ffffff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3rem;
+            margin: 0 0 18px;
+            color: var(--near-black) !important;
+            line-height: 1.1;
         }
 
         .product-page-price {
-            margin: 0 0 20px;
-            font-size: 1.3rem;
+            margin: 0 0 22px;
+            font-size: 1.2rem;
         }
 
         .product-page-price .old-price {
             text-decoration: line-through;
-            color: rgba(255,255,255,0.4);
-            font-size: 1rem;
+            color: var(--grey);
+            font-size: 0.95rem;
             margin-right: 10px;
         }
 
         .product-page-price .current-price {
-            color: #d4af37;
-            font-weight: bold;
+            color: var(--olive);
+            font-weight: 600;
         }
 
         .product-page-price .save-badge {
             display: inline-block;
             margin-left: 12px;
-            background: #d4af37;
-            color: #0d0d0d;
-            font-size: 12px;
-            font-weight: bold;
+            background: transparent;
+            color: var(--grey);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
             padding: 3px 10px;
+            border: 1px solid var(--line);
             border-radius: 999px;
             vertical-align: middle;
         }
 
         .product-page-description {
-            color: rgba(255,255,255,0.8);
-            line-height: 1.6;
-            margin-bottom: 30px;
+            color: var(--grey);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
         }
 
         .qty-row {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 26px;
         }
 
         .qty-selector {
             display: flex;
             align-items: center;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 6px;
+            border: 1px solid var(--line);
             overflow: hidden;
         }
 
         .qty-selector button {
             background: transparent;
             border: none;
-            color: #ffffff;
+            color: var(--near-black);
             width: 36px;
-            height: 40px;
+            height: 42px;
             font-size: 18px;
             cursor: pointer;
         }
 
         .qty-selector button:hover {
-            color: #d4af37;
+            color: var(--olive);
         }
 
         .qty-selector input {
@@ -310,10 +363,10 @@
             text-align: center;
             background: transparent;
             border: none;
-            border-left: 1px solid rgba(255,255,255,0.2);
-            border-right: 1px solid rgba(255,255,255,0.2);
-            color: #ffffff;
-            height: 40px;
+            border-left: 1px solid var(--line);
+            border-right: 1px solid var(--line);
+            color: var(--near-black);
+            height: 42px;
             font-size: 15px;
         }
 
@@ -321,47 +374,56 @@
             display: block;
             width: 100%;
             box-sizing: border-box;
-            padding: 16px;
-            border: 0;
-            border-radius: 8px;
-            background: #d4af37;
-            color: #080808;
+            padding: 17px;
+            border: 1px solid var(--near-black);
+            border-radius: 0;
+            background: var(--near-black);
+            color: var(--ivory);
             text-align: center;
-            font-weight: bold;
-            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
             cursor: pointer;
             margin-bottom: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .add-to-bag-btn:hover {
+            background: var(--olive);
+            border-color: var(--olive);
         }
 
         .add-to-bag-btn:disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
         }
 
         .add-to-bag-confirm {
             font-size: 13px;
-            color: #d4af37;
+            color: var(--olive);
             min-height: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 34px;
         }
 
         .accordion {
-            border-top: 1px solid rgba(255,255,255,0.15);
+            border-top: 1px solid var(--line);
         }
 
         .accordion-item {
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid var(--line);
         }
 
         .accordion-header {
             width: 100%;
             background: transparent;
             border: none;
-            color: #ffffff;
+            color: var(--near-black);
             text-align: left;
-            padding: 18px 0;
-            font-size: 15px;
-            letter-spacing: 0.03em;
+            padding: 19px 0;
+            font-size: 0.88rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -369,11 +431,12 @@
         }
 
         .accordion-header:hover {
-            color: #d4af37;
+            color: var(--olive);
         }
 
         .accordion-icon {
             transition: transform 0.2s ease;
+            color: var(--bronze);
         }
 
         .accordion-item.open .accordion-icon {
@@ -391,29 +454,33 @@
         }
 
         .accordion-panel-inner {
-            padding: 0 0 20px;
-            color: rgba(255,255,255,0.75);
-            line-height: 1.6;
-            font-size: 14px;
+            padding: 0 0 22px;
+            color: var(--grey);
+            line-height: 1.7;
+            font-size: 0.9rem;
         }
 
+        /* ============================================= */
+        /* Related products                                 */
+        /* ============================================= */
         .related-products {
-            max-width: 1100px;
-            margin: 0 auto 100px;
-            padding: 0 24px;
+            max-width: 1160px;
+            margin: 0 auto 130px;
+            padding: 0 6%;
         }
 
         .related-products h2 {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            color: var(--near-black) !important;
+            margin-bottom: 44px;
             text-align: center;
         }
 
         .related-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 32px;
         }
 
         @media (max-width: 768px) {
@@ -425,23 +492,24 @@
         .related-card {
             display: block;
             text-decoration: none;
-            background: #171717;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 10px;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 0;
             overflow: hidden;
             transition: border-color 0.2s ease;
         }
 
         .related-card:hover {
-            border-color: #d4af37;
+            border-color: var(--near-black);
         }
 
         .related-card-image {
             background: #ffffff;
-            padding: 24px;
+            padding: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-bottom: 1px solid var(--line);
         }
 
         .related-card-image img {
@@ -451,51 +519,54 @@
         }
 
         .related-card-details {
-            padding: 16px 18px 20px;
+            padding: 18px 20px 22px;
         }
 
         .related-card-details h3 {
-            font-size: 1rem;
-            color: #ffffff;
-            margin: 0 0 8px;
+            font-size: 0.98rem;
+            color: var(--near-black) !important;
+            margin: 0 0 10px;
+            font-weight: 500;
         }
 
         .related-card-price .old-price {
             text-decoration: line-through;
-            color: rgba(255,255,255,0.4);
+            color: var(--grey);
             font-size: 13px;
             margin-right: 8px;
         }
 
         .related-card-price .current-price {
-            color: #d4af37;
-            font-weight: bold;
+            color: var(--olive);
+            font-weight: 600;
             font-size: 14px;
         }
 
         /* Loading / not-found states */
         .product-page-loading, .product-page-error {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 0 24px;
+            max-width: 1160px;
+            margin: 100px auto;
+            padding: 0 6%;
             text-align: center;
-            color: rgba(255,255,255,0.7);
+            color: var(--grey);
         }
 
         .product-page-error a {
-            color: #d4af37;
+            color: var(--olive);
         }
 
-        /* Variant selector (used by multi-variant products like Gift Box) */
+        /* Variant selector */
         .variant-selector {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .variant-label {
             display: block;
-            font-size: 13px;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 10px;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--grey);
+            margin-bottom: 12px;
         }
 
         .variant-options {
@@ -506,34 +577,34 @@
 
         .variant-btn {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.25);
-            color: rgba(255,255,255,0.85);
-            padding: 9px 14px;
-            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--near-black);
+            padding: 9px 16px;
+            border-radius: 0;
             font-size: 13px;
             cursor: pointer;
             transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
         }
 
         .variant-btn:hover {
-            border-color: #d4af37;
-            color: #d4af37;
+            border-color: var(--olive);
+            color: var(--olive);
         }
 
         .variant-btn.active {
-            background: #d4af37;
-            border-color: #d4af37;
-            color: #0d0d0d;
-            font-weight: bold;
+            background: var(--near-black);
+            border-color: var(--near-black);
+            color: var(--ivory);
+            font-weight: 600;
         }
 
         .variant-badge {
             display: inline-block;
             margin-left: 10px;
-            background: #d4af37;
-            color: #0d0d0d;
+            background: var(--bronze);
+            color: var(--near-black);
             font-size: 11px;
-            font-weight: bold;
+            font-weight: 600;
             padding: 2px 9px;
             border-radius: 999px;
             vertical-align: middle;
@@ -546,12 +617,34 @@
         }
 
         .contents-list li {
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 7px 0;
+            border-bottom: 1px solid var(--line);
         }
 
         .contents-list li:last-child {
             border-bottom: none;
+        }
+
+        /* Footer, matched to rebuilt site */
+        .footer {
+            background: var(--near-black) !important;
+            color: rgba(245,242,236,0.7) !important;
+        }
+        .footer h3 {
+            color: var(--ivory) !important;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .footer a {
+            color: rgba(245,242,236,0.75) !important;
+        }
+        .footer a:hover {
+            color: var(--bronze) !important;
+        }
+        .footer-bottom {
+            color: rgba(245,242,236,0.5) !important;
+            border-top: 1px solid rgba(245,242,236,0.15);
         }
     </style>
 
@@ -588,6 +681,7 @@
             <a href="index.html#home">Home</a>
             <a href="index.html#shop" class="active">Shop</a>
             <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
 
@@ -629,10 +723,11 @@
       </div>
 
       <div class="product-page-details">
+          <span class="eyebrow-static">CyRamage Signature</span>
           <h1 id="productName"></h1>
 
           <div class="variant-selector" id="variantSelector" style="display:none;">
-              <span class="variant-label">Choose your box:</span>
+              <span class="variant-label">Choose your box</span>
               <div class="variant-options" id="variantOptions"></div>
           </div>
 
@@ -684,8 +779,8 @@
                   <div class="accordion-panel">
                       <div class="accordion-panel-inner">
                           Free UK delivery on orders over £50. Standard delivery 3&ndash;5 working days.
-                          See our <a href="delivery.html" style="color:#d4af37;">Delivery</a> and
-                          <a href="returns.html" style="color:#d4af37;">Returns</a> pages for full details.
+                          See our <a href="delivery.html" style="color:var(--olive);">Delivery</a> and
+                          <a href="returns.html" style="color:var(--olive);">Returns</a> pages for full details.
                       </div>
                   </div>
               </div>
@@ -721,8 +816,8 @@
             <a href="self-care.html">Self-Care</a>
             <a href="accessories.html">Accessories</a>
             <a href="home-fragrance.html">Home Fragrance</a>
-            <a href="fashion.html">Women's Fashion</a>
-            <a href="books.html">Books & Digital</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="digital-products.html">Books & Digital</a>
         </div>
 
         <div class="footer-column">
@@ -1117,4 +1212,3 @@
 </script>
 </body>
 </html>
-
