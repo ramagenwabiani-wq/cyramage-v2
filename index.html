@@ -24,6 +24,8 @@
             --grey: #75716A;
         }
 
+        html { scroll-behavior: smooth; }
+
         * { box-sizing: border-box; }
 
         body {
@@ -46,24 +48,29 @@
             align-items: center;
             justify-content: space-between;
             padding: 26px 6%;
-            background: transparent;
+            background: transparent !important;
             transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
         }
         .site-nav.scrolled {
-            background: var(--ivory);
+            background: var(--ivory) !important;
             padding: 16px 6%;
             box-shadow: 0 1px 0 rgba(26,24,22,0.08);
         }
         .site-nav .logo-mark {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            letter-spacing: 0.04em;
-            color: #fff;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            transition: color 0.35s ease;
         }
-        .site-nav.scrolled .logo-mark { color: var(--near-black); }
-        .site-nav .logo-mark img { display: none; }
+        .site-nav .logo-mark img {
+            display: block;
+            height: 34px;
+            width: auto;
+            filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0,0,0,0.35));
+            transition: filter 0.35s ease;
+        }
+        .site-nav.scrolled .logo-mark img {
+            filter: none;
+        }
 
         .site-nav-links {
             display: flex;
@@ -163,6 +170,10 @@
             z-index: 2; color: rgba(255,255,255,0.75); font-size: 0.7rem;
             letter-spacing: 0.1em; text-transform: uppercase;
             display: flex; flex-direction: column; align-items: center; gap: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            background: none;
+            border: none;
         }
         .scroll-cue::after {
             content: ""; width: 1px; height: 34px; background: rgba(255,255,255,0.6);
@@ -438,7 +449,7 @@
 
 <!-- Transparent nav that solidifies on scroll -->
 <nav class="site-nav" id="siteNav">
-    <a href="#top" class="logo-mark">CyRamage</a>
+    <a href="#top" class="logo-mark"><img src="images/logo.png" alt="CyRamage"></a>
     <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
     </button>
@@ -469,7 +480,7 @@
         <p>Premium self-care, oral care rituals, gifts and curated lifestyle essentials — crafted for a calmer, more intentional life.</p>
         <a href="#spotlight" class="btn-primary">Shop the Collection</a>
     </div>
-    <div class="scroll-cue">Scroll</div>
+    <a href="#rituals" class="scroll-cue">Scroll</a>
 </section>
 
 <!-- Manifesto: single statement, generous whitespace -->
@@ -694,4 +705,3 @@
 
 </body>
 </html>
-
