@@ -3,165 +3,451 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Care Collection | CyRamage</title>
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<title>CyRamage | Self-Care Collection</title>
+<style>
+    :root {
+        --ivory: #F5F2EC;
+        --near-black: #1A1816;
+        --olive: #3F4A3A;
+        --bronze: #A68A5B;
+        --grey: #75716A;
+        --line: #E2DDD2;
+    }
 
-<link rel="stylesheet" href="css/style.css">
+    * { box-sizing: border-box; }
+
+    body {
+        background: var(--ivory) !important;
+        color: var(--near-black) !important;
+        margin: 0;
+    }
+
+    .top-bar { background: var(--near-black) !important; color: var(--ivory) !important; }
+    header, .navbar { background: var(--ivory) !important; border-bottom: 1px solid var(--line); }
+
+    @media (min-width: 769px) {
+        #mainNavigation { display: flex; align-items: center; gap: 36px; }
+    }
+    #mainNavigation a {
+        position: relative; letter-spacing: 0.03em; transition: color 0.2s ease;
+        padding-bottom: 4px; color: var(--near-black) !important; font-size: 0.85rem; text-transform: uppercase;
+    }
+    #mainNavigation a:hover { color: var(--olive) !important; }
+    #mainNavigation a.active { color: var(--olive) !important; }
+    #mainNavigation a.active::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--olive);
+    }
+    .nav-cart { position: relative; display: inline-flex; align-items: center; margin-left: 8px; color: var(--near-black); }
+    .nav-cart svg { width: 22px; height: 22px; stroke: currentColor; fill: none; transition: stroke 0.2s ease; }
+    .nav-cart:hover svg { stroke: var(--olive); }
+    .nav-cart-badge {
+        position: absolute; top: -8px; right: -10px; background: var(--bronze); color: var(--near-black);
+        font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 999px;
+        min-width: 16px; text-align: center;
+    }
+    .nav-cart-badge.hidden { display: none; }
+
+    @media (max-width: 768px) {
+        #mainNavigation.open {
+            display: flex !important; flex-direction: column; align-items: flex-start; gap: 0;
+            width: 100%; padding: 8px 24px 24px; box-sizing: border-box; background: var(--ivory);
+        }
+        #mainNavigation.open a { width: 100%; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+        #mainNavigation.open a.active::after { display: none; }
+        #mainNavigation.open .nav-cart { border-bottom: none; margin-left: 0; padding: 16px 0; width: auto; gap: 10px; }
+        #mainNavigation.open .nav-cart::after { content: "Cart"; font-size: 1.05rem; letter-spacing: 0.03em; color: inherit; }
+    }
+
+    /* Page intro */
+    .page-hero {
+        text-align: center;
+        padding: 100px 8% 70px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .page-hero .eyebrow {
+        display: block; color: var(--bronze); text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        color: var(--near-black) !important;
+        margin-bottom: 18px;
+        line-height: 1.1;
+    }
+    .page-hero p {
+        color: var(--grey);
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    /* Product grid */
+    .selfcare-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 6% 120px;
+    }
+    .sc-card {
+        display: block;
+        text-decoration: none;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        transition: border-color 0.2s ease;
+        color: var(--near-black);
+        position: relative;
+    }
+    .sc-card:hover { border-color: var(--near-black); }
+    .sc-badge {
+        position: absolute;
+        top: 16px; left: 16px;
+        background: var(--bronze);
+        color: var(--near-black);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        z-index: 2;
+    }
+    .sc-card-image {
+        background: #ffffff;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--line);
+        aspect-ratio: 1;
+    }
+    .sc-card-image img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        display: block;
+    }
+    .sc-card-details {
+        padding: 20px 22px 26px;
+        text-align: center;
+    }
+    .sc-card-details h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        margin: 0 0 8px;
+        color: var(--near-black) !important;
+    }
+    .sc-card-details .desc {
+        color: var(--grey);
+        font-size: 0.82rem;
+        line-height: 1.5;
+        margin-bottom: 14px;
+        min-height: 38px;
+    }
+    .sc-price .old-price {
+        text-decoration: line-through;
+        color: var(--grey);
+        font-size: 0.85rem;
+        margin-right: 8px;
+    }
+    .sc-price .current-price {
+        color: var(--olive);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
+    .footer h3 { color: var(--ivory) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+    .footer a { color: rgba(245,242,236,0.75) !important; }
+    .footer a:hover { color: var(--bronze) !important; }
+    .footer-bottom { color: rgba(245,242,236,0.5) !important; border-top: 1px solid rgba(245,242,236,0.15); }
+</style>
 </head>
-
 <body>
 
-<header class="header">
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
 
-<a href="index.html" class="logo">
-<img src="images/logo.png" alt="CyRamage">
-</a>
+<header>
+    <div class="navbar">
 
-<nav>
+        <a href="index.html#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
+        </a>
 
-<a href="index.html">Home</a>
-<a href="self-care.html">Self-Care</a>
-<a href="collections.html">Collections</a>
-<a href="contact.html">Contact</a>
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-</nav>
+        <nav id="mainNavigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
 
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
 </header>
 
-<section class="collection-hero" style="position:relative; width:100%; height:320px; overflow:hidden;">
+<section class="page-hero">
+    <span class="eyebrow">CyRamage Signature</span>
+    <h1>Self-Care Collection</h1>
+    <p>Premium bath and body essentials, crafted to turn an ordinary routine into a daily ritual of calm.</p>
+</section>
 
-<img src="images/collection-pamper-pouch.png" alt="Luxury Self Care" style="width:100%; height:100%; object-fit:cover; display:block;">
+<div class="selfcare-grid">
 
-<div class="collection-overlay">
+    <a href="product.html?id=bath-gel" class="sc-card">
+        <div class="sc-card-image">
+            <img src="images/bath-gel-front.png" alt="Luxury Bath Gel">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Bath Gel</h3>
+            <p class="desc">A gentle cleansing bath and shower gel.</p>
+            <p class="sc-price">
+                <span class="old-price">£15.99</span>
+                <span class="current-price">£12.99</span>
+            </p>
+        </div>
+    </a>
 
-<h1>Luxury Self-Care Collection</h1>
+    <a href="product.html?id=bath-oil" class="sc-card">
+        <div class="sc-card-image">
+            <img src="images/bath-oil-front.png" alt="Luxury Bath Oil">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Bath Oil</h3>
+            <p class="desc">Nourishing bath oil for silky soft skin.</p>
+            <p class="sc-price">
+                <span class="old-price">£10.99</span>
+                <span class="current-price">£7.99</span>
+            </p>
+        </div>
+    </a>
 
-<p>
-Beautifully crafted bath and body products
-to transform every bath into a luxurious
-spa experience.
-</p>
+    <a href="product.html?id=bath-salt" class="sc-card">
+        <div class="sc-card-image">
+            <img src="images/bath-salt-lavender-front.png" alt="Luxury Bath Salt">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Bath Salt</h3>
+            <p class="desc">Relaxing mineral bath salts.</p>
+            <p class="sc-price">
+                <span class="old-price">£8.99</span>
+                <span class="current-price">£5.99</span>
+            </p>
+        </div>
+    </a>
+
+    <a href="product.html?id=bath-tea" class="sc-card">
+        <div class="sc-card-image">
+            <img src="images/bath-tea-front.png" alt="Luxury Bath Tea">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Bath Tea</h3>
+            <p class="desc">Botanical bath tea for ultimate relaxation.</p>
+            <p class="sc-price">
+                <span class="old-price">£8.99</span>
+                <span class="current-price">£5.99</span>
+            </p>
+        </div>
+    </a>
+
+    <a href="product.html?id=bath-bomb" class="sc-card">
+        <span class="sc-badge">12 Pack</span>
+        <div class="sc-card-image">
+            <img src="images/mini-bath-bombs-front.png" alt="Luxury Mini Bath Bombs">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Mini Bath Bombs</h3>
+            <p class="desc">Fizzing bath bombs infused with calming fragrance.</p>
+            <p class="sc-price">
+                <span class="old-price">£11.99</span>
+                <span class="current-price">£8.99</span>
+            </p>
+        </div>
+    </a>
+
+    <a href="product.html?id=bath-sponge" class="sc-card">
+        <span class="sc-badge">Essential</span>
+        <div class="sc-card-image">
+            <img src="images/bath-sponge-front.png" alt="Luxury Bath Sponge">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Bath Sponge</h3>
+            <p class="desc">Soft konjac sponge for a spa-like cleanse.</p>
+            <p class="sc-price">
+                <span class="old-price">£6.99</span>
+                <span class="current-price">£3.99</span>
+            </p>
+        </div>
+    </a>
+
+    <a href="product.html?id=candle" class="sc-card">
+        <span class="sc-badge">Luxury</span>
+        <div class="sc-card-image">
+            <img src="images/bath-candle-front.png" alt="Flower Candle">
+        </div>
+        <div class="sc-card-details">
+            <h3>Flower Candle</h3>
+            <p class="desc">Elegant floral candle with a soothing fragrance.</p>
+            <p class="sc-price">
+                <span class="old-price">£9.99</span>
+                <span class="current-price">£7.99</span>
+            </p>
+        </div>
+    </a>
+
+    <a href="product.html?id=gift-box" class="sc-card">
+        <span class="sc-badge">Gift Set</span>
+        <div class="sc-card-image">
+            <img src="images/gift-box-signature.png" alt="Luxury Gift Box">
+        </div>
+        <div class="sc-card-details">
+            <h3>Luxury Gift Box</h3>
+            <p class="desc">A beautifully curated luxury self-care gift collection.</p>
+            <p class="sc-price">
+                <span class="old-price">£26.99</span>
+                <span class="current-price">£24.99</span>
+            </p>
+        </div>
+    </a>
 
 </div>
 
-</section>
-  <section class="products">
+<footer class="footer">
 
-    <div class="product-grid">
+    <div class="footer-container">
 
-        <!-- Product 1 -->
-        <article class="product-card">
-            <div class="product-image">
-                <span class="product-badge">Best Seller</span>
-                <img src="images/bath-gel.png" alt="Bath Gel">
-            </div>
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
 
-            <div class="product-details">
-                <h3>Luxury Bath Gel</h3>
-                <p>A gentle cleansing bath and shower gel.</p>
-                <a href="product.html?id=bath-gel" class="product-btn">Shop Now</a>
-            </div>
-        </article>
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
 
-        <!-- Product 2 -->
-        <article class="product-card">
-            <div class="product-image">
-                <span class="product-badge">Popular</span>
-                <img src="images/bath-oil.png" alt="Bath Oil">
-            </div>
+        <div class="footer-column">
+            <h3>Shop</h3>
 
-            <div class="product-details">
-                <h3>Luxury Bath Oil</h3>
-                <p>Nourishing bath oil for silky soft skin.</p>
-                <a href="product.html?id=bath-oil" class="product-btn">Shop Now</a>
-            </div>
-        </article>
+            <a href="self-care.html">Self-Care</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="digital-products.html">Books & Digital</a>
+        </div>
 
-        <!-- Product 3 -->
-        <article class="product-card">
-            <div class="product-image">
-                <span class="product-badge">Favourite</span>
-                <img src="images/bath-salt.png" alt="Bath Salt">
-            </div>
+        <div class="footer-column">
+            <h3>Customer Care</h3>
 
-            <div class="product-details">
-                <h3>Luxury Bath Salt</h3>
-                <p>Relaxing mineral bath salts.</p>
-                <a href="product.html?id=bath-salt" class="product-btn">Shop Now</a>
-            </div>
-        </article>
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
 
-        <!-- Product 4 -->
-        <article class="product-card">
-            <div class="product-image">
-                <span class="product-badge">Featured</span>
-                <img src="images/bath-tea.png" alt="Bath Tea">
-            </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
 
-            <div class="product-details">
-                <h3>Luxury Bath Tea</h3>
-                <p>Botanical bath tea for ultimate relaxation.</p>
-                <a href="product.html?id=bath-tea" class="product-btn">Shop Now</a>
-            </div>
-        </article>
-<!-- Product 5 -->
-<article class="product-card">
-    <div class="product-image">
-        <span class="product-badge">New</span>
-        <img src="images/bath-bomb.png" alt="Bath Bomb">
+            <!-- TODO: add real Instagram URL once brand account is live -->
+            <a href="#">Instagram</a>
+            <!-- TODO: add real Facebook URL once brand account is live -->
+            <a href="#">Facebook</a>
+            <!-- TODO: add real Pinterest URL once brand account is live -->
+            <a href="#">Pinterest</a>
+            <!-- TODO: add real TikTok URL once brand account is live -->
+            <a href="#">TikTok</a>
+        </div>
+
     </div>
 
-    <div class="product-details">
-        <h3>Luxury Mini Bath Bombs</h3>
-        <p>Fizzing bath bombs infused with calming fragrance.</p>
-        <a href="product.html?id=bath-bomb" class="product-btn">Shop Now</a>
-    </div>
-</article>
+    <div class="footer-bottom">
 
-<!-- Product 6 -->
-<article class="product-card">
-    <div class="product-image">
-        <span class="product-badge">Essential</span>
-        <img src="images/bath-sponge.png" alt="Bath Sponge">
+        © 2026 CyRamage. All Rights Reserved.
+
     </div>
 
-    <div class="product-details">
-        <h3>Luxury Bath Sponge</h3>
-        <p>Soft exfoliating sponge for a spa-like cleanse.</p>
-        <a href="product.html?id=bath-sponge" class="product-btn">Shop Now</a>
-    </div>
-</article>
+</footer>
 
-<!-- Product 7 -->
-<article class="product-card">
-    <div class="product-image">
-        <span class="product-badge">Luxury</span>
-        <img src="images/flower-candle.png" alt="Flower Candle">
-    </div>
+<script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
 
-    <div class="product-details">
-        <h3>Flower Candle</h3>
-        <p>Elegant floral candle with a soothing fragrance.</p>
-        <a href="product.html?id=candle" class="product-btn">Shop Now</a>
-    </div>
-</article>
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        });
 
-<!-- Product 8 -->
-<article class="product-card">
-    <div class="product-image">
-        <span class="product-badge">Gift Set</span>
-        <img src="images/gift-box.png" alt="Luxury Gift Box">
-    </div>
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mainNavigation.classList.remove("open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
 
-    <div class="product-details">
-        <h3>Luxury Gift Box</h3>
-        <p>A beautifully curated luxury self-care gift collection.</p>
-        <a href="product.html?id=gift-box" class="product-btn">Shop Now</a>
-    </div>
-</article>
-      
-    </div>
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
 
-</section>
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
+</script>
+
 </body>
 </html>
