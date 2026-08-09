@@ -1,66 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Returns & Exchanges | CyRamage</title>
-    <link rel="stylesheet" href="css/style.css?v=9">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Returns & Exchanges | CyRamage</title>
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --ivory: #F5F2EC;
+        --near-black: #1A1816;
+        --olive: #3F4A3A;
+        --bronze: #A68A5B;
+        --grey: #75716A;
+        --line: #E2DDD2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        background: var(--ivory) !important;
+        color: var(--near-black) !important;
+        margin: 0;
+    }
+
+    .top-bar { background: var(--near-black) !important; color: var(--ivory) !important; }
+    header, .navbar { background: var(--ivory) !important; border-bottom: 1px solid var(--line); }
+
+    @media (min-width: 769px) {
+        #mainNavigation { display: flex; align-items: center; gap: 36px; }
+    }
+    #mainNavigation a {
+        position: relative; letter-spacing: 0.03em; transition: color 0.2s ease;
+        padding-bottom: 4px; color: var(--near-black) !important; font-size: 0.85rem; text-transform: uppercase;
+    }
+    #mainNavigation a:hover { color: var(--olive) !important; }
+    #mainNavigation a.active { color: var(--olive) !important; }
+    #mainNavigation a.active::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--olive);
+    }
+    .nav-cart { position: relative; display: inline-flex; align-items: center; margin-left: 8px; color: var(--near-black); }
+    .nav-cart svg { width: 22px; height: 22px; stroke: currentColor; fill: none; transition: stroke 0.2s ease; }
+    .nav-cart:hover svg { stroke: var(--olive); }
+    .nav-cart-badge {
+        position: absolute; top: -8px; right: -10px; background: var(--bronze); color: var(--near-black);
+        font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 999px;
+        min-width: 16px; text-align: center;
+    }
+    .nav-cart-badge.hidden { display: none; }
+
+    @media (max-width: 768px) {
+        #mainNavigation.open {
+            display: flex !important; flex-direction: column; align-items: flex-start; gap: 0;
+            width: 100%; padding: 8px 24px 24px; box-sizing: border-box; background: var(--ivory);
+        }
+        #mainNavigation.open a { width: 100%; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+        #mainNavigation.open a.active::after { display: none; }
+        #mainNavigation.open .nav-cart { border-bottom: none; margin-left: 0; padding: 16px 0; width: auto; gap: 10px; }
+        #mainNavigation.open .nav-cart::after { content: "Cart"; font-size: 1.05rem; letter-spacing: 0.03em; color: inherit; }
+    }
+
+    /* Content */
+    .legal-page {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 100px 6% 130px;
+        text-align: center;
+    }
+    .legal-page .eyebrow {
+        display: block; color: var(--bronze); text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 16px;
+    }
+    .legal-page h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.2rem, 4vw, 2.8rem);
+        color: var(--near-black) !important;
+        margin-bottom: 24px;
+        line-height: 1.1;
+    }
+    .legal-page p {
+        color: var(--grey);
+        line-height: 1.7;
+        font-size: 1rem;
+    }
+    .legal-page a {
+        color: var(--olive);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+    .legal-page a:hover { border-color: var(--olive); }
+
+    /* Footer */
+    .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
+    .footer h3 { color: var(--ivory) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+    .footer a { color: rgba(245,242,236,0.75) !important; }
+    .footer a:hover { color: var(--bronze) !important; }
+    .footer-bottom { color: rgba(245,242,236,0.5) !important; border-top: 1px solid rgba(245,242,236,0.15); }
+</style>
 </head>
 <body>
 
-  <div class="top-bar">
+<div class="top-bar">
     <div class="top-bar-track">
         <span>🚚 Free UK Delivery on Orders Over £50</span>
         <span>🚚 Free UK Delivery on Orders Over £50</span>
     </div>
-  </div>
+</div>
 
-  <header>
+<header>
     <div class="navbar">
+
         <a href="index.html#home" class="logo">
             <img src="images/logo.png" alt="CyRamage Logo">
         </a>
 
-        <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
-            <span></span><span></span><span></span>
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
         <nav id="mainNavigation">
             <a href="index.html#home">Home</a>
             <a href="index.html#shop">Shop</a>
             <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
         </nav>
+
     </div>
-  </header>
+</header>
 
-  <section class="container" style="padding: 100px 20px; max-width: 700px; margin: 0 auto; text-align:center;">
-    <h1>Returns & Exchanges</h1>
-    <p style="margin-top: 20px;">Our full returns policy is coming soon. For a return or exchange enquiry, email support@cyramage.com.</p>
-  </section>
+<div class="legal-page">
+    <span class="eyebrow">Customer Care</span>
+    <h1>Returns &amp; Exchanges</h1>
+    <p>Our full returns policy is coming soon. For a return or exchange enquiry, email <a href="mailto:support@cyramage.com">support@cyramage.com</a>.</p>
+</div>
 
-  <footer class="footer">
+<footer class="footer">
+
     <div class="footer-container">
+
         <div class="footer-column">
             <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
-            <p>Luxury self-care, elegant gifts and lifestyle essentials designed to bring beauty to every moment.</p>
+
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
         </div>
 
         <div class="footer-column">
             <h3>Shop</h3>
+
             <a href="self-care.html">Self-Care</a>
             <a href="accessories.html">Accessories</a>
             <a href="home-fragrance.html">Home Fragrance</a>
-            <a href="fashion.html">Womens Fashion</a>
-            <a href="books.html">Books & Digital</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="digital-products.html">Books & Digital</a>
         </div>
 
         <div class="footer-column">
             <h3>Customer Care</h3>
+
             <a href="contact.html">Contact Us</a>
             <a href="delivery.html">Delivery</a>
             <a href="returns.html">Returns</a>
@@ -69,26 +192,37 @@
 
         <div class="footer-column">
             <h3>Follow Us</h3>
+
+            <!-- TODO: add real Instagram URL once brand account is live -->
             <a href="#">Instagram</a>
+            <!-- TODO: add real Facebook URL once brand account is live -->
             <a href="#">Facebook</a>
+            <!-- TODO: add real Pinterest URL once brand account is live -->
             <a href="#">Pinterest</a>
+            <!-- TODO: add real TikTok URL once brand account is live -->
             <a href="#">TikTok</a>
         </div>
+
     </div>
 
     <div class="footer-bottom">
+
         © 2026 CyRamage. All Rights Reserved.
+
     </div>
-  </footer>
+
+</footer>
 
 <script>
     const mobileMenuButton = document.getElementById("mobileMenuButton");
     const mainNavigation = document.getElementById("mainNavigation");
+
     if (mobileMenuButton && mainNavigation) {
         mobileMenuButton.addEventListener("click", function () {
             const isOpen = mainNavigation.classList.toggle("open");
             mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
         });
+
         mainNavigation.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
                 mainNavigation.classList.remove("open");
@@ -96,6 +230,36 @@
             });
         });
     }
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
 </script>
+
 </body>
 </html>
