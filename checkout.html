@@ -12,6 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
+        /* ============================================= */
+        /* RESTYLED — ivory / near-black / olive / bronze  */
+        /* JS and Stripe integration untouched.             */
+        /* ============================================= */
+        :root {
+            --ivory: #F5F2EC;
+            --near-black: #1A1816;
+            --olive: #3F4A3A;
+            --bronze: #A68A5B;
+            --grey: #75716A;
+            --line: #E2DDD2;
+        }
+
+        * { box-sizing: border-box; }
+
+        .top-bar { background: var(--near-black) !important; color: var(--ivory) !important; }
+        header, .navbar { background: var(--ivory) !important; border-bottom: 1px solid var(--line); }
+
         @media (min-width: 769px) {
             #mainNavigation {
                 display: flex;
@@ -25,14 +43,17 @@
             letter-spacing: 0.03em;
             transition: color 0.2s ease;
             padding-bottom: 4px;
+            color: var(--near-black) !important;
+            font-size: 0.85rem;
+            text-transform: uppercase;
         }
 
         #mainNavigation a:hover {
-            color: #d4af37;
+            color: var(--olive) !important;
         }
 
         #mainNavigation a.active {
-            color: #d4af37;
+            color: var(--olive) !important;
         }
 
         #mainNavigation a.active::after {
@@ -42,7 +63,7 @@
             right: 0;
             bottom: 0;
             height: 1px;
-            background: #d4af37;
+            background: var(--olive);
         }
 
         .nav-cart {
@@ -50,6 +71,7 @@
             display: inline-flex;
             align-items: center;
             margin-left: 8px;
+            color: var(--near-black);
         }
 
         .nav-cart svg {
@@ -61,15 +83,15 @@
         }
 
         .nav-cart:hover svg {
-            stroke: #d4af37;
+            stroke: var(--olive);
         }
 
         .nav-cart-badge {
             position: absolute;
             top: -8px;
             right: -10px;
-            background: #d4af37;
-            color: #0d0d0d;
+            background: var(--bronze);
+            color: var(--near-black);
             font-size: 11px;
             font-weight: 700;
             line-height: 1;
@@ -92,12 +114,13 @@
                 width: 100%;
                 padding: 8px 24px 24px;
                 box-sizing: border-box;
+                background: var(--ivory);
             }
 
             #mainNavigation.open a {
                 width: 100%;
                 padding: 16px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                border-bottom: 1px solid var(--line);
                 font-size: 1.05rem;
             }
 
@@ -123,56 +146,77 @@
 
         body {
             margin: 0;
-            background: #0d0d0d;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            background: var(--ivory) !important;
+            color: var(--near-black) !important;
+            font-family: 'Poppins', Arial, sans-serif;
         }
 
         .checkout-page {
             width: min(900px, 90%);
-            margin: 60px auto;
+            margin: 80px auto 130px;
         }
 
         .checkout-page h1 {
+            font-family: 'Cormorant Garamond', serif;
             text-align: center;
-            margin-bottom: 35px;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--near-black);
         }
 
         .checkout-box {
-            background: #171717;
-            border: 1px solid #3b321c;
-            border-radius: 12px;
-            padding: 30px;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 0;
+            padding: 40px;
+        }
+
+        .checkout-box h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            margin: 0 0 20px;
+            color: var(--near-black);
         }
 
         .checkout-row {
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            padding: 14px 0;
-            border-bottom: 1px solid #333333;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.95rem;
         }
 
         .checkout-total {
-            color: #d4af37;
+            color: var(--olive);
             font-size: 1.3rem;
-            font-weight: bold;
+            font-weight: 600;
+            border-bottom: none;
         }
 
         .payment-button {
             display: block;
             width: 100%;
             box-sizing: border-box;
-            margin-top: 25px;
-            padding: 16px;
-            border: 0;
-            border-radius: 8px;
-            background: #d4af37;
-            color: #080808;
+            margin-top: 28px;
+            padding: 17px;
+            border: 1px solid var(--near-black);
+            border-radius: 0;
+            background: var(--near-black);
+            color: var(--ivory);
             text-align: center;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
             cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .payment-button:hover {
+            background: var(--olive);
+            border-color: var(--olive);
         }
 
         .payment-button:disabled {
@@ -182,9 +226,13 @@
 
         .back-link {
             display: inline-block;
-            margin-top: 20px;
-            color: #d4af37;
+            margin-top: 22px;
+            color: var(--olive);
             text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: var(--near-black);
         }
     </style>
 </head>
@@ -221,6 +269,7 @@
             <a href="index.html#home">Home</a>
             <a href="index.html#shop">Shop</a>
             <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
 
@@ -436,4 +485,3 @@ try {
 
 </body>
 </html>
-
