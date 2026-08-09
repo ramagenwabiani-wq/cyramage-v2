@@ -28,6 +28,37 @@
 
         * { box-sizing: border-box; }
 
+        /* ============================================= */
+        /* TOP ANNOUNCEMENT BAR — fixed above the nav      */
+        /* ============================================= */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 101;
+            background: var(--near-black);
+            color: var(--ivory);
+            overflow: hidden;
+            white-space: nowrap;
+            height: 38px;
+            display: flex;
+            align-items: center;
+        }
+        .top-bar-track {
+            display: flex;
+            gap: 60px;
+            padding-left: 40px;
+            font-size: 0.78rem;
+            letter-spacing: 0.03em;
+            animation: marquee 18s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .top-bar-track { animation: none; }
+        }
+
         body {
             background: var(--ivory) !important;
             color: var(--near-black) !important;
@@ -42,7 +73,7 @@
         /* ============================================= */
         .site-nav {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 38px; left: 0; right: 0;
             z-index: 100;
             display: flex;
             align-items: center;
@@ -447,6 +478,16 @@
 </head>
 
 <body>
+
+<!-- Top announcement bar -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
 
 <!-- Transparent nav that solidifies on scroll -->
 <nav class="site-nav" id="siteNav">
