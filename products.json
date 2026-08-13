@@ -613,42 +613,6 @@
       }
     },
     {
-      "id": "tongue-cleaner-set-4in1",
-      "name": "Tongue Cleaner Set - 4-in-1",
-      "category": "smile-ritual",
-      "priceOld": null,
-      "priceCurrent": 5.99,
-      "priceSave": 0,
-      "description": "A stainless steel tongue cleaner set with protective travel cases, for a cleaner tongue and fresher breath.",
-      "images": [
-        "tongue-cleaner-set-4in1-front.png",
-        "tongue-cleaner-set-4in1-cases.png",
-        "tongue-cleaner-set-4in1-lifestyle.png"
-      ],
-      "accordion": {
-        "details": "Rust-resistant stainless steel with an ergonomic grip for better control. Smooth edges keep cleaning gentle and hygienic, and each set comes with a protective travel case.",
-        "ingredients": "Stainless steel, ABS travel case."
-      }
-    },
-    {
-      "id": "premium-tongue-cleaner-set",
-      "name": "Premium Tongue Cleaner Set",
-      "category": "smile-ritual",
-      "priceOld": null,
-      "priceCurrent": 5.99,
-      "priceSave": 0,
-      "description": "A dual-ended rose gold tongue cleaner with a sleek protective case, designed to scrape away bacteria and buildup effectively.",
-      "images": [
-        "premium-tongue-cleaner-set-front.png",
-        "premium-tongue-cleaner-set-case.png",
-        "premium-tongue-cleaner-set-in-use.png"
-      ],
-      "accordion": {
-        "details": "Dual-ended design scrapes away bacteria and buildup effectively. Rust-resistant stainless steel, rinse and reuse for daily hygiene, with a sleek travel case included.",
-        "ingredients": "Stainless steel, ABS travel case."
-      }
-    },
-    {
       "id": "pureglide-tongue-cleaner-set",
       "name": "PureGlide Tongue Cleaner Set",
       "category": "smile-ritual",
