@@ -581,7 +581,7 @@
       "description": "A pocket-sized floss box with a built-in floss dispenser and pick, ready for your bag or travel kit.",
       "images": [
         "travel-floss-box-features.png",
-        "floss-box-how-it-works.png",
+        "rituals-floss-box-how-it-works.png",
         "travel-floss-box-portable.png",
         "travel-floss-box-lifestyle.png",
         "travel-floss-box-in-use.png",
@@ -601,7 +601,6 @@
       "priceSave": 0,
       "description": "A full-size ultrasonic dental bath with 3 cleaning modes, for a deep clean of dental pieces and jewellery alike.",
       "images": [
-        "sonicclean-dental-bath-ultrasonic-cleaner.png",
         "sonicclean-dental-bath-product-features.png",
         "sonicclean-dental-bath-three-cleaning-modes.png",
         "sonicclean-full-size-cleaning-chamber-comparison.png",
@@ -658,8 +657,7 @@
       "priceSave": 0,
       "description": "A dual-ended rose gold tongue cleaner with a sleek protective case, for a cleaner tongue and fresher breath.",
       "images": [
-        "pureglide-tongue-cleaner-set-front.png",
-        "pureglide-tongue-cleaner-set-case.png"
+        "pureglide-tongue-cleaner-set.png"
       ],
       "accordion": {
         "details": "Dual-ended design scrapes away bacteria and buildup effectively. Rust-resistant stainless steel, dishwasher safe, and compact enough to take anywhere.",
@@ -675,8 +673,7 @@
       "priceSave": 0,
       "description": "A single rose gold tongue cleaner with an ergonomic handle for a firm, comfortable grip.",
       "images": [
-        "pureglide-premium-tongue-cleaner-front.png",
-        "pureglide-premium-tongue-cleaner-lifestyle.png"
+        "pureglide-premium-tongue-cleaner.png"
       ],
       "accordion": {
         "details": "Scrapes away bacteria and buildup effectively, with smooth edges for a gentle, comfortable clean. Rust-resistant stainless steel, easy to rinse and reuse.",
@@ -692,8 +689,7 @@
       "priceSave": 0,
       "description": "A two-cleaner duo set in black and rose gold, each with its own protective travel case.",
       "images": [
-        "tongue-cleaner-set-duo-front.png",
-        "tongue-cleaner-set-duo-cases.png"
+        "pureglide-duo-tongue-cleaner-set.png"
       ],
       "accordion": {
         "details": "One black, one rose gold - ideal for sharing or keeping a spare on hand. Rust-resistant stainless steel with a protective case for each cleaner.",
@@ -709,8 +705,7 @@
       "priceSave": 0,
       "description": "A single black tongue cleaner with an ergonomic handle for a firm, comfortable grip.",
       "images": [
-        "pureglide-tongue-cleaner-front.png",
-        "pureglide-tongue-cleaner-lifestyle.png"
+        "pureglide-black-tongue-cleaner-benefits.png"
       ],
       "accordion": {
         "details": "Scrapes away bacteria and buildup effectively, with smooth edges for a gentle, comfortable clean. Rust-resistant stainless steel, easy to rinse and reuse.",
@@ -721,30 +716,15 @@
       "id": "uvc-toothbrush-sterilizer-2brush",
       "name": "Smart UVC Toothbrush Sterilizer - 2 Brush",
       "category": "smile-ritual",
+      "priceOld": 23.79,
+      "priceCurrent": 19.89,
+      "priceSave": 3.9,
       "description": "A wall-mounted UVC toothbrush sterilizer for two brushes, with infrared sensing and automatic open/close.",
-      "variants": [
-        {
-          "id": "black",
-          "name": "Black",
-          "priceOld": 23.79,
-          "priceCurrent": 19.89,
-          "priceSave": 3.9,
-          "description": "A wall-mounted UVC toothbrush sterilizer for two brushes in black.",
-          "images": [
-            "uvc-toothbrush-sterilizer-2brush-black.png"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "White",
-          "priceOld": 23.79,
-          "priceCurrent": 19.89,
-          "priceSave": 3.9,
-          "description": "A wall-mounted UVC toothbrush sterilizer for two brushes in white.",
-          "images": [
-            "uvc-toothbrush-sterilizer-2brush-white.png"
-          ]
-        }
+      "images": [
+        "uv-toothbrush-sterilizer-dryer.png",
+        "uv-toothbrush-sterilizer-uvc-disinfection.png",
+        "uv-toothbrush-sterilizer-24-hour-cycle-purification.png",
+        "uv-toothbrush-sterilizer-installation-instructions.png"
       ],
       "accordion": {
         "details": "Dual UV-C lamps eliminate 99.99% of common bacteria in a 5-minute auto cycle, running every 3 hours for round-the-clock protection. Wave your hand to open - no touching required.",
@@ -755,33 +735,19 @@
       "id": "uvc-toothbrush-sterilizer-compact",
       "name": "Smart UVC Toothbrush Sterilizer - Compact",
       "category": "smile-ritual",
-      "description": "A palm-sized, wall-mounted UVC toothbrush sterilizer with adjustable hook and 60\u00b0C heated drying.",
-      "variants": [
-        {
-          "id": "black",
-          "name": "Black",
-          "priceOld": 26.71,
-          "priceCurrent": 20.8,
-          "priceSave": 5.91,
-          "description": "A palm-sized UVC toothbrush sterilizer in black, with 60\u00b0C heated drying.",
-          "images": [
-            "uvc-toothbrush-sterilizer-compact-black.png"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "White",
-          "priceOld": 26.71,
-          "priceCurrent": 20.8,
-          "priceSave": 5.91,
-          "description": "A palm-sized UVC toothbrush sterilizer in white, with 60\u00b0C heated drying.",
-          "images": [
-            "uvc-toothbrush-sterilizer-compact-white.png"
-          ]
-        }
+      "priceOld": 26.71,
+      "priceCurrent": 20.8,
+      "priceSave": 5.91,
+      "description": "A palm-sized, wall-mounted UVC toothbrush sterilizer with adjustable hook and 60C heated drying.",
+      "images": [
+        "uv-toothbrush-sterilizer-compact-square-design.png",
+        "uv-toothbrush-sterilizer-adjustable-brush-head-hook.png",
+        "uv-toothbrush-sterilizer-99-9-percent-uvc-sterilization.png",
+        "toothbrush-sterilizer-60c-heated-drying-system.png",
+        "uv-toothbrush-sterilizer-compact-size-wide-compatibility.png"
       ],
       "accordion": {
-        "details": "Dual UV-C lamps remove up to 99.9% of bacteria in a 5-minute auto-cycle with auto shut-off, followed by a steady 60\u00b0C dry to prevent bacteria regrowth. Adjustable hook fits manual, sonic, electric, kids' and orthodontic brush heads.",
+        "details": "Dual UV-C lamps remove up to 99.9% of bacteria in a 5-minute auto-cycle with auto shut-off, followed by a steady 60C dry to prevent bacteria regrowth. Adjustable hook fits manual, sonic, electric, kids' and orthodontic brush heads.",
         "ingredients": "Durable ABS housing, dual UV-C lamps, USB-C powered."
       }
     },
@@ -799,9 +765,11 @@
           "priceSave": 14.02,
           "description": "A sonic electric toothbrush in black and orange, with 5 cleaning modes and 43,000 VPM.",
           "images": [
-            "s9-pro-sonic-toothbrush-black-orange.png",
-            "s9-pro-sonic-toothbrush-black-orange-heads.png",
-            "s9-pro-sonic-toothbrush-black-orange-charging.png"
+            "s9-pro-sonic-electric-toothbrush.png",
+            "s9-pro-sonic-electric-toothbrush-5-cleaning-modes.png",
+            "s9-pro-sonic-electric-toothbrush-43000-vpm-deep-cleaning.png",
+            "s9-pro-sonic-electric-toothbrush-soft-bristles-deep-cleaning.png",
+            "s9-pro-sonic-electric-toothbrush-wireless-charging-2000mah.png"
           ]
         },
         {
@@ -812,8 +780,11 @@
           "priceSave": 14.02,
           "description": "A sonic electric toothbrush in white, with 5 cleaning modes and 43,000 VPM.",
           "images": [
-            "s9-pro-sonic-toothbrush-white.png",
-            "s9-pro-sonic-toothbrush-white-heads.png"
+            "s9-pro-sonic-electric-toothbrush-white-with-brush-heads.png",
+            "s9-pro-sonic-electric-toothbrush-5-cleaning-modes.png",
+            "s9-pro-sonic-electric-toothbrush-43000-vpm-deep-cleaning.png",
+            "s9-pro-sonic-electric-toothbrush-soft-bristles-deep-cleaning.png",
+            "s9-pro-sonic-electric-toothbrush-wireless-charging-2000mah.png"
           ]
         }
       ],
@@ -831,10 +802,12 @@
       "priceSave": 4.04,
       "description": "A drill-free, wall-mounted UV toothbrush holder with a built-in shelf, holding up to 5 toothbrushes.",
       "images": [
-        "uv-sterilizer-holder-5slot-front.png",
-        "uv-sterilizer-holder-5slot-installation.png",
-        "uv-sterilizer-holder-5slot-family-use.png",
-        "uv-sterilizer-holder-5slot-lifestyle.png"
+        "uv-toothbrush-sterilizer-holder-black-gold.png",
+        "uv-toothbrush-sterilizer-drill-free-installation.png",
+        "uv-toothbrush-sterilizer-family-use.png",
+        "uv-toothbrush-sterilizer-everyday-use-features.png",
+        "uv-toothbrush-sterilizer-light-charging-design.png",
+        "uv-toothbrush-sterilizer-uv-light-sterilization.png"
       ],
       "accordion": {
         "details": "Drill-free adhesive installation keeps your walls intact, with strong adhesion to stay firmly in place. UV-C sterilization keeps toothbrushes clean, a built-in shelf holds skincare essentials, and the light-charging design recharges with ambient light to reduce frequent charging.",
@@ -855,7 +828,7 @@
           "priceSave": 4.04,
           "description": "A compact countertop UV sterilizer in white with black trim.",
           "images": [
-            "uv-sterilizer-countertop-white-black.png"
+            "uv-toothbrush-sterilizer-white-black-features.png"
           ]
         },
         {
@@ -866,7 +839,7 @@
           "priceSave": 4.04,
           "description": "A compact countertop UV sterilizer in white with gray trim.",
           "images": [
-            "uv-sterilizer-countertop-white-gray.png"
+            "uv-toothbrush-sterilizer-white-gray-features.png"
           ]
         },
         {
@@ -877,7 +850,8 @@
           "priceSave": 4.04,
           "description": "A compact countertop UV sterilizer in black with gold trim.",
           "images": [
-            "uv-sterilizer-countertop-black-gold.png"
+            "uv-toothbrush-sterilizer-black-gold.png",
+            "uv-toothbrush-sterilizer-black-gold-advanced-features.png"
           ]
         }
       ],
