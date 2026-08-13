@@ -237,6 +237,17 @@
             height: auto;
             object-fit: contain;
         }
+        .ritual-card-image.no-image {
+            background: var(--ivory);
+        }
+        .ritual-card-image.no-image::after {
+            content: "Photo coming soon";
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            color: var(--grey);
+            text-transform: uppercase;
+        }
         .ritual-badge-sale {
             position: absolute;
             top: 14px; left: 14px;
@@ -530,7 +541,7 @@
                 <a class="ritual-card" href="product.html?id=${p.id}">
                     <div class="ritual-card-image">
                         ${save ? `<span class="ritual-badge-sale">Save ${save}%</span>` : ``}
-                        <img src="images/${p.image}" alt="${p.name}" loading="lazy">
+                        <img src="images/${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
                     </div>
                     <div class="ritual-card-details">
                         <div class="ritual-card-cat">Smile Ritual</div>
@@ -596,4 +607,3 @@
 
 </body>
 </html>
-
