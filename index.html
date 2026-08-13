@@ -12,10 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================= */
-        /* GROUND-UP REBUILD — new structure, new palette   */
-        /* Ivory / near-black / olive / bronze signature    */
-        /* ============================================= */
         :root {
             --ivory: #F5F2EC;
             --near-black: #1A1816;
@@ -25,12 +21,8 @@
         }
 
         html { scroll-behavior: smooth; }
-
         * { box-sizing: border-box; }
 
-        /* ============================================= */
-        /* TOP ANNOUNCEMENT BAR — fixed above the nav      */
-        /* ============================================= */
         .top-bar {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -68,9 +60,6 @@
 
         h1, h2, h3, h4 { color: var(--near-black) !important; margin: 0; }
 
-        /* ============================================= */
-        /* NAV — transparent over hero, solidifies on scroll */
-        /* ============================================= */
         .site-nav {
             position: fixed;
             top: 38px; left: 0; right: 0;
@@ -148,9 +137,6 @@
             .site-nav-links.open a { color: var(--ivory); font-size: 1rem; }
         }
 
-        /* ============================================= */
-        /* FULL-VIEWPORT HERO                              */
-        /* ============================================= */
         .hero-full {
             position: relative;
             height: 100vh;
@@ -213,9 +199,6 @@
         }
         @keyframes scrollpulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
 
-        /* ============================================= */
-        /* MANIFESTO — single big statement, full width    */
-        /* ============================================= */
         .manifesto {
             padding: 140px 8%;
             text-align: center;
@@ -232,9 +215,6 @@
             width: 44px; height: 1px; background: var(--bronze); margin: 34px auto 0;
         }
 
-        /* ============================================= */
-        /* ALTERNATING RITUAL PANELS (replaces card grid)  */
-        /* ============================================= */
         .ritual-panel {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -285,9 +265,6 @@
             .ritual-panel-image { min-height: 340px; }
         }
 
-        /* ============================================= */
-        /* SPOTLIGHT PRODUCT — one large feature, not grid */
-        /* ============================================= */
         .spotlight {
             padding: 130px 8% 60px;
         }
@@ -354,9 +331,6 @@
             .spotlight-secondary { grid-template-columns: 1fr; }
         }
 
-        /* ============================================= */
-        /* SINGLE LARGE QUOTE — replaces testimonial grid  */
-        /* ============================================= */
         .single-quote {
             background: var(--olive);
             padding: 130px 8%;
@@ -378,9 +352,6 @@
             font-size: 0.78rem;
         }
 
-        /* ============================================= */
-        /* MINIMAL ROW — small links to remaining collections */
-        /* ============================================= */
         .minimal-row {
             padding: 100px 8%;
             text-align: center;
@@ -408,9 +379,6 @@
             letter-spacing: 0.03em;
         }
 
-        /* ============================================= */
-        /* NEWSLETTER — minimal inline bar                 */
-        /* ============================================= */
         .newsletter-bar {
             background: var(--near-black);
             padding: 70px 8%;
@@ -434,9 +402,6 @@
             font-size: 0.78rem; cursor: pointer;
         }
 
-        /* ============================================= */
-        /* FOOTER — minimal                                */
-        /* ============================================= */
         .site-footer {
             background: var(--near-black);
             color: rgba(245,242,236,0.7);
@@ -470,7 +435,6 @@
             .site-footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        /* Scroll reveal */
         .reveal { opacity: 0; transform: translateY(26px); transition: opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1); }
         .reveal.is-visible { opacity: 1; transform: translateY(0); }
         @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
@@ -479,7 +443,6 @@
 
 <body>
 
-<!-- Top announcement bar -->
 <div class="top-bar">
     <div class="top-bar-track">
         <span>🚚 Free UK Delivery on Orders Over £50</span>
@@ -489,7 +452,6 @@
     </div>
 </div>
 
-<!-- Transparent nav that solidifies on scroll -->
 <nav class="site-nav" id="siteNav">
     <a href="#top" class="logo-mark"><img src="images/logo.png" alt="CyRamage"></a>
     <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-expanded="false">
@@ -514,7 +476,6 @@
     </div>
 </nav>
 
-<!-- Full-viewport hero -->
 <section class="hero-full" id="top">
     <div class="hero-full-content">
         <span class="eyebrow">CyRamage Signature</span>
@@ -525,13 +486,11 @@
     <a href="#rituals" class="scroll-cue">Scroll</a>
 </section>
 
-<!-- Manifesto: single statement, generous whitespace -->
 <section class="manifesto reveal">
     <p>"Luxury isn't about having more. It's about experiencing life more deeply — one quiet ritual at a time."</p>
     <div class="rule"></div>
 </section>
 
-<!-- Alternating ritual panels — replaces the 6-card collection grid -->
 <div id="rituals">
     <div class="ritual-panel reveal">
         <div class="ritual-panel-image" style="background-image:url('images/collection-home-fragrance.png');"></div>
@@ -544,11 +503,11 @@
     </div>
 
     <div class="ritual-panel reverse reveal">
-        <div class="ritual-panel-image" style="background-image:url('images/editorial-smile-ritual.png');"></div>
+        <div class="ritual-panel-image" style="background-image:url('images/smile-ritual-banner.png');"></div>
         <div class="ritual-panel-text">
             <span class="eyebrow">Smile Ritual</span>
             <h2>Brighten. Refresh. Glow.</h2>
-            <p>Elegant oral care, designed as a daily ritual — not a chore. Coming soon to CyRamage.</p>
+            <p>Elegant oral care, designed as a daily ritual, not a chore. Tongue care, sonic cleaning and quiet sterilization, all in one place.</p>
             <a href="smile-ritual.html" class="panel-link">Discover Smile Ritual</a>
         </div>
     </div>
@@ -564,7 +523,6 @@
     </div>
 </div>
 
-<!-- Spotlight: one large featured product instead of an equal-weight grid -->
 <section class="spotlight" id="spotlight">
     <div class="spotlight-heading reveal">
         <span class="eyebrow">Customer Favourite</span>
@@ -575,7 +533,7 @@
         <img src="images/bath-salt.png" alt="CyRamage Luxury Bath Salt">
         <div>
             <h3>Luxury Bath Salt</h3>
-            <p class="desc">Mineral bath salts designed for a calm and indulgent soak — enriched with natural minerals and a soft botanical scent that lingers long after the water drains.</p>
+            <p class="desc">Mineral bath salts designed for a calm and indulgent soak, enriched with natural minerals and a soft botanical scent that lingers long after the water drains.</p>
             <p class="spotlight-price"><span class="old">£8.99</span><span class="now">£5.99</span></p>
             <a href="product.html?id=bath-salt" class="btn-primary">Shop Now</a>
         </div>
@@ -585,36 +543,33 @@
         <div class="spotlight-secondary-item">
             <img src="images/bath-gel-front.png" alt="CyRamage Luxury Bath Gel">
             <h4>Luxury Bath Gel</h4>
-            <p>£12.99 &mdash; a gentle bath and shower gel for daily self-care.</p>
+            <p>£12.99, a gentle bath and shower gel for daily self-care.</p>
             <a href="product.html?id=bath-gel">Shop Now</a>
         </div>
         <div class="spotlight-secondary-item">
             <img src="images/bath-tea.png" alt="CyRamage Luxury Bath Tea">
             <h4>Luxury Bath Tea</h4>
-            <p>£5.99 &mdash; a botanical bath blend for a peaceful soak.</p>
+            <p>£5.99, a botanical bath blend for a peaceful soak.</p>
             <a href="product.html?id=bath-tea">Shop Now</a>
         </div>
     </div>
 </section>
 
-<!-- Single large quote instead of a testimonial card grid -->
 <section class="single-quote reveal">
     <p class="quote-text">"Beautiful products and lovely packaging. It felt like opening a luxury gift."</p>
-    <p class="attribution">Emma R. &mdash; Verified Customer</p>
+    <p class="attribution">Emma R. Verified Customer</p>
 </section>
 
-<!-- Digital products, as its own alternating panel -->
 <div class="ritual-panel reveal">
     <div class="ritual-panel-image" style="background-image:url('images/100-ai-side-hustles.png'); background-size:contain; background-repeat:no-repeat; background-color:var(--near-black);"></div>
     <div class="ritual-panel-text">
         <span class="eyebrow">Books &amp; Digital</span>
         <h2>100 AI Side Hustles</h2>
-        <p>Guided planners, journals, and digital guides — the same CyRamage standard, delivered instantly as a PDF.</p>
+        <p>Guided planners, journals, and digital guides, the same CyRamage standard, delivered instantly as a PDF.</p>
         <a href="digital-products.html" class="panel-link">Discover Digital Guides</a>
     </div>
 </div>
 
-<!-- Minimal row: remaining collections, small and understated -->
 <section class="minimal-row reveal">
     <h2>More to Explore</h2>
     <div class="minimal-row-grid">
@@ -633,7 +588,6 @@
     </div>
 </section>
 
-<!-- Minimal newsletter bar -->
 <section class="newsletter-bar">
     <h2>Join the CyRamage Community</h2>
     <form action="https://formspree.io/f/xjgnjbzk" method="POST">
@@ -666,13 +620,9 @@
         </div>
         <div>
             <h3>Follow Us</h3>
-            <!-- TODO: add real Instagram URL once brand account is live -->
             <a href="#">Instagram</a>
-            <!-- TODO: add real Facebook URL once brand account is live -->
             <a href="#">Facebook</a>
-            <!-- TODO: add real Pinterest URL once brand account is live -->
             <a href="#">Pinterest</a>
-            <!-- TODO: add real TikTok URL once brand account is live -->
             <a href="#">TikTok</a>
         </div>
     </div>
@@ -680,7 +630,6 @@
 </footer>
 
 <script>
-    // Nav: transparent over hero, solid on scroll
     (function () {
         const nav = document.getElementById('siteNav');
         function onScroll() {
@@ -691,7 +640,6 @@
         onScroll();
     })();
 
-    // Mobile menu toggle
     (function () {
         const btn = document.getElementById('mobileMenuButton');
         const links = document.getElementById('siteNavLinks');
@@ -708,7 +656,6 @@
         });
     })();
 
-    // Cart badge (same logic as before, same storage key)
     (function updateNavCartBadge() {
         try {
             const savedCart = localStorage.getItem('cyramageCart') || localStorage.getItem('cart') || '[]';
@@ -725,7 +672,6 @@
         }
     })();
 
-    // Scroll reveal
     (function scrollReveal() {
         const revealEls = document.querySelectorAll('.reveal');
         if (!revealEls.length) return;
