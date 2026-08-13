@@ -533,7 +533,7 @@
                 <a class="ritual-card" href="product.html?id=${p.id}">
                     <div class="ritual-card-image">
                         ${save ? `<span class="ritual-badge-sale">Save ${save}%</span>` : ``}
-                        <img src="images/${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                        <img src="images/${p.image}" alt="${p.name}" loading="lazy" onerror="this.closest('.ritual-card-image').style.display='none';">
                     </div>
                     <div class="ritual-card-details">
                         <div class="ritual-card-cat">Smile Ritual</div>
