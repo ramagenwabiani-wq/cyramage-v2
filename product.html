@@ -869,6 +869,18 @@
         return "£" + Number(n).toFixed(2);
     }
 
+    // Fisher-Yates shuffle — returns a new shuffled array, leaves the original untouched.
+    function shuffleArray(array) {
+        const result = array.slice();
+        for (let i = result.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = result[i];
+            result[i] = result[j];
+            result[j] = temp;
+        }
+        return result;
+    }
+
     async function loadProduct() {
         const id = getProductIdFromUrl();
         const loadingState = document.getElementById("loadingState");
@@ -1046,7 +1058,11 @@
             return p.id !== product.id && p.category !== product.category;
         });
 
-        const related = sameCategory.concat(others).slice(0, 3);
+        // Shuffle each pool so "You May Also Like" varies between visits/reloads,
+        // instead of always showing the same first 3 items in products.json order.
+        // Same-category items are still prioritized over others, just no longer
+        // in a fixed order.
+        const related = shuffleArray(sameCategory).concat(shuffleArray(others)).slice(0, 3);
 
         related.forEach(function (p) {
             const thumb = Array.isArray(p.images)
