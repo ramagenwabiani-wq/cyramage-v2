@@ -153,6 +153,12 @@
         font-weight: 600;
         font-size: 1rem;
     }
+    .accessories-grid-status {
+        text-align: center;
+        color: var(--grey);
+        padding: 40px 6%;
+        grid-column: 1 / -1;
+    }
 
     /* Footer */
     .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
@@ -215,71 +221,11 @@
 <section class="page-hero">
     <span class="eyebrow">CyRamage Signature</span>
     <h1>Luxury Accessories</h1>
-    <p>Fine jewellery pieces designed to be worn daily &mdash; moissanite, sterling silver, and gold-plated finishes, crafted for everyday elegance.</p>
+    <p>Fine jewellery, watches and eyewear designed to be worn daily &mdash; moissanite, sterling silver, and gold-plated finishes, crafted for everyday elegance.</p>
 </section>
 
-<div class="accessories-grid">
-
-    <!-- Necklace -->
-    <a href="product.html?id=necklace" class="accessory-card">
-        <span class="accessory-badge">Best Seller</span>
-        <div class="accessory-card-image">
-            <img src="images/gold-necklace.png" alt="Moissanite Station Necklace">
-        </div>
-        <div class="accessory-card-details">
-            <h3>Moissanite Station Necklace</h3>
-            <p class="accessory-price">
-                <span class="old-price">£105.87</span>
-                <span class="current-price">£46.15</span>
-            </p>
-        </div>
-    </a>
-
-    <!-- Earrings -->
-    <a href="product.html?id=earrings" class="accessory-card">
-        <span class="accessory-badge">Popular</span>
-        <div class="accessory-card-image">
-            <img src="images/gold-earrings.png" alt="Oval Bezel Earrings">
-        </div>
-        <div class="accessory-card-details">
-            <h3>Oval Bezel Earrings</h3>
-            <p class="accessory-price">
-                <span class="old-price">£128.24</span>
-                <span class="current-price">£55.67</span>
-            </p>
-        </div>
-    </a>
-
-    <!-- Bracelet -->
-    <a href="product.html?id=bracelet" class="accessory-card">
-        <span class="accessory-badge">Luxury</span>
-        <div class="accessory-card-image">
-            <img src="images/bracelet-gold.png" alt="Moissanite Tennis Bracelet">
-        </div>
-        <div class="accessory-card-details">
-            <h3>Moissanite Tennis Bracelet</h3>
-            <p class="accessory-price">
-                <span class="old-price">£106.06</span>
-                <span class="current-price">£46.88</span>
-            </p>
-        </div>
-    </a>
-
-    <!-- Wristwatch -->
-    <a href="product.html?id=wristwatch" class="accessory-card">
-        <span class="accessory-badge">Featured</span>
-        <div class="accessory-card-image">
-            <img src="images/wristwatch.png" alt="Luxury Wristwatch">
-        </div>
-        <div class="accessory-card-details">
-            <h3>Luxury Wristwatch</h3>
-            <p class="accessory-price">
-                <span class="old-price">£42.58</span>
-                <span class="current-price">£34.60</span>
-            </p>
-        </div>
-    </a>
-
+<div class="accessories-grid" id="accessoriesGrid">
+    <p class="accessories-grid-status">Loading accessories&hellip;</p>
 </div>
 
 <footer class="footer">
@@ -383,6 +329,103 @@
             console.error("Unable to read cart for nav badge:", error);
         }
     })();
+
+    // Manually curated badges for specific products, matched by id.
+    // Anything not listed here gets no badge (or "New" if flagged in the newIds set below).
+    const BADGES = {
+        "necklace": "Best Seller",
+        "earrings": "Popular",
+        "bracelet": "Luxury",
+        "wristwatch": "Featured"
+    };
+
+    // Products added in the most recent catalog update get a "New" badge
+    // unless they already have one assigned above.
+    const NEW_IDS = new Set([
+        "crystal-skeleton-automatic-watch",
+        "olevs-quartz-watch",
+        "statement-angular-cat-eye-sunglasses",
+        "mens-performance-sunglasses",
+        "apexshield-sport-sunglasses"
+    ]);
+
+    function formatPrice(value) {
+        return "£" + Number(value).toFixed(2);
+    }
+
+    function getDisplayPricing(product) {
+        // Products with variants: use the first variant's pricing.
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            const v = product.variants[0];
+            return { old: v.priceOld, current: v.priceCurrent };
+        }
+        // Flat products: pricing lives on the product itself.
+        return { old: product.priceOld, current: product.priceCurrent };
+    }
+
+    function getDisplayImage(product) {
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            const v = product.variants[0];
+            if (Array.isArray(v.images) && v.images.length > 0) return v.images[0];
+        }
+        if (Array.isArray(product.images) && product.images.length > 0) return product.images[0];
+        return "placeholder.png";
+    }
+
+    function buildCard(product) {
+        const pricing = getDisplayPricing(product);
+        const image = getDisplayImage(product);
+        const badgeText = BADGES[product.id] || (NEW_IDS.has(product.id) ? "New" : null);
+
+        const showOldPrice = pricing.old && pricing.current && pricing.old > pricing.current;
+
+        const card = document.createElement("a");
+        card.href = "product.html?id=" + encodeURIComponent(product.id);
+        card.className = "accessory-card";
+
+        card.innerHTML =
+            (badgeText ? '<span class="accessory-badge">' + badgeText + '</span>' : '') +
+            '<div class="accessory-card-image">' +
+                '<img src="images/' + image + '" alt="' + product.name + '" loading="lazy">' +
+            '</div>' +
+            '<div class="accessory-card-details">' +
+                '<h3>' + product.name + '</h3>' +
+                '<p class="accessory-price">' +
+                    (showOldPrice ? '<span class="old-price">' + formatPrice(pricing.old) + '</span>' : '') +
+                    '<span class="current-price">' + formatPrice(pricing.current) + '</span>' +
+                '</p>' +
+            '</div>';
+
+        return card;
+    }
+
+    async function loadAccessories() {
+        const grid = document.getElementById("accessoriesGrid");
+
+        try {
+            const response = await fetch("products.json");
+            if (!response.ok) throw new Error("Failed to load products.json (" + response.status + ")");
+
+            const data = await response.json();
+            const products = Array.isArray(data.products) ? data.products : [];
+            const accessories = products.filter(function (p) { return p.category === "accessories"; });
+
+            if (accessories.length === 0) {
+                grid.innerHTML = '<p class="accessories-grid-status">No accessories found.</p>';
+                return;
+            }
+
+            grid.innerHTML = "";
+            accessories.forEach(function (product) {
+                grid.appendChild(buildCard(product));
+            });
+        } catch (error) {
+            console.error("Unable to load accessories:", error);
+            grid.innerHTML = '<p class="accessories-grid-status">Unable to load products right now. Please refresh the page.</p>';
+        }
+    }
+
+    loadAccessories();
 </script>
 
 </body>
