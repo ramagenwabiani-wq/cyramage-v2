@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Fragrance | CyRamage</title>
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --ivory: #F5F2EC;
+        --near-black: #1A1816;
+        --olive: #3F4A3A;
+        --bronze: #A68A5B;
+        --grey: #75716A;
+        --line: #E2DDD2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        background: var(--ivory) !important;
+        color: var(--near-black) !important;
+        margin: 0;
+    }
+
+    .top-bar { background: var(--near-black) !important; color: var(--ivory) !important; }
+    header, .navbar { background: var(--ivory) !important; border-bottom: 1px solid var(--line); }
+
+    @media (min-width: 769px) {
+        #mainNavigation { display: flex; align-items: center; gap: 36px; }
+    }
+    #mainNavigation a {
+        position: relative; letter-spacing: 0.03em; transition: color 0.2s ease;
+        padding-bottom: 4px; color: var(--near-black) !important; font-size: 0.85rem; text-transform: uppercase;
+    }
+    #mainNavigation a:hover { color: var(--olive) !important; }
+    #mainNavigation a.active { color: var(--olive) !important; }
+    #mainNavigation a.active::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--olive);
+    }
+    .nav-cart { position: relative; display: inline-flex; align-items: center; margin-left: 8px; color: var(--near-black); }
+    .nav-cart svg { width: 22px; height: 22px; stroke: currentColor; fill: none; transition: stroke 0.2s ease; }
+    .nav-cart:hover svg { stroke: var(--olive); }
+    .nav-cart-badge {
+        position: absolute; top: -8px; right: -10px; background: var(--bronze); color: var(--near-black);
+        font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 5px; border-radius: 999px;
+        min-width: 16px; text-align: center;
+    }
+    .nav-cart-badge.hidden { display: none; }
+
+    @media (max-width: 768px) {
+        #mainNavigation.open {
+            display: flex !important; flex-direction: column; align-items: flex-start; gap: 0;
+            width: 100%; padding: 8px 24px 24px; box-sizing: border-box; background: var(--ivory);
+        }
+        #mainNavigation.open a { width: 100%; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+        #mainNavigation.open a.active::after { display: none; }
+        #mainNavigation.open .nav-cart { border-bottom: none; margin-left: 0; padding: 16px 0; width: auto; gap: 10px; }
+        #mainNavigation.open .nav-cart::after { content: "Cart"; font-size: 1.05rem; letter-spacing: 0.03em; color: inherit; }
+    }
+
+    /* Page intro */
+    .page-hero {
+        text-align: center;
+        padding: 100px 8% 70px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .page-hero .eyebrow {
+        display: block; color: var(--bronze); text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        color: var(--near-black) !important;
+        margin-bottom: 18px;
+        line-height: 1.1;
+    }
+    .page-hero p {
+        color: var(--grey);
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    /* Product grid */
+    .fragrance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 6% 120px;
+    }
+    .fragrance-card {
+        display: block;
+        text-decoration: none;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        transition: border-color 0.2s ease;
+        color: var(--near-black);
+        position: relative;
+    }
+    .fragrance-card:hover { border-color: var(--near-black); }
+    .fragrance-badge {
+        position: absolute;
+        top: 16px; left: 16px;
+        background: var(--bronze);
+        color: var(--near-black);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        z-index: 2;
+    }
+    .fragrance-card-image {
+        background: #ffffff;
+        padding: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        overflow: hidden;
+    }
+    .fragrance-card-image img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        display: block;
+        user-select: none;
+    }
+    .fragrance-carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(26, 24, 22, 0.55);
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 0.2s ease, background 0.2s ease;
+        padding: 0;
+    }
+    .fragrance-card-image:hover .fragrance-carousel-arrow { opacity: 1; }
+    .fragrance-carousel-arrow:hover { background: var(--near-black); }
+    .fragrance-carousel-arrow.prev { left: 8px; }
+    .fragrance-carousel-arrow.next { right: 8px; }
+    .fragrance-carousel-dots {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        z-index: 3;
+    }
+    .fragrance-carousel-dots .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--line);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    .fragrance-carousel-dots .dot.active { background: var(--bronze); }
+    .fragrance-card-details {
+        padding: 20px 22px 26px;
+        text-align: center;
+    }
+    .fragrance-card-details h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.15rem;
+        margin: 0 0 12px;
+        color: var(--near-black) !important;
+    }
+    .fragrance-price .old-price {
+        text-decoration: line-through;
+        color: var(--grey);
+        font-size: 0.85rem;
+        margin-right: 8px;
+    }
+    .fragrance-price .current-price {
+        color: var(--olive);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .fragrance-grid-status {
+        text-align: center;
+        color: var(--grey);
+        padding: 40px 6%;
+        grid-column: 1 / -1;
+    }
+
+    /* Footer */
+    .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
+    .footer h3 { color: var(--ivory) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+    .footer a { color: rgba(245,242,236,0.75) !important; }
+    .footer a:hover { color: var(--bronze) !important; }
+    .footer-bottom { color: rgba(245,242,236,0.5) !important; border-top: 1px solid rgba(245,242,236,0.15); }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
+
+<header>
+    <div class="navbar">
+
+        <a href="index.html#home" class="logo">
+            <img src="images/logo.png" alt="CyRamage Logo">
+        </a>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNavigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="digital-products.html">Digital Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="page-hero">
+    <span class="eyebrow">CyRamage Signature</span>
+    <h1>Home Fragrance</h1>
+    <p>Hand-poured candles and home fragrance, designed to turn any room into a moment of calm.</p>
+</section>
+
+<div class="fragrance-grid" id="fragranceGrid">
+    <p class="fragrance-grid-status">Loading home fragrance&hellip;</p>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage Logo" class="footer-logo">
+
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+
+            <a href="self-care.html">Self-Care</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="digital-products.html">Books & Digital</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Care</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+
+            <!-- TODO: add real Instagram URL once brand account is live -->
+            <a href="#">Instagram</a>
+            <!-- TODO: add real Facebook URL once brand account is live -->
+            <a href="#">Facebook</a>
+            <!-- TODO: add real Pinterest URL once brand account is live -->
+            <a href="#">Pinterest</a>
+            <!-- TODO: add real TikTok URL once brand account is live -->
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 CyRamage. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mainNavigation.classList.remove("open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    })();
+
+    // Manually curated badges for specific products, matched by id.
+    // Anything not listed here gets no badge (or "New" if flagged in the newIds set below).
+    const BADGES = {
+        "candle": "Best Seller"
+    };
+
+    // Products added in the most recent catalog update get a "New" badge
+    // unless they already have one assigned above.
+    const NEW_IDS = new Set([]);
+
+    function formatPrice(value) {
+        return "£" + Number(value).toFixed(2);
+    }
+
+    function getDisplayPricing(product) {
+        // Products with variants: use the first variant's pricing.
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            const v = product.variants[0];
+            return { old: v.priceOld, current: v.priceCurrent };
+        }
+        // Flat products: pricing lives on the product itself.
+        return { old: product.priceOld, current: product.priceCurrent };
+    }
+
+    function getDisplayImages(product) {
+        // For variant products, show that first variant's own image set (matches the
+        // "Choose your..." selector default on the product detail page).
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            const v = product.variants[0];
+            if (Array.isArray(v.images) && v.images.length > 0) return v.images;
+        }
+        if (Array.isArray(product.images) && product.images.length > 0) return product.images;
+        return ["placeholder.png"];
+    }
+
+    function buildCard(product) {
+        const pricing = getDisplayPricing(product);
+        const images = getDisplayImages(product);
+        const badgeText = BADGES[product.id] || (NEW_IDS.has(product.id) ? "New" : null);
+        const showOldPrice = pricing.old && pricing.current && pricing.old > pricing.current;
+
+        const card = document.createElement("a");
+        card.href = "product.html?id=" + encodeURIComponent(product.id);
+        card.className = "fragrance-card";
+
+        const dotsHtml = images.length > 1
+            ? images.map(function (_, i) {
+                return '<button type="button" class="dot' + (i === 0 ? ' active' : '') + '" data-index="' + i + '" aria-label="Image ' + (i + 1) + '"></button>';
+              }).join('')
+            : '';
+
+        card.innerHTML =
+            (badgeText ? '<span class="fragrance-badge">' + badgeText + '</span>' : '') +
+            '<div class="fragrance-card-image">' +
+                (images.length > 1 ? '<button type="button" class="fragrance-carousel-arrow prev" aria-label="Previous image">&#8249;</button>' : '') +
+                '<img src="images/' + images[0] + '" alt="' + product.name + '" loading="lazy">' +
+                (images.length > 1 ? '<button type="button" class="fragrance-carousel-arrow next" aria-label="Next image">&#8250;</button>' : '') +
+                (dotsHtml ? '<div class="fragrance-carousel-dots">' + dotsHtml + '</div>' : '') +
+            '</div>' +
+            '<div class="fragrance-card-details">' +
+                '<h3>' + product.name + '</h3>' +
+                '<p class="fragrance-price">' +
+                    (showOldPrice ? '<span class="old-price">' + formatPrice(pricing.old) + '</span>' : '') +
+                    '<span class="current-price">' + formatPrice(pricing.current) + '</span>' +
+                '</p>' +
+            '</div>';
+
+        if (images.length > 1) {
+            let currentIndex = 0;
+            const imgEl = card.querySelector(".fragrance-card-image img");
+            const dots = card.querySelectorAll(".fragrance-carousel-dots .dot");
+            const prevBtn = card.querySelector(".fragrance-carousel-arrow.prev");
+            const nextBtn = card.querySelector(".fragrance-carousel-arrow.next");
+
+            function showImage(index) {
+                currentIndex = (index + images.length) % images.length;
+                imgEl.src = "images/" + images[currentIndex];
+                dots.forEach(function (dot, i) {
+                    dot.classList.toggle("active", i === currentIndex);
+                });
+            }
+
+            prevBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                showImage(currentIndex - 1);
+            });
+            nextBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                showImage(currentIndex + 1);
+            });
+            dots.forEach(function (dot) {
+                dot.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showImage(Number(dot.dataset.index));
+                });
+            });
+        }
+
+        return card;
+    }
+
+    async function loadFragrance() {
+        const grid = document.getElementById("fragranceGrid");
+
+        try {
+            const response = await fetch("products.json");
+            if (!response.ok) throw new Error("Failed to load products.json (" + response.status + ")");
+
+            const data = await response.json();
+            const products = Array.isArray(data.products) ? data.products : [];
+            const fragrance = products.filter(function (p) { return p.category === "home-fragrance"; });
+
+            if (fragrance.length === 0) {
+                grid.innerHTML = '<p class="fragrance-grid-status">No home fragrance products found.</p>';
+                return;
+            }
+
+            grid.innerHTML = "";
+            fragrance.forEach(function (product) {
+                grid.appendChild(buildCard(product));
+            });
+        } catch (error) {
+            console.error("Unable to load home fragrance products:", error);
+            grid.innerHTML = '<p class="fragrance-grid-status">Unable to load products right now. Please refresh the page.</p>';
+        }
+    }
+
+    loadFragrance();
+</script>
+
+</body>
+</html>
