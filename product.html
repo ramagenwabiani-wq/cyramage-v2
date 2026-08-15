@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">Loading… | CyRamage</title>
+    <meta name="description" id="pageDescription" content="Shop luxury self-care, accessories, home fragrance and oral care essentials at CyRamage.">
+    <meta property="og:title" id="ogTitle" content="CyRamage">
+    <meta property="og:description" id="ogDescription" content="Shop luxury self-care, accessories, home fragrance and oral care essentials at CyRamage.">
+    <meta property="og:image" id="ogImage" content="">
+    <meta property="og:url" id="ogUrl" content="">
+    <meta property="og:type" content="product">
     <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -929,6 +935,19 @@
         document.getElementById("pageTitle").textContent = product.name + " | CyRamage";
         document.getElementById("breadcrumbCurrent").textContent = product.name;
         document.getElementById("productName").textContent = product.name;
+
+        // ---- SEO: dynamic meta description + Open Graph tags ----
+        const seoImage = Array.isArray(product.images)
+            ? product.images[0]
+            : (product.variants && product.variants[0]
+                ? (Array.isArray(product.variants[0].images) ? product.variants[0].images[0] : product.variants[0].image)
+                : "");
+
+        document.getElementById("pageDescription").setAttribute("content", product.description || "");
+        document.getElementById("ogTitle").setAttribute("content", product.name + " | CyRamage");
+        document.getElementById("ogDescription").setAttribute("content", product.description || "");
+        document.getElementById("ogImage").setAttribute("content", "https://cyramage.com/images/" + seoImage);
+        document.getElementById("ogUrl").setAttribute("content", "https://cyramage.com/product.html?id=" + product.id);
 
         const variantSelector = document.getElementById("variantSelector");
         const variantOptions = document.getElementById("variantOptions");
