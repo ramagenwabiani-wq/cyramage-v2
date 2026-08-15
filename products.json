@@ -524,7 +524,7 @@
       "id": "rotating-electric-toothbrush",
       "name": "Rotating Electric Toothbrush",
       "category": "smile-ritual",
-      "description": "A rotating electric toothbrush with 5 oral care modes, 3D deep cleaning and a 25\u00b0 rotating head, for a thorough daily clean.",
+      "description": "A rotating electric toothbrush with 5 oral care modes, 3D deep cleaning and a 25ÃÂ° rotating head, for a thorough daily clean.",
       "variants": [
         {
           "id": "white",
@@ -564,7 +564,7 @@
           "priceOld": 32.94,
           "priceCurrent": 22.19,
           "priceSave": 10.75,
-          "description": "A two-brush duo set, with 5 oral care modes and a 25\u00b0 rotating head - one for you, one to share.",
+          "description": "A two-brush duo set, with 5 oral care modes and a 25ÃÂ° rotating head - one for you, one to share.",
           "images": [
             "electric-toothbrush-duo-complete-set.png",
             "electric-toothbrush-five-oral-care-modes.png",
@@ -576,7 +576,7 @@
         }
       ],
       "accordion": {
-        "details": "Five oral care modes adapt to sensitive gums, deep cleaning or daily maintenance. 3D deep cleaning technology and a 25\u00b0 rotating head reach angles other brushes miss, with a smart timer reminder to guide even coverage. Long-lasting battery with Type-C charging.",
+        "details": "Five oral care modes adapt to sensitive gums, deep cleaning or daily maintenance. 3D deep cleaning technology and a 25ÃÂ° rotating head reach angles other brushes miss, with a smart timer reminder to guide even coverage. Long-lasting battery with Type-C charging.",
         "ingredients": "Durable ABS housing, DuPont nylon bristles."
       }
     },
@@ -1164,7 +1164,940 @@
         "details": "A durable wraparound sport frame with full UV400 protection, polarized lenses, and mirrored finishes across five colourways. Built for running, cycling, hiking, driving and fishing.",
         "ingredients": "Polycarbonate frame, polarized mirrored lenses."
       }
+    },
+    {
+      "id": "rose-gold-shimmer-glow-body-oil",
+      "name": "GlowMoves Shimmer Glow Body Oil",
+      "category": "self-care",
+      "variants": [
+        {
+          "id": "warm-bronze",
+          "name": "Warm Bronze",
+          "priceOld": 13.92,
+          "priceCurrent": 10.32,
+          "priceSave": "3.6",
+          "images": [
+            "glowmoves-warm-bronze-glow-oil-product-packaging-results.png",
+            "glowmoves-glow-oil-how-to-use-application-guide.png",
+            "glowmoves-glow-oil-poolside-sun-kissed-lifestyle.png"
+          ],
+          "description": "Shimmering, nourishing body oil with a warm bronze shimmer finish. Feather-light feel, tropical vacation scent, vegan nourishment."
+        },
+        {
+          "id": "rio-sunset",
+          "name": "Rio Sunset",
+          "priceOld": 13.92,
+          "priceCurrent": 10.32,
+          "priceSave": "3.6",
+          "images": [
+            "glowmoves-rio-sunset-glow-oil-product-packaging-results.png",
+            "glowmoves-glow-oil-how-to-use-application-guide.png",
+            "glowmoves-glow-oil-poolside-sun-kissed-lifestyle.png"
+          ],
+          "description": "Shimmering, nourishing body oil with a warm golden Rio Sunset glow. Feather-light feel, tropical vacation scent, vegan nourishment."
+        },
+        {
+          "id": "rose-gold",
+          "name": "Rose Gold",
+          "priceOld": 13.92,
+          "priceCurrent": 10.32,
+          "priceSave": "3.6",
+          "images": [
+            "rose-gold-shimmer-glow-body-oil.png",
+            "glowmoves-glow-oil-how-to-use-application-guide.png",
+            "glowmoves-glow-oil-poolside-sun-kissed-lifestyle.png"
+          ],
+          "description": "Shimmering, nourishing body oil with a rose gold shimmer finish. Feather-light feel, tropical vacation scent, vegan nourishment.",
+          "badge": true
+        }
+      ]
+    },
+    {
+      "id": "rollaway-glow-liquid-highlighter",
+      "name": "Rollaway Glow Liquid Body Highlighter",
+      "category": "self-care",
+      "variants": [
+        {
+          "id": "pearl-white",
+          "name": "#01 Pearl White",
+          "priceOld": 10.05,
+          "priceCurrent": 10.05,
+          "priceSave": "0",
+          "images": [
+            "rollaway-glow-liquid-body-highlighter-pearl-white.png"
+          ],
+          "description": "Roll-on liquid highlighter for a luminous, buildable glow on face and body."
+        },
+        {
+          "id": "pearl-champagne",
+          "name": "#02 Pearl Champagne",
+          "priceOld": 10.05,
+          "priceCurrent": 10.05,
+          "priceSave": "0",
+          "images": [
+            "rollaway-glow-liquid-body-highlighter-pearl-champagne.png"
+          ],
+          "description": "Roll-on liquid highlighter for a luminous, buildable glow on face and body.",
+          "badge": true
+        },
+        {
+          "id": "rose-champagne",
+          "name": "#03 Rose Champagne",
+          "priceOld": 10.05,
+          "priceCurrent": 10.05,
+          "priceSave": "0",
+          "images": [
+            "rollaway-glow-liquid-body-highlighter-rose-champagne.png"
+          ],
+          "description": "Roll-on liquid highlighter for a luminous, buildable glow on face and body."
+        },
+        {
+          "id": "warm-bronze",
+          "name": "#04 Warm Bronze",
+          "priceOld": 10.05,
+          "priceCurrent": 10.05,
+          "priceSave": "0",
+          "images": [
+            "rollaway-glow-liquid-body-highlighter-warm-bronze.png"
+          ],
+          "description": "Roll-on liquid highlighter for a luminous, buildable glow on face and body."
+        }
+      ]
+    },
+    {
+      "id": "mayjam-essential-oil-collection",
+      "name": "MayJam Premium Essential Oil",
+      "category": "self-care",
+      "variants": [
+        {
+          "id": "lemon",
+          "name": "Lemon",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "rose",
+          "name": "Rose",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "bergamot",
+          "name": "Bergamot",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "rosemary",
+          "name": "Rosemary",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "rosemary-essential-oil-100ml-with-dropper.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "citronella",
+          "name": "Citronella",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "lavender",
+          "name": "Lavender",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper.",
+          "badge": true
+        },
+        {
+          "id": "jasmine",
+          "name": "Jasmine",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "jasmine-essential-oil-100ml-with-dropper.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "eucalyptus",
+          "name": "Eucalyptus",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "peppermint",
+          "name": "Peppermint",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "sandalwood",
+          "name": "Sandalwood",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "sweet-orange",
+          "name": "Sweet Orange",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "premium-essential-oil-fragrance-collection.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "frankincense",
+          "name": "Frankincense",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "frankincense-essential-oil-100ml-with-dropper.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        },
+        {
+          "id": "ylang-ylang",
+          "name": "Ylang Ylang",
+          "priceOld": 18.41,
+          "priceCurrent": 12.52,
+          "priceSave": "5.89",
+          "images": [
+            "ylang-ylang-essential-oil-100ml-with-dropper.png"
+          ],
+          "description": "100% pure premium essential oil, 100mL/3.38 fl.oz, with glass dropper."
+        }
+      ]
+    },
+    {
+      "id": "mayjam-35-piece-essential-oil-gift-set",
+      "name": "MayJam 35-Piece Essential Oil Gift Set",
+      "category": "gift-sets",
+      "priceOld": 54.99,
+      "priceCurrent": 29.62,
+      "priceSave": "25.37",
+      "images": [
+        "35-piece-essential-oil-gift-set.png",
+        "35-piece-essential-oil-set-all-scents.png",
+        "essential-oils-with-wood-grain-aroma-diffuser.png"
+      ],
+      "description": "A curated 35-piece gift box of 100% pure plant essential oils (5mL each), presented in an elegant book-style gift box with droppers included."
+    },
+    {
+      "id": "luxury-reed-diffuser",
+      "name": "Luxury Reed Diffuser",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "yamakawa-hisagi",
+          "name": "Woode Scent Ã¢ Yamakawa Hisagi",
+          "priceOld": 20.35,
+          "priceCurrent": 17.35,
+          "priceSave": "3.0",
+          "images": [
+            "yamakawa-hisagi-woody-reed-diffuser-scent-notes.png",
+            "luxury-reed-diffuser-bedroom-lifestyle.png"
+          ],
+          "description": "Top: Pine Needle, Fir. Middle: Cedar, Vetiver. Base: Amber, Patchouli.",
+          "badge": true
+        },
+        {
+          "id": "floral-note",
+          "name": "Floral Note",
+          "priceOld": 20.35,
+          "priceCurrent": 17.35,
+          "priceSave": "3.0",
+          "images": [
+            "floral-note-luxury-reed-diffuser.png"
+          ],
+          "description": "A romantic floral bouquet reed diffuser scent."
+        },
+        {
+          "id": "muyun-chunshu",
+          "name": "Tea Leaves Ã¢ Muyun Chunshu",
+          "priceOld": 20.35,
+          "priceCurrent": 17.35,
+          "priceSave": "3.0",
+          "images": [
+            "muyun-chunshu-tea-leaves-reed-diffuser-scent-notes.png"
+          ],
+          "description": "Top: Grass, Bergamot. Middle: Cedar, Lily of the Valley. Base: Amber, Ambergris."
+        },
+        {
+          "id": "gulong-scent",
+          "name": "Gulong Scent",
+          "priceOld": 20.35,
+          "priceCurrent": 17.35,
+          "priceSave": "3.0",
+          "images": [
+            "luxury-reed-diffuser-lifestyle-display.png"
+          ],
+          "description": "A warm, ambered reed diffuser scent."
+        }
+      ]
+    },
+    {
+      "id": "cyramage-luxury-scented-candle",
+      "name": "CyRamage Luxury Scented Candle",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "lavender-vanilla",
+          "name": "Lavender & Vanilla",
+          "priceOld": 15.84,
+          "priceCurrent": 15.84,
+          "priceSave": "0",
+          "images": [
+            "cyramage-lavender-vanilla-luxury-scented-candle-220g.png"
+          ],
+          "description": "220g / 7.8oz hand-poured luxury scented candle in a matte black glass jar with gold lid.",
+          "badge": true
+        },
+        {
+          "id": "sandalwood-amber",
+          "name": "Sandalwood & Amber",
+          "priceOld": 15.84,
+          "priceCurrent": 15.84,
+          "priceSave": "0",
+          "images": [
+            "cyramage-sandalwood-amber-luxury-scented-candle-220g.png"
+          ],
+          "description": "220g / 7.8oz hand-poured luxury scented candle in a matte black glass jar with gold lid."
+        },
+        {
+          "id": "white-jasmine",
+          "name": "White Jasmine",
+          "priceOld": 15.84,
+          "priceCurrent": 15.84,
+          "priceSave": "0",
+          "images": [
+            "cyramage-white-jasmine-luxury-scented-candle-220g.png"
+          ],
+          "description": "220g / 7.8oz hand-poured luxury scented candle in a matte black glass jar with gold lid."
+        },
+        {
+          "id": "rose-oud",
+          "name": "Rose Oud",
+          "priceOld": 15.84,
+          "priceCurrent": 15.84,
+          "priceSave": "0",
+          "images": [
+            "cyramage-rose-oud-luxury-scented-candle-220g.png"
+          ],
+          "description": "220g / 7.8oz hand-poured luxury scented candle in a matte black glass jar with gold lid."
+        }
+      ]
+    },
+    {
+      "id": "flame-aroma-essential-oil-diffuser",
+      "name": "Flame Aroma Essential Oil Diffuser",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "black",
+          "name": "Black",
+          "priceOld": 30.9,
+          "priceCurrent": 22.5,
+          "priceSave": "8.4",
+          "images": [
+            "black-aroma-essential-oil-diffuser.png",
+            "black-flame-aroma-essential-oil-diffuser-lifestyle.png",
+            "black-flame-aroma-diffuser-colour-light-modes.png"
+          ],
+          "description": "Flame-effect essential oil diffuser with realistic mist 'flame' simulation and 7 ambient light colours.",
+          "badge": true
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "priceOld": 30.9,
+          "priceCurrent": 22.5,
+          "priceSave": "8.4",
+          "images": [
+            "white-aroma-essential-oil-diffuser.png"
+          ],
+          "description": "Flame-effect essential oil diffuser with realistic mist 'flame' simulation and 7 ambient light colours."
+        }
+      ]
+    },
+    {
+      "id": "ambient-light-aroma-diffuser",
+      "name": "Ambient Light Aroma Diffuser",
+      "category": "home-fragrance",
+      "priceOld": 19.5,
+      "priceCurrent": 19.5,
+      "priceSave": "0",
+      "images": [
+        "two-speed-aroma-diffuser-warm-light-mist.png",
+        "quiet-sleep-aroma-diffuser-night-mist.png",
+        "ambient-light-aroma-diffuser-lifestyle.png"
+      ],
+      "description": "Two-speed ultrasonic aroma diffuser with warm ambient glow light. Gentle 10-30dB operation for quiet, restful sleep."
+    },
+    {
+      "id": "cyramage-room-linen-mist",
+      "name": "CyRamage Room & Linen Mist",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "lavender-vanilla-black",
+          "name": "Lavender & Vanilla",
+          "priceOld": 13.89,
+          "priceCurrent": 13.89,
+          "priceSave": "0",
+          "images": [
+            "cyramage-lavender-vanilla-room-linen-mist-100ml.png"
+          ],
+          "description": "100ml room and linen mist. Perfect for bedding, curtains, sofas and bathrooms.",
+          "badge": true
+        },
+        {
+          "id": "lavender-vanilla-reed",
+          "name": "Lavender & Vanilla (Reed)",
+          "priceOld": 13.89,
+          "priceCurrent": 13.89,
+          "priceSave": "0",
+          "images": [
+            "cyramage-lavender-vanilla-room-linen-mist-white-100ml.png"
+          ],
+          "description": "100ml room and linen mist in white/gold packaging. Perfect for bedding, curtains, sofas and bathrooms."
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla",
+          "priceOld": 13.89,
+          "priceCurrent": 13.89,
+          "priceSave": "0",
+          "images": [
+            "cyramage-vanilla-room-linen-mist-150ml.png"
+          ],
+          "description": "150ml room and linen mist. Fresh, clean, long-lasting."
+        },
+        {
+          "id": "tropical-fruit",
+          "name": "Tropical Fruit",
+          "priceOld": 13.89,
+          "priceCurrent": 13.89,
+          "priceSave": "0",
+          "images": [
+            "cyramage-tropical-fruit-room-linen-mist-100ml.png"
+          ],
+          "description": "100ml room and linen mist. Fresh, clean, long-lasting."
+        },
+        {
+          "id": "luxury",
+          "name": "Luxury",
+          "priceOld": 13.89,
+          "priceCurrent": 13.89,
+          "priceSave": "0",
+          "images": [
+            "cyramage-luxury-room-linen-mist-100ml.png"
+          ],
+          "description": "100ml room and linen mist. Fresh, clean, long-lasting."
+        }
+      ]
+    },
+    {
+      "id": "mini-wooden-skyline-aroma-diffuser",
+      "name": "Mini Wooden Skyline Aroma Diffuser",
+      "category": "home-fragrance",
+      "priceOld": 7.56,
+      "priceCurrent": 7.56,
+      "priceSave": "0",
+      "images": [
+        "wooden-aroma-diffuser-essential-oil-drop-lifestyle.png",
+        "wooden-aroma-diffuser-6cm-natural-wood.png",
+        "wooden-aroma-diffuser-set-natural-wood.png"
+      ],
+      "description": "Natural wood skyline-shaped aroma diffuser. Add a few drops of essential oil to the wood blocks for a subtle, lasting scent. 6cm/2.36in."
+    },
+    {
+      "id": "wooden-ball-aroma-diffuser",
+      "name": "Wooden Ball Aroma Diffuser (Set of 2)",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "natural-beech",
+          "name": "Beech Wood",
+          "priceOld": 12.66,
+          "priceCurrent": 10.55,
+          "priceSave": "2.11",
+          "images": [
+            "2pcs-beech-wooden-ball-aroma-diffuser-set.png",
+            "beech-wooden-ball-aroma-diffuser-lifestyle.png"
+          ],
+          "description": "Set of 2 natural beech wood ball aroma diffusers. 50mm/1.97in x 35mm/1.38in each.",
+          "badge": true
+        },
+        {
+          "id": "walnut",
+          "name": "Walnut",
+          "priceOld": 12.66,
+          "priceCurrent": 10.55,
+          "priceSave": "2.11",
+          "images": [
+            "walnut-wooden-ball-aroma-diffuser.png"
+          ],
+          "description": "Set of 2 walnut wood ball aroma diffusers. 50mm/1.97in x 35mm/1.38in each."
+        }
+      ]
+    },
+    {
+      "id": "wooden-apple-aromatherapy-diffuser",
+      "name": "Wooden Apple Aromatherapy Diffuser",
+      "category": "home-fragrance",
+      "priceOld": 11.24,
+      "priceCurrent": 8.82,
+      "priceSave": "2.42",
+      "images": [
+        "wooden-apple-aroma-diffuser-essential-oil-lifestyle.png",
+        "wooden-apple-aroma-diffuser-size-guide.png",
+        "wooden-apple-aromatherapy-diffuser-feature.png",
+        "wooden-apple-aroma-diffuser-essential-oil-home-lifestyle.png",
+        "wooden-apple-aromatherapy-diffuser-multi-use.png"
+      ],
+      "description": "Nourishing wood apple that locks in essential oils and fragrance. 3.8cm x 4.5cm. Perfect for headboards, wardrobes, offices and cars."
+    },
+    {
+      "id": "homeflower-wooden-cylinder-reed-diffuser",
+      "name": "HomeFlower Wooden Cylinder Reed Diffuser",
+      "category": "home-fragrance",
+      "priceOld": 12.15,
+      "priceCurrent": 9.89,
+      "priceSave": "2.26",
+      "images": [
+        "wooden-aromatherapy-diffuser-cup-lifestyle.png",
+        "wooden-aromatherapy-diffuser-essential-oil-application.png",
+        "wooden-aromatherapy-diffuser-luxury-display.png",
+        "wooden-reed-aromatherapy-diffuser-lifestyle-display.png"
+      ],
+      "description": "Solid wood cylinder reed diffuser cup with matching wood lid and black display tray. Add your own essential oil for a natural, wood-locked fragrance."
+    },
+    {
+      "id": "smokeless-air-purification-ashtray",
+      "name": "Smokeless Air Purification Ashtray",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "black",
+          "name": "Black",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "smokeless-air-purification-ashtray-black.png",
+            "air-purification-ashtray-side-opening-features.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable.",
+          "badge": true
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "air-purification-ashtray-six-colour-options.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable."
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "air-purification-ashtray-six-colour-options.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable."
+        },
+        {
+          "id": "grey",
+          "name": "Grey",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "air-purification-ashtray-six-colour-options.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable."
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "air-purification-ashtray-six-colour-options.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable."
+        },
+        {
+          "id": "green",
+          "name": "Green",
+          "priceOld": 49.99,
+          "priceCurrent": 49.99,
+          "priceSave": "0",
+          "images": [
+            "air-purification-ashtray-six-colour-options.png"
+          ],
+          "description": "Four-layer HEPA + activated carbon filtration ashtray with silent turbo fan. Stores 30-40 cigarette butts. Rechargeable."
+        }
+      ]
+    },
+    {
+      "id": "luxury-car-fragrance-diffuser",
+      "name": "East Herben Luxury Car Fragrance Diffuser",
+      "category": "home-fragrance",
+      "variants": [
+        {
+          "id": "west-lake-longjing",
+          "name": "West Lake Longjing",
+          "priceOld": 16.89,
+          "priceCurrent": 16.89,
+          "priceSave": "0",
+          "images": [
+            "luxury-car-fragrance-air-freshener-bottles.png",
+            "luxury-car-fragrance-air-freshener-features.png",
+            "natural-plant-extract-car-fragrance-lifestyle.png",
+            "luxury-car-fragrance-cup-holder-lifestyle.png",
+            "luxury-car-fragrance-diffuser-lifestyle.png",
+            "natural-botanical-car-fragrance-diffuser.png"
+          ],
+          "description": "0% alcohol car fragrance diffuser with natural plant extracts. Long-lasting without dizziness. Safe for pregnant women and children.",
+          "badge": true
+        },
+        {
+          "id": "alpine-white-tea",
+          "name": "Alpine White Tea",
+          "priceOld": 16.89,
+          "priceCurrent": 16.89,
+          "priceSave": "0",
+          "images": [
+            "luxury-car-fragrance-air-freshener-bottles.png",
+            "luxury-car-fragrance-air-freshener-features.png",
+            "natural-plant-extract-car-fragrance-lifestyle.png",
+            "luxury-car-fragrance-cup-holder-lifestyle.png",
+            "luxury-car-fragrance-diffuser-lifestyle.png",
+            "natural-botanical-car-fragrance-diffuser.png"
+          ],
+          "description": "0% alcohol car fragrance diffuser with natural plant extracts. Long-lasting without dizziness. Safe for pregnant women and children."
+        },
+        {
+          "id": "enchanting-cologne",
+          "name": "Enchanting Cologne",
+          "priceOld": 16.89,
+          "priceCurrent": 16.89,
+          "priceSave": "0",
+          "images": [
+            "luxury-car-fragrance-air-freshener-bottles.png",
+            "luxury-car-fragrance-air-freshener-features.png",
+            "natural-plant-extract-car-fragrance-lifestyle.png",
+            "luxury-car-fragrance-cup-holder-lifestyle.png",
+            "luxury-car-fragrance-diffuser-lifestyle.png",
+            "natural-botanical-car-fragrance-diffuser.png"
+          ],
+          "description": "0% alcohol car fragrance diffuser with natural plant extracts. Long-lasting without dizziness. Safe for pregnant women and children."
+        },
+        {
+          "id": "no-5",
+          "name": "No. 5",
+          "priceOld": 16.89,
+          "priceCurrent": 16.89,
+          "priceSave": "0",
+          "images": [
+            "luxury-car-fragrance-air-freshener-bottles.png",
+            "luxury-car-fragrance-air-freshener-features.png",
+            "natural-plant-extract-car-fragrance-lifestyle.png",
+            "luxury-car-fragrance-cup-holder-lifestyle.png",
+            "luxury-car-fragrance-diffuser-lifestyle.png",
+            "natural-botanical-car-fragrance-diffuser.png"
+          ],
+          "description": "0% alcohol car fragrance diffuser with natural plant extracts. Long-lasting without dizziness. Safe for pregnant women and children."
+        }
+      ]
+    },
+    {
+      "id": "hotel-premium-fragrance-oil-set",
+      "name": "Hotel Premium Fragrance Oil Set (6 x 10ml)",
+      "category": "home-fragrance",
+      "priceOld": 28.89,
+      "priceCurrent": 17.98,
+      "priceSave": 10.91,
+      "description": "A curated set of 6 luxury fragrance oils inspired by iconic hotel scents, presented in an elegant black and gold gift box. An ideal gift set for the ones you care about.",
+      "images": [
+        "luxury-hotel-fragrance-oil-6-piece-gift-set.png",
+        "hotel-inspired-fragrance-oils-scent-notes.png",
+        "hotel-fragrance-oil-top-6-scent-collection.png",
+        "hotel-fragrance-oils-midnight-orchid-blush-woods-bubbly-bloom.png",
+        "hotel-fragrance-oil-ideal-gift-set-lifestyle.png"
+      ],
+      "accordion": {
+        "details": "Six long-lasting fragrance oils inspired by the ambience of luxury hotels, from bright citrus to warm orchid and vanilla notes. Each 10ml bottle can be used in diffusers, oil burners, or added to unscented products for a signature scent.\n\nPark Lane Serenity - Top: Black Currant. Heart: Ambergris, Rose. Base: White Sandalwood, Cedarwood.\nCitrus Verde - Top: Bergamot, Orange. Heart: Green Tea, Orange Blossom. Base: White Musk, Light Woods.\nWhite Tea - Top: White Tea, Freesia. Heart: Green Leaves, Jasmine. Base: Cedarwood, Vanilla.\nMidnight Orchid - Top: Pink Pepper, Orange Blossom, Citrus. Heart: Jasmine, Almond, Licorice. Base: Vanilla, Tonka Bean, Patchouli, Cedarwood.\nBlush Woods - Top: Black Currant, Fuji Apple, Grapefruit. Heart: Pink Jasmine, Rose. Base: Clary Sage, White Cedarwood, White Musk.\nBubbly Bloom - Top: Champagne, Passion Fruit, Peach. Heart: Tiare Flower, Ylang-Ylang. Base: Tonka Bean, Violet Leaf, Woody Notes.",
+        "ingredients": "Fragrance oil blend, carrier oil base. 6 x 10ml / 0.33fl.oz bottles."
+      }
+    },
+    {
+      "id": "ceramic-aromatherapy-oil-burner",
+      "name": "Sculptural Ceramic Aromatherapy Oil Burner",
+      "category": "home-fragrance",
+      "priceOld": 34.98,
+      "priceCurrent": 20.99,
+      "priceSave": 13.99,
+      "description": "A sculptural white ceramic tealight oil burner with an abstract, hand-finished silhouette. Add water and a few drops of essential oil to the dish, light a tealight beneath, and let the warmth release the fragrance.",
+      "images": [
+        "ceramic-aromatherapy-oil-burner-white.png",
+        "ceramic-aromatherapy-oil-burner-in-use.png",
+        "ceramic-aromatherapy-oil-burner-size-guide.png",
+        "ceramic-aromatherapy-oil-burner-tealight-lifestyle.png",
+        "ceramic-aromatherapy-oil-burner-essential-oil-lifestyle.png"
+      ],
+      "accordion": {
+        "details": "A hand-finished ceramic oil burner with a sculptural, abstract silhouette that doubles as a decorative piece even unlit. Fill the top dish with water and a few drops of your favourite essential oil, place a tealight in the base, and let the gentle heat diffuse fragrance through the room. Dimensions: 14.8cm/5.8in (H) x 12.8cm/5.03in (W) x 7.5cm/2.95in (D).",
+        "ingredients": "Glazed ceramic. Tealight candle not included."
+      }
+    },
+    {
+      "id": "electric-wax-warmer-lamp",
+      "name": "Electric Wax Warmer Lamp",
+      "category": "home-fragrance",
+      "description": "A flameless, plug-in electric wax warmer with a laser-cut metal shade, digital timer display and removable wax dish for easy cleaning.",
+      "variants": [
+        {
+          "id": "deer-forest",
+          "name": "Deer Forest",
+          "priceOld": 31.02,
+          "priceCurrent": 18.39,
+          "priceSave": 12.63,
+          "description": "Electric wax warmer lamp with a laser-cut deer and forest silhouette design.",
+          "images": [
+            "electric-wax-warmer-lamp-with-timer.png",
+            "electric-wax-warmer-lamp-features.png",
+            "electric-wax-warmer-lamp-digital-timer-display.png",
+            "electric-wax-warmer-lamp-warm-light-ambiance.png",
+            "electric-wax-warmer-room-fragrance-uses.png",
+            "electric-wax-warmer-deer-forest-uk-plug.png"
+          ]
+        },
+        {
+          "id": "wave-pattern",
+          "name": "Wave Pattern",
+          "priceOld": 31.02,
+          "priceCurrent": 18.39,
+          "priceSave": 12.63,
+          "description": "Electric wax warmer lamp with a laser-cut flowing wave and flame silhouette design.",
+          "images": [
+            "electric-wax-warmer-removable-dish-easy-clean.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "No flame, no soot - a gentle heating element melts wax cubes to release fragrance safely, ideal for bedrooms, studies, living rooms and kitchens. Digital display shows the timer countdown at a glance, with automatic timed shutdown, stable temperature control, and a removable dish that lifts out for effortless cleaning between scents. UK 3-pin plug.",
+        "ingredients": "Laser-cut metal shade, ceramic/ABS dish, UK-standard plug (240V)."
+      }
+    },
+    {
+      "id": "3d-fireworks-electric-wax-warmer",
+      "name": "3D Fireworks Touch Electric Wax Warmer Lamp",
+      "category": "home-fragrance",
+      "priceOld": 36.94,
+      "priceCurrent": 23.69,
+      "priceSave": 13.25,
+      "description": "A touch-control glass wax warmer with a mesmerising 3D fireworks effect and mirrored chrome base. Melts wax cubes or oils to release fragrance and a soft, shimmering glow.",
+      "images": [
+        "touch-control-fireworks-aroma-diffuser-lamp.png",
+        "fireworks-aromatherapy-wax-warmer-benefits.png",
+        "3d-fireworks-electric-wax-warmer-lamp-lifestyle.png",
+        "3d-fireworks-electric-wax-warmer-us-regulations.png",
+        "3d-fireworks-electric-wax-warmer-european-regulations.png"
+      ],
+      "accordion": {
+        "details": "A single touch brings the 3D glass shade to life with a dazzling fireworks-style light effect, while a gentle heating plate melts wax melts or oils in the glass dish above. Doubles as a decorative accent even when unlit, purifying and freshening the air while creating a warm, romantic ambience.",
+        "ingredients": "3D-effect glass shade, mirrored chrome base, glass wax dish."
+      }
+    },
+    {
+      "id": "tennis-choker-necklace",
+      "name": "Adjustable Tennis Choker Necklace",
+      "category": "accessories",
+      "description": "A sparkling round-cut tennis choker necklace with an adjustable slider clasp for a perfect fit, available in silver, gold and rose gold finishes, plus a pear-cut pendant style.",
+      "variants": [
+        {
+          "id": "silver",
+          "name": "Silver",
+          "priceOld": 236.94,
+          "priceCurrent": 89.99,
+          "priceSave": 146.95,
+          "description": "Round-cut tennis choker necklace in silver with an adjustable slider clasp.",
+          "images": [
+            "silver-tennis-choker-necklace-adjustable.png"
+          ],
+          "materials": "925 Sterling Silver, round-cut cubic zirconia."
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "priceOld": 236.94,
+          "priceCurrent": 89.99,
+          "priceSave": 146.95,
+          "description": "Round-cut tennis choker necklace in gold with an adjustable slider clasp.",
+          "images": [
+            "gold-tennis-choker-necklace-adjustable.png"
+          ],
+          "materials": "Gold-plated 925 Sterling Silver, round-cut cubic zirconia."
+        },
+        {
+          "id": "rose-gold",
+          "name": "Rose Gold",
+          "priceOld": 236.94,
+          "priceCurrent": 89.99,
+          "priceSave": 146.95,
+          "description": "Round-cut tennis choker necklace in rose gold with an adjustable slider clasp.",
+          "images": [
+            "rose-gold-tennis-choker-necklace-adjustable.png"
+          ],
+          "materials": "Rose gold-plated 925 Sterling Silver, round-cut cubic zirconia."
+        },
+        {
+          "id": "pear-cut-pendant",
+          "name": "Pear-Cut Pendant",
+          "priceOld": 236.94,
+          "priceCurrent": 89.99,
+          "priceSave": 146.95,
+          "description": "Round-cut tennis choker necklace with a statement pear-cut crystal centre pendant.",
+          "images": [
+            "pear-cut-crystal-tennis-choker-necklace.png",
+            "pear-cut-crystal-tennis-choker-necklace-black-display.png"
+          ],
+          "materials": "925 Sterling Silver, round-cut and pear-cut cubic zirconia."
+        }
+      ],
+      "accordion": {
+        "details": "A single row of brilliant round-cut stones sits close to the neck for a delicate, sparkling choker look. The adjustable slider clasp lets you customise the length for a comfortable, secure fit.",
+        "ingredients": "925 Sterling Silver base, cubic zirconia stones. Available in silver, gold-plated, and rose gold-plated finishes."
+      }
+    },
+    {
+      "id": "flower-moissanite-stud-earrings",
+      "name": "Flower-Set Moissanite Stud Earrings",
+      "category": "accessories",
+      "description": "Round-cut moissanite studs cradled in a delicate flower-shaped setting, available in gold and silver finishes and two carat sizes.",
+      "variants": [
+        {
+          "id": "gold-1ct",
+          "name": "Gold, 1.0ct (7.5mm)",
+          "priceOld": 25.88,
+          "priceCurrent": 18.58,
+          "priceSave": 7.3,
+          "description": "Flower-set moissanite stud earrings in 14K gold filled, 1.0ct per stone, 7.5mm.",
+          "images": [
+            "gold-flower-crystal-stud-earrings.png",
+            "gold-flower-crystal-stud-earrings-gift-box.png",
+            "gold-moissanite-flower-stud-earrings-close-up.png",
+            "gold-moissanite-flower-stud-earrings-lifestyle-close-up.png"
+          ]
+        },
+        {
+          "id": "gold-2ct",
+          "name": "Gold, 2.0ct (9.5mm)",
+          "priceOld": 25.88,
+          "priceCurrent": 18.58,
+          "priceSave": 7.3,
+          "description": "Flower-set moissanite stud earrings in 14K gold filled, 2.0ct per stone, 9.5mm.",
+          "images": [
+            "gold-flower-crystal-stud-earrings.png",
+            "gold-flower-crystal-stud-earrings-gift-box.png",
+            "gold-moissanite-flower-stud-earrings-close-up.png",
+            "gold-moissanite-flower-stud-earrings-lifestyle-close-up.png"
+          ]
+        },
+        {
+          "id": "silver-1ct",
+          "name": "Silver, 1.0ct (7.5mm)",
+          "priceOld": 25.88,
+          "priceCurrent": 18.58,
+          "priceSave": 7.3,
+          "description": "Flower-set moissanite stud earrings in silver, 1.0ct per stone, 7.5mm.",
+          "images": [
+            "silver-flower-crystal-stud-earrings.png"
+          ]
+        },
+        {
+          "id": "silver-2ct",
+          "name": "Silver, 2.0ct (9.5mm)",
+          "priceOld": 25.88,
+          "priceCurrent": 18.58,
+          "priceSave": 7.3,
+          "description": "Flower-set moissanite stud earrings in silver, 2.0ct per stone, 9.5mm.",
+          "images": [
+            "silver-flower-crystal-stud-earrings.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "A brilliant round-cut moissanite stone sits inside a scalloped, flower-inspired setting for extra sparkle and dimension. D colour, VVS1 clarity, excellent cut. Secure friction butterfly backs.",
+        "ingredients": "14K Gold Filled or silver setting, Moissanite stone (D colour, VVS1 clarity). Stone sizes: 6.5mm/1.0ct or 8mm/2.0ct per stone. Includes moissanite certificate and gift box."
+      }
     }
   ]
 }
-
