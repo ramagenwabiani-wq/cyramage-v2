@@ -70,7 +70,7 @@
 
     /* Content */
     .legal-page {
-        max-width: 760px;
+        max-width: 780px;
         margin: 0 auto;
         padding: 100px 6% 130px;
     }
@@ -82,8 +82,14 @@
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(2.2rem, 4vw, 2.8rem);
         color: var(--near-black) !important;
-        margin-bottom: 50px;
+        margin-bottom: 12px;
         line-height: 1.1;
+    }
+    .legal-page .page-sub {
+        color: var(--grey);
+        font-size: 0.98rem;
+        line-height: 1.65;
+        margin-bottom: 50px;
     }
     .legal-section {
         padding: 28px 0;
@@ -102,8 +108,9 @@
         color: var(--grey);
         line-height: 1.7;
         font-size: 0.95rem;
-        margin: 0;
+        margin: 0 0 12px;
     }
+    .legal-section p:last-child { margin-bottom: 0; }
     .legal-section a {
         color: var(--olive);
         text-decoration: none;
@@ -111,6 +118,29 @@
         transition: border-color 0.2s ease;
     }
     .legal-section a:hover { border-color: var(--olive); }
+
+    .delivery-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 6px;
+    }
+    .delivery-table th, .delivery-table td {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.9rem;
+        color: var(--near-black);
+    }
+    .delivery-table th {
+        color: var(--bronze);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+    }
+    .delivery-table td { color: var(--grey); }
+    .delivery-table td:first-child { color: var(--near-black); font-weight: 500; }
 
     /* Footer */
     .footer { background: var(--near-black) !important; color: rgba(245,242,236,0.7) !important; }
@@ -173,25 +203,63 @@
 <div class="legal-page">
     <span class="eyebrow">Customer Care</span>
     <h1>Delivery Information</h1>
+    <p class="page-sub">Everything you need to know about getting your CyRamage order, from dispatch to your door.</p>
 
     <div class="legal-section">
-        <h3>UK Standard Delivery</h3>
-        <p>3&ndash;5 working days. Free on all orders over &pound;50; &pound;3.99 on orders under &pound;50.</p>
+        <h3>Delivery Options &amp; Timeframes</h3>
+        <table class="delivery-table">
+            <tr>
+                <th>Service</th>
+                <th>Delivery Time</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Standard Delivery</td>
+                <td>3&ndash;5 working days</td>
+                <td>£3.99 &mdash; free on orders over £50</td>
+            </tr>
+            <tr>
+                <td>Express Delivery</td>
+                <td>1&ndash;2 working days</td>
+                <td>£5.99</td>
+            </tr>
+        </table>
     </div>
 
     <div class="legal-section">
-        <h3>UK Express Delivery</h3>
-        <p>1&ndash;2 working days. &pound;5.99, available at checkout.</p>
+        <h3>Which Option Should I Choose?</h3>
+        <p><strong>Standard Delivery</strong> is our default and best all-round choice for most orders &mdash; fully tracked, and free once your basket is over £50.</p>
+        <p><strong>Express Delivery</strong> is worth choosing when timing matters &mdash; a gift with a date attached, or simply when you'd rather not wait.</p>
     </div>
 
     <div class="legal-section">
         <h3>Order Processing</h3>
-        <p>Orders are packed and dispatched within 1&ndash;2 business days of purchase. You'll receive a confirmation email with tracking once your order ships.</p>
+        <p>Orders are packed and dispatched within 1&ndash;2 business days of purchase. You'll receive a confirmation email with tracking as soon as your order ships.</p>
+    </div>
+
+    <div class="legal-section">
+        <h3>Payment</h3>
+        <p>All orders are processed securely through Stripe. We never see or store your card details directly.</p>
+    </div>
+
+    <div class="legal-section">
+        <h3>Packaging</h3>
+        <p>Every order is carefully wrapped to protect your items and arrive looking as beautiful as they feel &mdash; because unboxing should be part of the luxury.</p>
+    </div>
+
+    <div class="legal-section">
+        <h3>Tracking Your Order</h3>
+        <p>Once your order is dispatched, you'll receive a tracking link by email. If you can't locate it, contact <a href="mailto:orders@cyramage.com">orders@cyramage.com</a> and we'll help you track it down.</p>
     </div>
 
     <div class="legal-section">
         <h3>International Delivery</h3>
         <p>We're working on expanding delivery outside the UK. For enquiries, contact <a href="mailto:orders@cyramage.com">orders@cyramage.com</a>.</p>
+    </div>
+
+    <div class="legal-section">
+        <h3>Returns &amp; Exchanges</h3>
+        <p>See our <a href="returns.html">Returns</a> page for details on returning or exchanging an order.</p>
     </div>
 
     <div class="legal-section">
