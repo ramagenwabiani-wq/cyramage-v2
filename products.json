@@ -524,7 +524,7 @@
       "id": "rotating-electric-toothbrush",
       "name": "Rotating Electric Toothbrush",
       "category": "smile-ritual",
-      "description": "A rotating electric toothbrush with 5 oral care modes, 3D deep cleaning and a 25ÃÂ° rotating head, for a thorough daily clean.",
+      "description": "A rotating electric toothbrush with 5 oral care modes, 3D deep cleaning and a 25Â° rotating head, for a thorough daily clean.",
       "variants": [
         {
           "id": "white",
@@ -564,7 +564,7 @@
           "priceOld": 32.94,
           "priceCurrent": 22.19,
           "priceSave": 10.75,
-          "description": "A two-brush duo set, with 5 oral care modes and a 25ÃÂ° rotating head - one for you, one to share.",
+          "description": "A two-brush duo set, with 5 oral care modes and a 25Â° rotating head - one for you, one to share.",
           "images": [
             "electric-toothbrush-duo-complete-set.png",
             "electric-toothbrush-five-oral-care-modes.png",
@@ -576,7 +576,7 @@
         }
       ],
       "accordion": {
-        "details": "Five oral care modes adapt to sensitive gums, deep cleaning or daily maintenance. 3D deep cleaning technology and a 25ÃÂ° rotating head reach angles other brushes miss, with a smart timer reminder to guide even coverage. Long-lasting battery with Type-C charging.",
+        "details": "Five oral care modes adapt to sensitive gums, deep cleaning or daily maintenance. 3D deep cleaning technology and a 25Â° rotating head reach angles other brushes miss, with a smart timer reminder to guide even coverage. Long-lasting battery with Type-C charging.",
         "ingredients": "Durable ABS housing, DuPont nylon bristles."
       }
     },
@@ -842,7 +842,7 @@
       "priceSave": 0,
       "description": "A transparent skeleton-dial automatic watch with a resin case and strap, showcasing the mechanical movement.",
       "images": [
-        "transparent-skeleton-automatic-watch-white-front.png",
+        "transparent-skeleton-automatic-watch-white.png",
         "crystal-skeleton-automatic-watch-white-gold.png",
         "crystal-skeleton-automatic-watch-product-information.png",
         "crystal-skeleton-automatic-watch-features-overview.png",
@@ -1447,7 +1447,7 @@
       "variants": [
         {
           "id": "yamakawa-hisagi",
-          "name": "Woode Scent Ã¢ Yamakawa Hisagi",
+          "name": "Woode Scent â Yamakawa Hisagi",
           "priceOld": 20.35,
           "priceCurrent": 17.35,
           "priceSave": "3.0",
@@ -1471,7 +1471,7 @@
         },
         {
           "id": "muyun-chunshu",
-          "name": "Tea Leaves Ã¢ Muyun Chunshu",
+          "name": "Tea Leaves â Muyun Chunshu",
           "priceOld": 20.35,
           "priceCurrent": 17.35,
           "priceSave": "3.0",
@@ -2097,6 +2097,230 @@
       "accordion": {
         "details": "A brilliant round-cut moissanite stone sits inside a scalloped, flower-inspired setting for extra sparkle and dimension. D colour, VVS1 clarity, excellent cut. Secure friction butterfly backs.",
         "ingredients": "14K Gold Filled or silver setting, Moissanite stone (D colour, VVS1 clarity). Stone sizes: 6.5mm/1.0ct or 8mm/2.0ct per stone. Includes moissanite certificate and gift box."
+      }
+    },
+    {
+      "id": "cloudcurve-retro-sunglasses",
+      "name": "CloudCurve Retro Sunglasses",
+      "category": "accessories",
+      "description": "Statement infinity-frame sunglasses with a glossy, sculptural silhouette and dark UV400 lenses, available in five bold colourways.",
+      "variants": [
+        {
+          "id": "white",
+          "name": "White",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy white with dark lenses.",
+          "images": [
+            "cloudcurve-white-retro-sunglasses.png",
+            "cloudcurve-white-retro-sunglasses-headscarf-model.png",
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy black with dark lenses.",
+          "images": [
+            "cloudcurve-black-retro-sunglasses-model.png",
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy red with dark lenses.",
+          "images": [
+            "cloudcurve-red-retro-sunglasses-model.png",
+            "cloudcurve-retro-sunglasses-colour-trio.png",
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy blue with dark lenses.",
+          "images": [
+            "cloudcurve-retro-sunglasses-colour-trio.png",
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        },
+        {
+          "id": "pink",
+          "name": "Pink",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy pink with dark lenses.",
+          "images": [
+            "cloudcurve-retro-sunglasses-colour-trio.png",
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "priceOld": 10.95,
+          "priceCurrent": 10.95,
+          "priceSave": 0,
+          "description": "CloudCurve retro sunglasses in glossy yellow with dark lenses.",
+          "images": [
+            "cloudcurve-retro-sunglasses-five-colour-collection.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "A bold, sculptural infinity frame with a high-gloss finish and rounded lens shape - a true statement piece that instantly elevates any outfit. UV400 protection with a comfortable, secure fit.",
+        "ingredients": "Acetate frame, UV400 protected lenses."
+      }
+    },
+    {
+      "id": "rhinestone-cateye-sunglasses",
+      "name": "Rhinestone-Trim Cat-Eye Sunglasses",
+      "category": "accessories",
+      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
+      "description": "Dramatic rimless cat-eye sunglasses with a crystal-studded gold arm and gradient lens, available in three lens colours.",
+      "variants": [
+        {
+          "id": "black",
+          "name": "Black Lens",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Rhinestone-trim cat-eye sunglasses with a solid black lens.",
+          "images": [
+            "black-cat-eye-rhinestone-sunglasses-product-view.png"
+          ]
+        },
+        {
+          "id": "purple-gradient",
+          "name": "Purple Gradient",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Rhinestone-trim cat-eye sunglasses with a purple gradient lens.",
+          "images": [
+            "purple-gradient-cat-eye-rhinestone-sunglasses.png"
+          ]
+        },
+        {
+          "id": "brown-gradient",
+          "name": "Brown Gradient",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Rhinestone-trim cat-eye sunglasses with a brown gradient lens.",
+          "images": [
+            "brown-gradient-cat-eye-rhinestone-sunglasses.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "An avant-garde rimless silhouette with a sculpted gold arm set with sparkling rhinestones. Lightweight metal construction with a dramatic, editorial edge.",
+        "ingredients": "Metal frame, rhinestone embellishment, UV400 protected lenses."
+      }
+    },
+    {
+      "id": "narrow-rectangle-sunglasses",
+      "name": "Narrow Rectangle Sunglasses",
+      "category": "accessories",
+      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
+      "description": "Sleek narrow rectangular sunglasses with a bold metal frame, available in gold, black and silver finishes.",
+      "variants": [
+        {
+          "id": "gold",
+          "name": "Gold",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Narrow rectangle sunglasses in a brushed gold metal frame.",
+          "images": [
+            "gold-narrow-rectangle-sunglasses-black-lens.png",
+            "black-gold-narrow-rectangle-sunglasses-set.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Narrow rectangle sunglasses in a matte black metal frame.",
+          "images": [
+            "black-gold-narrow-rectangle-sunglasses-set.png"
+          ]
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Narrow rectangle sunglasses in a polished silver metal frame.",
+          "images": [
+            "black-gold-narrow-rectangle-sunglasses-set.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "A slim, angular rectangular frame with a minimal metal build - a versatile everyday shape with a modern, editorial edge.",
+        "ingredients": "Metal frame, UV400 protected lenses."
+      }
+    },
+    {
+      "id": "shield-wraparound-sunglasses",
+      "name": "Futuristic Shield Wraparound Sunglasses",
+      "category": "accessories",
+      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
+      "description": "Bold single-lens shield sunglasses with a sculptural wraparound silhouette, available in black, silver-trim and gold-trim finishes.",
+      "variants": [
+        {
+          "id": "all-black",
+          "name": "All Black",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Shield wraparound sunglasses in an all-black finish.",
+          "images": [
+            "all-black-shield-wraparound-sunglasses.png"
+          ]
+        },
+        {
+          "id": "silver-trim",
+          "name": "Silver Trim",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Shield wraparound sunglasses in black with a polished silver trim.",
+          "images": [
+            "silver-black-shield-wraparound-sunglasses.png"
+          ]
+        },
+        {
+          "id": "gold-trim",
+          "name": "Gold Trim",
+          "priceOld": null,
+          "priceCurrent": null,
+          "priceSave": null,
+          "description": "Shield wraparound sunglasses in black with a polished gold trim.",
+          "images": [
+            "gold-black-shield-wraparound-sunglasses.png"
+          ]
+        }
+      ],
+      "accordion": {
+        "details": "A single continuous shield lens wraps the face for a bold, futuristic look, framed in a sculptural metallic-trimmed shell. Statement eyewear built for full coverage and maximum impact.",
+        "ingredients": "Acetate shell, metallic trim, UV400 protected shield lens."
       }
     }
   ]
