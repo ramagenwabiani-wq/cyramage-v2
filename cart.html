@@ -185,6 +185,23 @@ object-fit: cover;
 border-radius: 0;
 background: #fff;
 border: 1px solid var(--line);
+display: block;
+}
+
+.cart-item a {
+    text-decoration: none;
+}
+
+.cart-item-link {
+    display: inline-block;
+}
+
+.cart-item-link h3 {
+    transition: color 0.2s ease;
+}
+
+.cart-item-link:hover h3 {
+    color: var(--olive);
 }
 
 .cart-info{
@@ -534,16 +551,26 @@ function renderCart() {
 
         orderTotal += price * quantity;
 
+        // Older cart entries saved before this field existed won't have productId —
+        // fall back to item.id, which works for non-variant products but may 404
+        // for variant products added before this update (their id includes the
+        // variant suffix, e.g. "rotating-electric-toothbrush-white").
+        const productLink = "product.html?id=" + encodeURIComponent(item.productId || item.id);
+
         cartItems.innerHTML += `
             <div class="cart-item">
-                <img
-                    src="${imageSrc}"
-                    alt="${item.name}"
-                    onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';"
-                >
+                <a href="${productLink}" aria-label="View ${item.name}">
+                    <img
+                        src="${imageSrc}"
+                        alt="${item.name}"
+                        onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}';"
+                    >
+                </a>
 
                 <div class="cart-info">
-                    <h3>${item.name}</h3>
+                    <a href="${productLink}" class="cart-item-link">
+                        <h3>${item.name}</h3>
+                    </a>
                     <p>£${price.toFixed(2)}</p>
 
                     <div class="quantity">
