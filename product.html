@@ -1049,8 +1049,8 @@
         }
 
         CURRENT_CART_ITEM = variant
-            ? { id: product.id + "-" + variant.id, name: variant.name, price: variant.priceCurrent, image: "images/" + CURRENT_IMAGES[0] }
-            : { id: product.id, name: product.name, price: product.priceCurrent, image: "images/" + CURRENT_IMAGES[0] };
+            ? { id: product.id + "-" + variant.id, productId: product.id, name: variant.name, price: variant.priceCurrent, image: "images/" + CURRENT_IMAGES[0] }
+            : { id: product.id, productId: product.id, name: product.name, price: product.priceCurrent, image: "images/" + CURRENT_IMAGES[0] };
     }
 
     function showImage(index) {
