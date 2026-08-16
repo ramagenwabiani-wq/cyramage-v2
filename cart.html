@@ -495,6 +495,43 @@ const cartItems = document.getElementById("cartItems");
 const subtotal = document.getElementById("subtotal");
 const total = document.getElementById("total");
 
+// For cart items saved before the productId field existed, their stored id
+// includes the variant suffix (e.g. "rotating-electric-toothbrush-white").
+// Fetch the product list once and resolve those older entries to their real
+// product id by prefix match, so old cart links don't 404.
+let PRODUCTS_FOR_LOOKUP = [];
+
+async function loadProductsForLookup() {
+    try {
+        const response = await fetch("products.json");
+        if (!response.ok) return;
+        const data = await response.json();
+        PRODUCTS_FOR_LOOKUP = Array.isArray(data.products) ? data.products : [];
+    } catch (error) {
+        console.error("Unable to load products.json for cart link resolution:", error);
+    }
+}
+
+function resolveProductId(item) {
+    if (item.productId) return item.productId;
+
+    // Exact match first (covers simple, non-variant items saved with just their id).
+    const exact = PRODUCTS_FOR_LOOKUP.find(function (p) { return p.id === item.id; });
+    if (exact) return exact.id;
+
+    // Otherwise, look for a product whose id is a prefix of this cart item's id,
+    // followed by a hyphen (the variant suffix separator). Pick the longest match
+    // in case of ambiguity between similarly-prefixed product ids.
+    let best = null;
+    PRODUCTS_FOR_LOOKUP.forEach(function (p) {
+        if (item.id.indexOf(p.id + "-") === 0) {
+            if (!best || p.id.length > best.id.length) best = p;
+        }
+    });
+
+    return best ? best.id : item.id;
+}
+
 function updateNavCartBadge() {
     try {
         const count = cart.reduce(function (sum, item) {
@@ -551,11 +588,9 @@ function renderCart() {
 
         orderTotal += price * quantity;
 
-        // Older cart entries saved before this field existed won't have productId —
-        // fall back to item.id, which works for non-variant products but may 404
-        // for variant products added before this update (their id includes the
-        // variant suffix, e.g. "rotating-electric-toothbrush-white").
-        const productLink = "product.html?id=" + encodeURIComponent(item.productId || item.id);
+        // Resolve the real product id — either the productId saved directly on
+        // the cart item, or (for older cart entries) a lookup against products.json.
+        const productLink = "product.html?id=" + encodeURIComponent(resolveProductId(item));
 
         cartItems.innerHTML += `
             <div class="cart-item">
@@ -628,7 +663,7 @@ function removeItem(index) {
     renderCart();
 }
 
-renderCart();
+loadProductsForLookup().then(renderCart);
 
 const proceedToCheckout =
     document.getElementById("proceedToCheckout");
