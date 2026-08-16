@@ -165,6 +165,12 @@
                 background: var(--plum); padding: 100px 34px 40px; gap: 26px; z-index: 99;
             }
             .site-nav-links.open a { color: var(--linen); font-size: 1rem; }
+            /* The scroll cue sits close to the trust-badge row on shorter mobile
+               screens and can overlap "Free UK Delivery Over £50" etc. The trust
+               badges already signal there's more content below, so just hide the
+               cue on mobile rather than trying to reposition it precisely across
+               every device height. */
+            .scroll-cue { display: none; }
         }
 
         .hero-full {
