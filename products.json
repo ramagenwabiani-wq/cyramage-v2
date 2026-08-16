@@ -842,7 +842,7 @@
       "priceSave": 0,
       "description": "A transparent skeleton-dial automatic watch with a resin case and strap, showcasing the mechanical movement.",
       "images": [
-        "transparent-skeleton-automatic-watch-white-front.png",
+        "transparent-skeleton-automatic-watch-white.png",
         "crystal-skeleton-automatic-watch-white-gold.png",
         "crystal-skeleton-automatic-watch-product-information.png",
         "crystal-skeleton-automatic-watch-features-overview.png",
@@ -2188,15 +2188,14 @@
       "id": "rhinestone-cateye-sunglasses",
       "name": "Rhinestone-Trim Cat-Eye Sunglasses",
       "category": "accessories",
-      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
       "description": "Dramatic rimless cat-eye sunglasses with a crystal-studded gold arm and gradient lens, available in three lens colours.",
       "variants": [
         {
           "id": "black",
           "name": "Black Lens",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.73,
+          "priceCurrent": 11.83,
+          "priceSave": 2.9,
           "description": "Rhinestone-trim cat-eye sunglasses with a solid black lens.",
           "images": [
             "black-cat-eye-rhinestone-sunglasses-product-view.png"
@@ -2205,9 +2204,9 @@
         {
           "id": "purple-gradient",
           "name": "Purple Gradient",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.73,
+          "priceCurrent": 11.83,
+          "priceSave": 2.9,
           "description": "Rhinestone-trim cat-eye sunglasses with a purple gradient lens.",
           "images": [
             "purple-gradient-cat-eye-rhinestone-sunglasses.png"
@@ -2216,9 +2215,9 @@
         {
           "id": "brown-gradient",
           "name": "Brown Gradient",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.73,
+          "priceCurrent": 11.83,
+          "priceSave": 2.9,
           "description": "Rhinestone-trim cat-eye sunglasses with a brown gradient lens.",
           "images": [
             "brown-gradient-cat-eye-rhinestone-sunglasses.png"
@@ -2234,15 +2233,14 @@
       "id": "narrow-rectangle-sunglasses",
       "name": "Narrow Rectangle Sunglasses",
       "category": "accessories",
-      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
       "description": "Sleek narrow rectangular sunglasses with a bold metal frame, available in gold, black and silver finishes.",
       "variants": [
         {
           "id": "gold",
           "name": "Gold",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.77,
+          "priceCurrent": 11.83,
+          "priceSave": 2.94,
           "description": "Narrow rectangle sunglasses in a brushed gold metal frame.",
           "images": [
             "gold-narrow-rectangle-sunglasses-black-lens.png",
@@ -2252,9 +2250,9 @@
         {
           "id": "black",
           "name": "Black",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.77,
+          "priceCurrent": 11.83,
+          "priceSave": 2.94,
           "description": "Narrow rectangle sunglasses in a matte black metal frame.",
           "images": [
             "black-gold-narrow-rectangle-sunglasses-set.png"
@@ -2263,9 +2261,9 @@
         {
           "id": "silver",
           "name": "Silver",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.77,
+          "priceCurrent": 11.83,
+          "priceSave": 2.94,
           "description": "Narrow rectangle sunglasses in a polished silver metal frame.",
           "images": [
             "black-gold-narrow-rectangle-sunglasses-set.png"
@@ -2281,15 +2279,14 @@
       "id": "shield-wraparound-sunglasses",
       "name": "Futuristic Shield Wraparound Sunglasses",
       "category": "accessories",
-      "note": "Price not yet provided - update priceOld/priceCurrent/priceSave before publishing.",
       "description": "Bold single-lens shield sunglasses with a sculptural wraparound silhouette, available in black, silver-trim and gold-trim finishes.",
       "variants": [
         {
           "id": "all-black",
           "name": "All Black",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.7,
+          "priceCurrent": 10.8,
+          "priceSave": 3.9,
           "description": "Shield wraparound sunglasses in an all-black finish.",
           "images": [
             "all-black-shield-wraparound-sunglasses.png"
@@ -2298,9 +2295,9 @@
         {
           "id": "silver-trim",
           "name": "Silver Trim",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.7,
+          "priceCurrent": 10.8,
+          "priceSave": 3.9,
           "description": "Shield wraparound sunglasses in black with a polished silver trim.",
           "images": [
             "silver-black-shield-wraparound-sunglasses.png"
@@ -2309,19 +2306,25 @@
         {
           "id": "gold-trim",
           "name": "Gold Trim",
-          "priceOld": null,
-          "priceCurrent": null,
-          "priceSave": null,
+          "priceOld": 14.7,
+          "priceCurrent": 10.8,
+          "priceSave": 3.9,
           "description": "Shield wraparound sunglasses in black with a polished gold trim.",
           "images": [
             "gold-black-shield-wraparound-sunglasses.png"
           ]
+        },
+        {
+          "id": "gold-brown",
+          "name": "Gold / Brown",
+          "priceOld": 14.7,
+          "priceCurrent": 10.8,
+          "priceSave": 3.9,
+          "description": "Shield wraparound sunglasses in gold with a brown gradient lens.",
+          "images": [
+            "gold-brown-shield-wraparound-sunglasses.png"
+          ]
         }
       ],
       "accordion": {
-        "details": "A single continuous shield lens wraps the face for a bold, futuristic look, framed in a sculptural metallic-trimmed shell. Statement eyewear built for full coverage and maximum impact.",
-        "ingredients": "Acetate shell, metallic trim, UV400 protected shield lens."
-      }
-    }
-  ]
-}
+        "details": "A single continuous shield lens wraps the face for a bold, futuristic look, framed in a sculptural metallic-trimmed shell. Statement eyewear built 
