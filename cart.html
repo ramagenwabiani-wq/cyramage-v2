@@ -503,16 +503,12 @@ let PRODUCTS_FOR_LOOKUP = [];
 
 async function loadProductsForLookup() {
     try {
-        // FIX: this was fetching "products.json" (plural), which doesn't exist —
-        // the real file is "product.json" (singular). That typo meant this fetch
-        // always failed silently, PRODUCTS_FOR_LOOKUP stayed empty, and
-        // resolveProductId() below could never resolve anything.
-        const response = await fetch("product.json");
+        const response = await fetch("products.json");
         if (!response.ok) return;
         const data = await response.json();
         PRODUCTS_FOR_LOOKUP = Array.isArray(data.products) ? data.products : [];
     } catch (error) {
-        console.error("Unable to load product.json for cart link resolution:", error);
+        console.error("Unable to load products.json for cart link resolution:", error);
     }
 }
 
@@ -593,7 +589,7 @@ function renderCart() {
         orderTotal += price * quantity;
 
         // Resolve the real product id — either the productId saved directly on
-        // the cart item, or (for older cart entries) a lookup against product.json.
+        // the cart item, or (for older cart entries) a lookup against products.json.
         const productLink = "product.html?id=" + encodeURIComponent(resolveProductId(item));
 
         cartItems.innerHTML += `
