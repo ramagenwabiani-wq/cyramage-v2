@@ -437,7 +437,7 @@
     updateNavCartBadge();
 
     // ---- Gift Sets grid ----
-    // Reads product.json, filters to category === "gift-sets", and renders a card per product.
+    // Reads products.json, filters to category === "gift-sets", and renders a card per product.
     // Handles two shapes seen in product.json:
     //   1) Flat pricing: { priceOld, priceCurrent, priceSave, images: [...] }
     //   2) Variant-based (e.g. "gift-box"): { variants: [{ priceOld, priceCurrent, image, ... }, ...] }
@@ -522,9 +522,9 @@
         if (!grid) return;
 
         try {
-            const response = await fetch("product.json");
+            const response = await fetch("products.json");
             if (!response.ok) {
-                throw new Error("Failed to load product.json: " + response.status);
+                throw new Error("Failed to load products.json: " + response.status);
             }
 
             const data = await response.json();
