@@ -1447,7 +1447,7 @@
       "variants": [
         {
           "id": "yamakawa-hisagi",
-          "name": "Woode Scent â Yamakawa Hisagi",
+          "name": "Woode Scent â Yamakawa Hisagi",
           "priceOld": 20.35,
           "priceCurrent": 17.35,
           "priceSave": "3.0",
@@ -1471,7 +1471,7 @@
         },
         {
           "id": "muyun-chunshu",
-          "name": "Tea Leaves â Muyun Chunshu",
+          "name": "Tea Leaves â Muyun Chunshu",
           "priceOld": 20.35,
           "priceCurrent": 17.35,
           "priceSave": "3.0",
@@ -2329,6 +2329,438 @@
       "accordion": {
         "details": "A single continuous shield lens wraps the face for a bold, futuristic look, framed in a sculptural metallic-trimmed shell. Statement eyewear built for full coverage and maximum impact.",
         "ingredients": "Acetate shell, metallic trim, UV400 protected shield lens."
+      }
+    },
+    {
+      "id": "smile-ritual-starter-kit",
+      "name": "Smile Ritual Starter Kit",
+      "category": "gift-sets",
+      "priceOld": 35.78,
+      "priceCurrent": 35.78,
+      "priceSave": 0,
+      "description": "A black-and-gold CyRamage gift box pairing a sonic toothbrush with a travel tongue-cleaner case and UV sanitiser pod - a compact start to a daily smile ritual.",
+      "images": [
+        "cyramage-smile-ritual-starter-kit.png"
+      ],
+      "accordion": {
+        "details": "Includes a sonic toothbrush with Clean, White, Gum Care and Sensitive modes, a black and rose gold tongue cleaner duo in a travel case, and a UV sanitiser pod for the brush head. Presented in a black CyRamage gift box with satin ribbon.",
+        "ingredients": "Durable ABS housing, DuPont nylon bristles, stainless steel tongue cleaners, UV-C sanitiser lamp."
+      }
+    },
+    {
+      "id": "complete-smile-ritual-luxury-care-kit",
+      "name": "Complete Smile Ritual Luxury Care Kit",
+      "category": "gift-sets",
+      "priceOld": 59.78,
+      "priceCurrent": 59.78,
+      "priceSave": 0,
+      "description": "Our full smile ritual, gift-boxed: cordless water flosser, sonic toothbrush, tongue cleaners, UV sanitiser pod, whitening mouthwash and whitening pen.",
+      "images": [
+        "cyramage-complete-smile-ritual-luxury-care-kit.png"
+      ],
+      "accordion": {
+        "details": "A complete oral care ritual in one box - cordless water flosser with two nozzles, sonic toothbrush with Soft, White, Normal, Massage and Gumcare modes, metal tongue cleaner duo, UV sanitiser pod, whitening mouthwash, and a whitening pen with refill vials.",
+        "ingredients": "Durable ABS housing, stainless steel tongue cleaners, DuPont nylon bristles, UV-C sanitiser lamp."
+      }
+    },
+    {
+      "id": "luxury-home-fragrance-gift-set",
+      "name": "Luxury Home Fragrance Gift Set",
+      "category": "gift-sets",
+      "priceOld": 37.76,
+      "priceCurrent": 37.76,
+      "priceSave": 0,
+      "description": "Lavender & Vanilla candle, room & linen mist, and matching reed diffuser in a black CyRamage gift box.",
+      "images": [
+        "cyramage-luxury-home-fragrance-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Three ways to elevate your space: a 220g/7.8oz Lavender & Vanilla scented candle for warm ambiance, a 100ml room & linen mist for instant freshness, and a 100ml reed diffuser for continuous, long-lasting fragrance.",
+        "ingredients": "Soy wax blend candle, alcohol-based linen mist, reed diffuser with natural rattan sticks."
+      }
+    },
+    {
+      "id": "luxury-home-fragrance-complete-gift-set",
+      "name": "Luxury Home Fragrance Complete Gift Set",
+      "category": "gift-sets",
+      "priceOld": 49.99,
+      "priceCurrent": 49.99,
+      "priceSave": 0,
+      "description": "A crystal-topped Lavender & Vanilla candle, room & linen mist, Fresh Ocean reed diffuser, and three mini flower candles in a black CyRamage gift box.",
+      "images": [
+        "cyramage-luxury-home-fragrance-complete-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Our most complete fragrance set: a 220g/7.8oz candle topped with real crystal chips, a 100ml room & linen mist, a 100ml alcohol-free reed diffuser, and three mini flower-shaped candles for extra ambiance.",
+        "ingredients": "Soy wax blend candle, natural crystal chips, alcohol-based linen mist, plant-extracted reed diffuser oil."
+      }
+    },
+    {
+      "id": "gold-moissanite-jewellery-gift-set",
+      "name": "Gold Moissanite Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 58.49,
+      "priceCurrent": 58.49,
+      "priceSave": 0,
+      "description": "A bezel-set moissanite necklace, stud earrings, and matching bracelet in a gold finish, boxed and ribbon-tied.",
+      "images": [
+        "cyramage-gold-moissanite-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A coordinated three-piece set - pendant necklace, stud earrings, and delicate bracelet - each set with a single bezel-set round moissanite stone. Presented in a soft velvet-lined jewellery box.",
+        "ingredients": "Gold-plated 925 Sterling Silver, bezel-set moissanite stones."
+      }
+    },
+    {
+      "id": "silver-moissanite-jewellery-gift-set",
+      "name": "Silver Moissanite Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 58.49,
+      "priceCurrent": 58.49,
+      "priceSave": 0,
+      "description": "A bezel-set moissanite necklace, stud earrings, and matching bracelet in a silver finish, boxed and ribbon-tied.",
+      "images": [
+        "cyramage-silver-moissanite-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A coordinated three-piece set - pendant necklace, stud earrings, and delicate bracelet - each set with a single bezel-set round moissanite stone. Presented in a soft velvet-lined jewellery box.",
+        "ingredients": "925 Sterling Silver, bezel-set moissanite stones."
+      }
+    },
+    {
+      "id": "rose-gold-moissanite-jewellery-gift-set",
+      "name": "Rose Gold Moissanite Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 58.49,
+      "priceCurrent": 58.49,
+      "priceSave": 0,
+      "description": "A bezel-set moissanite necklace, stud earrings, and matching bracelet in a rose gold finish, boxed and ribbon-tied.",
+      "images": [
+        "cyramage-rose-gold-moissanite-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A coordinated three-piece set - pendant necklace, stud earrings, and delicate bracelet - each set with a single bezel-set round moissanite stone. Presented in a soft velvet-lined jewellery box.",
+        "ingredients": "Rose gold-plated 925 Sterling Silver, bezel-set moissanite stones."
+      }
+    },
+    {
+      "id": "gold-floral-moissanite-jewellery-gift-set",
+      "name": "Gold Floral Moissanite Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 120.47,
+      "priceCurrent": 120.47,
+      "priceSave": 0,
+      "description": "A gold floral-cluster necklace, matching drop and huggie earrings, and station bracelet in a fitted jewellery box.",
+      "images": [
+        "cyramage-gold-floral-moissanite-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A four-piece jewellery wardrobe: a pendant necklace and matching bracelet scattered with four-petal moissanite clusters, plus a huggie drop earring and a stud earring, all in a compartmentalised velvet jewellery box.",
+        "ingredients": "Gold-plated 925 Sterling Silver, moissanite stones."
+      }
+    },
+    {
+      "id": "luxe-bloom-gold-floral-jewellery-gift-set",
+      "name": "Luxe Bloom Gold Floral Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 120.47,
+      "priceCurrent": 120.47,
+      "priceSave": 0,
+      "description": "A gold-tone floral necklace, huggie drop earrings, and matching station bracelet in a fitted jewellery box.",
+      "images": [
+        "cyramage-luxe-bloom-gold-floral-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A pendant necklace and matching bracelet set with four-petal moissanite clusters, paired with huggie drop earrings, presented in a two-compartment jewellery box.",
+        "ingredients": "Gold-plated 925 Sterling Silver, moissanite stones."
+      }
+    },
+    {
+      "id": "luxelis-silver-floral-jewellery-gift-set",
+      "name": "Luxelis Silver Floral Jewellery Gift Set",
+      "category": "gift-sets",
+      "priceOld": 120.47,
+      "priceCurrent": 120.47,
+      "priceSave": 0,
+      "description": "A silver-tone floral necklace, huggie drop earrings, and matching station bracelet in a fitted jewellery box.",
+      "images": [
+        "cyramage-luxelis-silver-floral-jewellery-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A pendant necklace and matching bracelet set with four-petal moissanite clusters, paired with huggie drop earrings, presented in a two-compartment jewellery box.",
+        "ingredients": "925 Sterling Silver, moissanite stones."
+      }
+    },
+    {
+      "id": "womens-gold-bracelet-crystal-hoop-earrings-ring-gift-set",
+      "name": "Women's Gold Bracelet, Crystal Hoop Earrings & Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 95.79,
+      "priceCurrent": 65.79,
+      "priceSave": 30.0,
+      "description": "A gold beaded bangle bracelet, pave crystal hoop earrings, and a stacked ring in a velvet jewellery box.",
+      "images": [
+        "womens-gold-bracelet-crystal-hoop-earrongs-ring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A gold beaded bangle bracelet pairs with pave-set crystal hoop earrings and a multi-row stacked ring, presented together in a compartmentalised velvet box.",
+        "ingredients": "Gold-plated 925 Sterling Silver, cubic zirconia."
+      }
+    },
+    {
+      "id": "womens-silver-bracelet-crystal-hoop-earrings-ring-gift-set",
+      "name": "Women's Silver Bracelet, Crystal Hoop Earrings & Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 95.79,
+      "priceCurrent": 65.79,
+      "priceSave": 30.0,
+      "description": "A silver beaded bangle bracelet, pave crystal hoop earrings, and a stacked ring in a velvet jewellery box.",
+      "images": [
+        "women-silver-bracelet-crystal-hoop-earrings-ring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A silver beaded bangle bracelet pairs with pave-set crystal hoop earrings and a multi-row stacked ring, presented together in a compartmentalised velvet box.",
+        "ingredients": "925 Sterling Silver, cubic zirconia."
+      }
+    },
+    {
+      "id": "womens-rose-gold-bracelet-crystal-hoop-earrings-ring-gift-set",
+      "name": "Women's Rose Gold Bracelet, Crystal Hoop Earrings & Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 95.79,
+      "priceCurrent": 65.79,
+      "priceSave": 30.0,
+      "description": "A rose gold beaded bangle bracelet, pave crystal hoop earrings, and a stacked ring in a velvet jewellery box.",
+      "images": [
+        "womens-rose-gold-bracelet-crystal-hoop-earrings-ring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A rose gold beaded bangle bracelet pairs with pave-set crystal hoop earrings and a multi-row stacked ring, presented together in a compartmentalised velvet box.",
+        "ingredients": "Rose gold-plated 925 Sterling Silver, cubic zirconia."
+      }
+    },
+    {
+      "id": "womens-gold-heart-crystal-bracelet-hoop-earrings-ring-gift-set",
+      "name": "Women's Gold Heart Crystal Bracelet, Hoop Earrings & Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 95.79,
+      "priceCurrent": 62.72,
+      "priceSave": 33.07,
+      "description": "A gold heart-link crystal tennis bracelet, hoop earrings, and crystal ring in a velvet jewellery box.",
+      "images": [
+        "womens-gold-heart-crystal-bracelet-crystal-hoop-earrings-crystal-ring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A tennis-style bracelet of bezel-set heart-cut crystals pairs with matching bezel hoop earrings and a coordinating eternity-style ring, presented in a compartmentalised velvet box.",
+        "ingredients": "Gold-plated 925 Sterling Silver, cubic zirconia."
+      }
+    },
+    {
+      "id": "womens-silver-heart-crystal-bracelet-hoop-earrings-ring-gift-set",
+      "name": "Women's Silver Heart Crystal Bracelet, Hoop Earrings & Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 90.76,
+      "priceCurrent": 62.72,
+      "priceSave": 28.04,
+      "description": "A silver heart-link crystal tennis bracelet, hoop earrings, and crystal ring in a velvet jewellery box.",
+      "images": [
+        "womens-silver-heart-crystal-bracelet-crystal-hoop-earrings-crystal-ring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A tennis-style bracelet of bezel-set heart-cut crystals pairs with matching bezel hoop earrings and a coordinating eternity-style ring, presented in a compartmentalised velvet box.",
+        "ingredients": "925 Sterling Silver, cubic zirconia."
+      }
+    },
+    {
+      "id": "mens-silver-smart-watch-silver-smart-ring-charging-case-gift-set",
+      "name": "Men's Silver Smart Watch & Silver Smart Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 79.8,
+      "priceCurrent": 52.9,
+      "priceSave": 26.9,
+      "description": "A silver-tone LED smart watch paired with a silver smart ring and charging case, in a two-tier CyRamage gift box.",
+      "images": [
+        "mens-silver-smart-watch-silver-smart-ring-charging-case-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A square-face LED smart watch on a stainless steel bracelet, paired with a silver smart ring supplied in its own charging case. Presented together in a fitted CyRamage gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-black-smart-watch-gold-smart-ring-charging-case-gift-set",
+      "name": "Men's Black Smart Watch & Gold Smart Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 79.8,
+      "priceCurrent": 52.9,
+      "priceSave": 26.9,
+      "description": "A black-tone LED smart watch paired with a gold smart ring and charging case, in a two-tier CyRamage gift box.",
+      "images": [
+        "mens-black-smart-watch-gold-smart-ring-charging-case-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A square-face LED smart watch on a black stainless steel bracelet, paired with a gold-tone smart ring supplied in its own charging case. Presented together in a fitted CyRamage gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-black-smart-watch-black-smart-ring-charging-case-gift-set",
+      "name": "Men's Black Smart Watch & Black Smart Ring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 79.8,
+      "priceCurrent": 52.9,
+      "priceSave": 26.9,
+      "description": "A black-tone LED smart watch paired with a black smart ring and charging case, in a two-tier CyRamage gift box.",
+      "images": [
+        "mens-black-smart-watch-black-smart-ring-charging-case-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A square-face LED smart watch on a black stainless steel bracelet, paired with a black smart ring supplied in its own charging case. Presented together in a fitted CyRamage gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-black-smart-watch-black-smart-ring-audio-glasses-gift-set",
+      "name": "Men's Black Smart Watch, Black Smart Ring & Audio Glasses Gift Set",
+      "category": "gift-sets",
+      "priceOld": 68.79,
+      "priceCurrent": 68.79,
+      "priceSave": 0,
+      "description": "A black round-face smart watch, black smart ring, and audio sunglasses in a three-compartment CyRamage gift box.",
+      "images": [
+        "mens-black-smart-watch-black-smart-ring-audio-glasses-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A round-face smart watch on a link bracelet, a smart ring in its charging case, and a pair of built-in audio sunglasses - three wearable tech pieces in one fitted gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, acetate sunglasses frame, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-gold-smart-watch-gold-smart-ring-audio-glasses-gift-set",
+      "name": "Men's Gold Smart Watch, Gold Smart Ring & Audio Glasses Gift Set",
+      "category": "gift-sets",
+      "priceOld": 68.79,
+      "priceCurrent": 68.79,
+      "priceSave": 0,
+      "description": "A gold round-face smart watch, gold smart ring, and audio sunglasses in a three-compartment CyRamage gift box.",
+      "images": [
+        "mens-gold-smart-watch-gold-smart-ring-audio-glasses-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A round-face smart watch on a link bracelet, a smart ring in its charging case, and a pair of built-in audio sunglasses - three wearable tech pieces in one fitted gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, acetate sunglasses frame, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-silver-smart-watch-silver-smart-ring-audio-glasses-gift-set",
+      "name": "Men's Silver Smart Watch, Silver Smart Ring & Audio Glasses Gift Set",
+      "category": "gift-sets",
+      "priceOld": 68.79,
+      "priceCurrent": 68.79,
+      "priceSave": 0,
+      "description": "A silver round-face smart watch, silver smart ring, and audio sunglasses in a three-compartment CyRamage gift box.",
+      "images": [
+        "mens-silver-smart-watch-silver-smart-ring-audio-glasses-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A round-face smart watch on a link bracelet, a smart ring in its charging case, and a pair of built-in audio sunglasses - three wearable tech pieces in one fitted gift box.",
+        "ingredients": "Stainless steel watch case and bracelet, titanium smart ring, acetate sunglasses frame, USB-rechargeable charging case."
+      }
+    },
+    {
+      "id": "mens-brown-watch-sunglasses-wallet-belt-keyring-gift-set",
+      "name": "Men's Brown Watch, Sunglasses, Wallet, Belt & Keyring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 28.99,
+      "priceCurrent": 20.78,
+      "priceSave": 8.21,
+      "description": "A brown leather watch, aviator sunglasses, checked wallet, belt, and bottle-opener keyring in a CyRamage gift box.",
+      "images": [
+        "mens-brown-watch-sunglasses-wallet-belt-keyring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Five everyday essentials in one box: a brown leather-strap watch, aviator sunglasses, a checked-pattern bifold wallet, a matching leather belt, and a bottle-opener keyring.",
+        "ingredients": "PU leather wallet and belt, alloy watch case, acetate sunglasses frame."
+      }
+    },
+    {
+      "id": "mens-black-watch-sunglasses-wallet-belt-keyring-gift-set",
+      "name": "Men's Black Watch, Sunglasses, Wallet, Belt & Keyring Gift Set",
+      "category": "gift-sets",
+      "priceOld": 28.99,
+      "priceCurrent": 20.78,
+      "priceSave": 8.21,
+      "description": "A black leather watch, aviator sunglasses, checked wallet, belt, and bottle-opener keyring in a CyRamage gift box.",
+      "images": [
+        "mens-black-watch-sunglasses-wallet-belt-keyring-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Five everyday essentials in one box: a black leather-strap watch, aviator sunglasses, a checked-pattern bifold wallet, a matching leather belt, and a bottle-opener keyring.",
+        "ingredients": "PU leather wallet and belt, alloy watch case, acetate sunglasses frame."
+      }
+    },
+    {
+      "id": "home-fragrance-oil-diffuser-sandalwood-amber-candle-gift-set",
+      "name": "Home Fragrance Oil Diffuser & Sandalwood Amber Candle Gift Set",
+      "category": "gift-sets",
+      "priceOld": 65.99,
+      "priceCurrent": 55.8,
+      "priceSave": 10.19,
+      "description": "A flame-effect oil diffuser, Sandalwood & Amber candle, and set of six fragrance oils in a black CyRamage gift bag.",
+      "images": [
+        "home-fragrance-oil-diffuser-sandalwood-amber-scented-candle-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A flame-effect ultrasonic diffuser sits alongside a 220g/7.8oz Sandalwood & Amber candle and six 10ml fragrance oils (Sandalwood, White Tea, Citrus, Oud, Midnight Oud, Bloom), presented in a gold-corded gift bag.",
+        "ingredients": "Soy wax blend candle, fragrance oil blend, ultrasonic diffuser with LED flame effect."
+      }
+    },
+    {
+      "id": "wedding-gift-rose-oud-candle-hotel-fragrance-oils-pearl-earrings-gift-set",
+      "name": "Wedding Gift: Rose Oud Candle, Hotel Fragrance Oils & Pearl Earrings Set",
+      "category": "gift-sets",
+      "priceOld": 55.99,
+      "priceCurrent": 45.78,
+      "priceSave": 10.21,
+      "description": "A Rose Oud candle, hotel-inspired fragrance oil trio, and pearl drop earrings, gift-bagged with a \"Best Wishes\" tag for weddings.",
+      "images": [
+        "wedding-gift-rose-oud-candle-hotel-fragrance-oils-pearl-earrings-gift-set.png"
+      ],
+      "accordion": {
+        "details": "A 220g/7.8oz Rose Oud candle pairs with a trio of hotel-inspired fragrance oils (White Tea, Blush Wood, Midnight Oud) and a pair of gold and pearl drop earrings, gift-bagged with a \"Best Wishes For Your New Journey Together\" tag.",
+        "ingredients": "Soy wax blend candle, fragrance oil blend, gold-plated 925 Sterling Silver, freshwater pearl."
+      }
+    },
+    {
+      "id": "womens-sunglasses-dog-keyring-black-bracelet-tan-card-holder-gift-set",
+      "name": "Women's Sunglasses, Dog Keyring, Black Bracelet & Tan Card Holder Gift Set",
+      "category": "gift-sets",
+      "priceOld": 38.67,
+      "priceCurrent": 35.99,
+      "priceSave": 2.68,
+      "description": "Square sunglasses, a monogram dog keyring, a corded charm bracelet, and a tan envelope card holder in a CyRamage gift box.",
+      "images": [
+        "womens-sunglasses-dog-keyring-black-bracelet-tan-card-holder-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Square-frame sunglasses, a monogram-pattern dog keyring charm, a black corded bracelet with a two-tone charm, and a tan envelope-style card holder, presented together in a compartmentalised gift box.",
+        "ingredients": "Acetate sunglasses frame, PU leather keyring and card holder, alloy bracelet hardware."
+      }
+    },
+    {
+      "id": "womens-gold-sunglasses-gold-bracelet-dog-keyring-burgundy-card-holder-gift-set",
+      "name": "Women's Gold Sunglasses, Gold Bracelet, Dog Keyring & Burgundy Card Holder Gift Set",
+      "category": "gift-sets",
+      "priceOld": 38.67,
+      "priceCurrent": 35.99,
+      "priceSave": 2.68,
+      "description": "Octagonal gold-frame sunglasses, a gold chain bracelet, monogram dog keyring, and a burgundy heart-clasp card holder in a CyRamage gift box.",
+      "images": [
+        "womens-gold-sunglasses-gold-bracelet-dog-keyring-burgundy-card-holder-gift-set.png"
+      ],
+      "accordion": {
+        "details": "Octagonal gold-frame sunglasses, a delicate gold chain bracelet, a monogram-pattern dog keyring charm, and a burgundy card holder with a heart clasp and chain, presented together in a compartmentalised gift box.",
+        "ingredients": "Acetate sunglasses frame, gold-plated 925 Sterling Silver, PU leather keyring and card holder."
       }
     }
   ]
