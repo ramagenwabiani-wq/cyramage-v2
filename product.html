@@ -889,7 +889,7 @@
 </footer>
 
 <script>
-    // ===== Load product data from product.json based on ?id= URL param =====
+    // ===== Load product data from products.json based on ?id= URL param =====
     let CURRENT_PRODUCT = null;
     let CURRENT_CART_ITEM = null; // {id, name, price} — what Add to Bag actually adds
     let ALL_PRODUCTS = [];
@@ -931,11 +931,9 @@
         }
 
         try {
-            // FIX: this was fetching "products.json" (plural), which doesn't exist —
-            // the real file is "product.json" (singular), same typo as cart.html had.
-            const response = await fetch("product.json");
+            const response = await fetch("products.json");
             if (!response.ok) {
-                throw new Error("Failed to load product.json");
+                throw new Error("Failed to load products.json");
             }
             const data = await response.json();
             ALL_PRODUCTS = Array.isArray(data.products) ? data.products : [];
@@ -1110,7 +1108,7 @@
         });
 
         // Shuffle each pool so "You May Also Like" varies between visits/reloads,
-        // instead of always showing the same first 3 items in product.json order.
+        // instead of always showing the same first 3 items in products.json order.
         // Same-category items are still prioritized over others, just no longer
         // in a fixed order.
         const related = shuffleArray(sameCategory).concat(shuffleArray(others)).slice(0, 3);
