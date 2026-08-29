@@ -432,22 +432,22 @@ try {
     checkoutTotal.textContent =
         `£${orderTotal.toFixed(2)}`;
 
-    // ---- Resolve cart item ids to real product.json ids before paying ----
+    // ---- Resolve cart item ids to real products.json ids before paying ----
     // Cart items can be saved with an id that has a variant suffix squashed
     // onto it (e.g. "ultrasonic-cleaning-pod-black"), or with a separate
     // productId field. The Stripe worker only recognises the base product
-    // ids that exist in product.json, so — same as cart.html — we resolve
-    // each item's id against product.json before sending anything to Stripe.
+    // ids that exist in products.json, so — same as cart.html — we resolve
+    // each item's id against products.json before sending anything to Stripe.
     let PRODUCTS_FOR_LOOKUP = [];
 
     async function loadProductsForLookup() {
         try {
-            const response = await fetch("product.json");
+            const response = await fetch("products.json");
             if (!response.ok) return;
             const data = await response.json();
             PRODUCTS_FOR_LOOKUP = Array.isArray(data.products) ? data.products : [];
         } catch (error) {
-            console.error("Unable to load product.json for checkout id resolution:", error);
+            console.error("Unable to load products.json for checkout id resolution:", error);
         }
     }
 
@@ -487,7 +487,7 @@ try {
         paymentButton.textContent = "Opening secure payment...";
 
         try {
-            // Make sure product.json has finished loading before resolving ids —
+            // Make sure products.json has finished loading before resolving ids —
             // this resolves instantly if loadProductsForLookup already finished.
             await productsLoadedPromise;
 
