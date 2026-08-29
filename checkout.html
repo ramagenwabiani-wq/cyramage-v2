@@ -491,10 +491,26 @@ try {
             // this resolves instantly if loadProductsForLookup already finished.
             await productsLoadedPromise;
 
-            const items = cart.map((item) => ({
-                id: resolveProductId(item),
-                quantity: Number(item.quantity) || 1
-            }));
+            const items = cart.map((item) => {
+                const resolvedId = resolveProductId(item);
+
+                // Variant products (e.g. "Choose Your Box") need to know which
+                // variant was picked to price correctly. Newer cart items store
+                // this directly as item.variantId. For older cart items saved
+                // before this field existed, fall back to deriving it from the
+                // compound id (e.g. "ultrasonic-cleaning-pod-black" minus the
+                // resolved base id "ultrasonic-cleaning-pod" leaves "black").
+                let variantId = item.variantId || null;
+                if (!variantId && item.id && resolvedId && item.id.indexOf(resolvedId + "-") === 0) {
+                    variantId = item.id.slice(resolvedId.length + 1);
+                }
+
+                return {
+                    id: resolvedId,
+                    variantId: variantId,
+                    quantity: Number(item.quantity) || 1
+                };
+            });
 
             const response = await fetch(WORKER_URL, {
                 method: "POST",
