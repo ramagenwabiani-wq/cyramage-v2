@@ -432,6 +432,45 @@ try {
     checkoutTotal.textContent =
         `£${orderTotal.toFixed(2)}`;
 
+    // ---- Resolve cart item ids to real product.json ids before paying ----
+    // Cart items can be saved with an id that has a variant suffix squashed
+    // onto it (e.g. "ultrasonic-cleaning-pod-black"), or with a separate
+    // productId field. The Stripe worker only recognises the base product
+    // ids that exist in product.json, so — same as cart.html — we resolve
+    // each item's id against product.json before sending anything to Stripe.
+    let PRODUCTS_FOR_LOOKUP = [];
+
+    async function loadProductsForLookup() {
+        try {
+            const response = await fetch("product.json");
+            if (!response.ok) return;
+            const data = await response.json();
+            PRODUCTS_FOR_LOOKUP = Array.isArray(data.products) ? data.products : [];
+        } catch (error) {
+            console.error("Unable to load product.json for checkout id resolution:", error);
+        }
+    }
+
+    function resolveProductId(item) {
+        if (item.productId) return item.productId;
+
+        const exact = PRODUCTS_FOR_LOOKUP.find(function (p) { return p.id === item.id; });
+        if (exact) return exact.id;
+
+        let best = null;
+        PRODUCTS_FOR_LOOKUP.forEach(function (p) {
+            if (item.id.indexOf(p.id + "-") === 0) {
+                if (!best || p.id.length > best.id.length) best = p;
+            }
+        });
+
+        return best ? best.id : item.id;
+    }
+
+    // Kick off the product lookup as soon as the page loads, so it's ready
+    // by the time the person clicks "Pay Securely with Stripe".
+    const productsLoadedPromise = loadProductsForLookup();
+
     const paymentButton =
         document.getElementById("paymentButton");
 
@@ -448,8 +487,12 @@ try {
         paymentButton.textContent = "Opening secure payment...";
 
         try {
+            // Make sure product.json has finished loading before resolving ids —
+            // this resolves instantly if loadProductsForLookup already finished.
+            await productsLoadedPromise;
+
             const items = cart.map((item) => ({
-                id: item.id,
+                id: resolveProductId(item),
                 quantity: Number(item.quantity) || 1
             }));
 
