@@ -463,9 +463,9 @@
         {
           "id": "black",
           "name": "Black",
-          "priceOld": 26.99,
-          "priceCurrent": 20.8,
-          "priceSave": 6.19,
+          "priceOld": 55.99,
+          "priceCurrent": 48.8,
+          "priceSave": 7.19,
           "description": "A compact ultrasonic cleaner in black, with 3 modes for jewellery, aligners, retainers, mouthguards and dentures.",
           "images": [
             "ultrasonic-cleaning-pod-black.png",
@@ -479,9 +479,9 @@
         {
           "id": "white",
           "name": "White",
-          "priceOld": 26.99,
-          "priceCurrent": 20.8,
-          "priceSave": 6.19,
+          "priceOld": 55.99,
+          "priceCurrent": 48.8,
+          "priceSave": 7.19,
           "description": "A compact ultrasonic cleaner in white, with 3 modes for jewellery, aligners, retainers, mouthguards and dentures.",
           "images": [
             "ultrasonic-cleaning-pod-white-front.png",
