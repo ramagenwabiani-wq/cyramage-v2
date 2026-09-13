@@ -463,9 +463,9 @@
         {
           "id": "black",
           "name": "Black",
-          "priceOld": 55.99,
-          "priceCurrent": 48.8,
-          "priceSave": 7.19,
+          "priceOld": 26.99,
+          "priceCurrent": 20.8,
+          "priceSave": 6.19,
           "description": "A compact ultrasonic cleaner in black, with 3 modes for jewellery, aligners, retainers, mouthguards and dentures.",
           "images": [
             "ultrasonic-cleaning-pod-black.png",
@@ -479,9 +479,9 @@
         {
           "id": "white",
           "name": "White",
-          "priceOld": 55.99,
-          "priceCurrent": 48.8,
-          "priceSave": 7.19,
+          "priceOld": 26.99,
+          "priceCurrent": 20.8,
+          "priceSave": 6.19,
           "description": "A compact ultrasonic cleaner in white, with 3 modes for jewellery, aligners, retainers, mouthguards and dentures.",
           "images": [
             "ultrasonic-cleaning-pod-white-front.png",
@@ -2452,7 +2452,7 @@
       "priceSave": 0,
       "description": "A gold floral-cluster necklace, matching drop and huggie earrings, and station bracelet in a fitted jewellery box.",
       "images": [
-        "cyramage-rose-gold-floral-moissanite-jewellery-gift-set.png"
+        "cyramage-gold-floral-moissanite-jewellery-gift-set.png"
       ],
       "accordion": {
         "details": "A four-piece jewellery wardrobe: a pendant necklace and matching bracelet scattered with four-petal moissanite clusters, plus a huggie drop earring and a stud earring, all in a compartmentalised velvet jewellery box.",
@@ -2500,7 +2500,7 @@
       "priceSave": 30.0,
       "description": "A gold beaded bangle bracelet, pave crystal hoop earrings, and a stacked ring in a velvet jewellery box.",
       "images": [
-        "womens-gold-bracelet-crystal-hoop-earrings-ring-gift-set.png"
+        "womens-gold-bracelet-crystal-hoop-earrongs-ring-gift-set.png"
       ],
       "accordion": {
         "details": "A gold beaded bangle bracelet pairs with pave-set crystal hoop earrings and a multi-row stacked ring, presented together in a compartmentalised velvet box.",
@@ -2516,7 +2516,7 @@
       "priceSave": 30.0,
       "description": "A silver beaded bangle bracelet, pave crystal hoop earrings, and a stacked ring in a velvet jewellery box.",
       "images": [
-        "womens-silver-bracelet-crystal-hoop-earrings-ring-gift-set.png"
+        "women-silver-bracelet-crystal-hoop-earrings-ring-gift-set.png"
       ],
       "accordion": {
         "details": "A silver beaded bangle bracelet pairs with pave-set crystal hoop earrings and a multi-row stacked ring, presented together in a compartmentalised velvet box.",
@@ -2761,6 +2761,294 @@
       "accordion": {
         "details": "Octagonal gold-frame sunglasses, a delicate gold chain bracelet, a monogram-pattern dog keyring charm, and a burgundy card holder with a heart clasp and chain, presented together in a compartmentalised gift box.",
         "ingredients": "Acetate sunglasses frame, gold-plated 925 Sterling Silver, PU leather keyring and card holder."
+      }
+    },
+    {
+      "id": "the-day-the-sun-forgot-to-wake-up",
+      "name": "The Day the Sun Forgot to Wake Up (Anything Can Happen! Book 1)",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A funny, magical picture book adventure about friendship, teamwork and an important job - Book 1 in The Anything Can Happen! series, by Nwabiani C. Ramage.",
+      "images": [
+        "the-day-the-sun-forgot-to-wake-up-book-1.png"
+      ],
+      "accordion": {
+        "details": "One morning the sun simply won't wake up, and it's up to a determined little girl and her firefly friend to set things right. A funny, magical adventure about friendship, teamwork and an important job. Book 1 in The Anything Can Happen! series.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "monday-ran-away",
+      "name": "Monday Ran Away! (Anything Can Happen! Book 2)",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A funny, magical adventure about friendship, feelings and a fresh start, for ages 3-7 - Book 2 in The Anything Can Happen! series, by Nwabiani C. Ramage.",
+      "images": [
+        "monday-ran-away-book-2.png"
+      ],
+      "accordion": {
+        "details": "Monday has had enough and runs off down the road with a suitcase, leaving the days of the week in chaos. A funny, magical adventure about friendship, feelings and a fresh start, for ages 3-7. Book 2 in The Anything Can Happen! series.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "the-library-that-ate-homework",
+      "name": "The Library That Ate Homework! (Anything Can Happen! Book 3)",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A funny magical adventure for ages 3-7 about reading, imagining and discovering - Book 3 in The Anything Can Happen! series, by Nwabiani C. Ramage.",
+      "images": [
+        "the-library-that-ate-homework-book-3.png"
+      ],
+      "accordion": {
+        "details": "A mischievous purple library monster swallows homework whole, sending one determined child on a torch-lit adventure to get it back. A funny magical adventure for ages 3-7 about reading, imagining and discovering. Book 3 in The Anything Can Happen! series.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "the-boy-who-collected-laughs",
+      "name": "The Boy Who Collected Laughs (Anything Can Happen! Book 4)",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A funny, magical story about laughter, friendship and sharing, for ages 3-7 - Book 4 in The Anything Can Happen! series, by Nwabiani C. Ramage.",
+      "images": [
+        "the-boy-who-collected-laughs-book-4.png"
+      ],
+      "accordion": {
+        "details": "A boy discovers he can collect laughter in a jar and carries it through the library and school, spreading joy wherever he goes. A funny, magical story about laughter, friendship and sharing, for ages 3-7. Book 4 in The Anything Can Happen! series.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "grandmas-pocket-zoo",
+      "name": "Grandma's Pocket Zoo",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A funny picture book for ages 3-7, where a grandmother's pockets hold a whole zoo of tiny animal friends, by Nwabiani C. Ramage.",
+      "images": [
+        "grandmas-pocket-zoo.png"
+      ],
+      "accordion": {
+        "details": "Grandma's coat has the most surprising pockets, each one holding a tiny animal friend - a funny picture book for ages 3-7, part of the \"Anything Can Happen!\" line of stories.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "the-invisible-playground",
+      "name": "The Invisible Playground",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A magical adventure for ages 3-7, where a pair of star-covered glasses reveal a playground hidden in plain sight, by Nwabiani C. Ramage.",
+      "images": [
+        "the-invisible-playground.png"
+      ],
+      "accordion": {
+        "details": "A pair of star-patterned glasses reveal a shimmering, invisible playground waiting to be discovered. A magical adventure for ages 3-7.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "the-door-that-only-opened-at-midnight",
+      "name": "The Door That Only Opened at Midnight",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A gentle nighttime picture book about a curious little boy and a glowing door that only opens at midnight, by Nwabiani C. Ramage.",
+      "images": [
+        "the-door-that-only-opened-at-midnight.png"
+      ],
+      "accordion": {
+        "details": "In the quiet of the night, a boy in striped pyjamas finds a door in his home that only opens once the clock strikes midnight, spilling golden light and wonder into the dark.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "i-can-be-anything-kawaii-activity-book",
+      "name": "I Can Be Anything! A Kawaii Activity Book",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A Kawaii-style activity book for ages 2-5, encouraging kids to draw their dreams, play pretend, think big and believe in themselves, by Nwabiani C. Ramage.",
+      "images": [
+        "i-can-be-anything-kawaii-activity-book.png"
+      ],
+      "accordion": {
+        "details": "A colourful Kawaii-style activity book for ages 2-5, exploring careers like astronaut, firefighter, artist, doctor and chef through drawing, pretend play and creative-thinking activities. Draw your dreams, play pretend, think big, and believe in yourself.",
+        "ingredients": "Paperback activity book, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "small-business-order-expense-tracker",
+      "name": "Small Business Order & Expense Tracker",
+      "category": "books",
+      "priceOld": 13.99,
+      "priceCurrent": 13.99,
+      "priceSave": 0,
+      "description": "A 12-month planning and record-keeping journal for orders, sales, inventory, expenses and profit, for the modern entrepreneur, by Nwabiani C. Ramage.",
+      "images": [
+        "small-business-order-expense-tracker.png"
+      ],
+      "accordion": {
+        "details": "A 12-month planning and record-keeping journal built for small business owners, covering orders, sales, inventory, expenses and profit tracking in one place - for the modern entrepreneur.",
+        "ingredients": "Paperback journal, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "grandparents-legacy-journal",
+      "name": "Grandparent's Legacy Journal",
+      "category": "books",
+      "priceOld": 13.99,
+      "priceCurrent": 13.99,
+      "priceSave": 0,
+      "description": "A guided keepsake journal for stories, memories and wisdom to pass down through generations, by Nwabiani C. Ramage.",
+      "images": [
+        "grandparents-legacy-journal.png"
+      ],
+      "accordion": {
+        "details": "A story worth keeping - a guided keepsake journal where a grandparent's stories, memories and wisdom can be written down and passed on through generations, with space for who it belongs to, who it's written for, and when it was completed.",
+        "ingredients": "Paperback journal, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "100-ai-side-hustles-that-actually-work-2026",
+      "name": "100 AI Side Hustles That Actually Work in 2026",
+      "category": "books",
+      "priceOld": 13.99,
+      "priceCurrent": 13.99,
+      "priceSave": 0,
+      "description": "A practical print guide to 100 real AI-powered income ideas for freelancers, creators and entrepreneurs, by Nwabiani C. Ramage.",
+      "images": [
+        "100-ai-side-hustles-that-actually-work-2026.png"
+      ],
+      "accordion": {
+        "details": "A practical guide to 100 AI side hustles that actually work in 2026, written for freelancers, creators and entrepreneurs looking for realistic, tool-backed income ideas. Also available as an instant PDF download.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-womens-outfit-planner",
+      "name": "2027 Women's Slim Calendar Outfit Planner",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A 2027 women's slim calendar outfit planner with 365 ready-to-wear looks to plan across the year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-womens-slim-calendar-outfit-planner.png"
+      ],
+      "accordion": {
+        "details": "A full year of outfit planning for women, with space for 365 ready-to-wear looks - a simple way to plan what to wear and take the decision fatigue out of getting dressed in 2027.",
+        "ingredients": "Paperback planner, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-daily-affirmations",
+      "name": "2027 Daily Affirmations",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "365 daily affirmations for a brighter 2027, one for every day of the year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-daily-affirmations.png"
+      ],
+      "accordion": {
+        "details": "365 words for a brighter year - a daily affirmations book with one grounding, positive statement for every day of 2027.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-2028-scotland-school-year-planner",
+      "name": "2027-2028 Scotland School Year Slim Calendar Planner",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A 12-month slim academic calendar planner aligned to the 2027-2028 Scotland school year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-2028-scotland-school-year-slim-calendar-planner.png"
+      ],
+      "accordion": {
+        "details": "A slim, 12-month academic calendar planner covering the 2027-2028 school year, aligned to the Scotland school calendar.",
+        "ingredients": "Paperback planner, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "the-sycamore-girl-novel",
+      "name": "The Sycamore Girl: A Novel",
+      "category": "books",
+      "priceOld": 18.99,
+      "priceCurrent": 18.99,
+      "priceSave": 0,
+      "description": "A novel by Nwabiani C. Ramage.",
+      "images": [
+        "the-sycamore-girl-novel.png"
+      ],
+      "accordion": {
+        "details": "A novel by Nwabiani C. Ramage, published under CyRamage Studio.",
+        "ingredients": "Paperback, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-mens-outfit-planner",
+      "name": "2027 Men's Slim Calendar Outfit Planner",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A 2027 men's slim calendar outfit planner with 365 ready-to-wear looks to plan across the year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-mens-slim-calendar-outfit-planner.png"
+      ],
+      "accordion": {
+        "details": "A full year of outfit planning for men, with space for 365 ready-to-wear looks - a simple way to plan what to wear and take the decision fatigue out of getting dressed in 2027.",
+        "ingredients": "Paperback planner, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-2028-england-school-year-planner",
+      "name": "2027-2028 England School Year Slim Calendar Planner",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A 12-month slim academic calendar planner aligned to the 2027-2028 England school year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-2028-england-school-year-slim-calendar-planner.png"
+      ],
+      "accordion": {
+        "details": "A slim, 12-month academic calendar planner covering the 2027-2028 school year, aligned to the England school calendar.",
+        "ingredients": "Paperback planner, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
+      }
+    },
+    {
+      "id": "2027-uk-football-match-day-calendar",
+      "name": "2027 UK Football Match Day Calendar",
+      "category": "books",
+      "priceOld": 9.99,
+      "priceCurrent": 9.99,
+      "priceSave": 0,
+      "description": "A 2027 slim calendar for tracking UK football match days across the year, by Nwabiani C. Ramage.",
+      "images": [
+        "2027-uk-football-match-day-calendar.png"
+      ],
+      "accordion": {
+        "details": "A 2027 slim calendar built around UK football match days, for keeping track of fixtures throughout the year.",
+        "ingredients": "Paperback planner, KDP print edition. Published under Nwabiani C. Ramage / CyRamage Studio."
       }
     }
   ]
