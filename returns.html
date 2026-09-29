@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Returns &amp; Refunds | CyRamage</title>
+<meta name="description" content="CyRamage returns and refunds policy: 14-day change-of-mind returns, faulty item support, and how to send an item back.">
+<link rel="canonical" href="https://cyramage.com/returns.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F8F5EE;
+    --ivory-deep: #EFE9DC;
+    --ink: #1C1B19;
+    --ink-soft: #4A4740;
+    --olive: #5E6B3A;
+    --bronze: #9C6F3C;
+    --rule: #D9D0BD;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  a { color: var(--olive); text-underline-offset: 3px; }
+  a:hover { color: var(--bronze); }
+  a:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-radius: 2px; }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem clamp(1.25rem, 5vw, 3rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .wordmark {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .back { font-size: 0.9rem; font-weight: 400; }
+
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) 4rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.6rem, 8vw, 3.8rem);
+    line-height: 1.05;
+    margin: 0 0 0.75rem;
+  }
+  .updated { color: var(--ink-soft); font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0 0 2.5rem;
+  }
+
+  /* The three facts customers look for first */
+  .glance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 0 3rem;
+    padding: 0;
+    list-style: none;
+  }
+  .glance li { padding: 1.25rem 1rem 1.25rem 0; }
+  .glance li + li { padding-left: 1rem; border-left: 1px solid var(--rule); }
+  .glance strong {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: var(--olive);
+    margin-bottom: 0.4rem;
+  }
+  .glance span { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; display: block; }
+
+  section { margin-bottom: 2.5rem; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
+  }
+  p { margin: 0 0 1rem; }
+
+  .note {
+    background: var(--ivory-deep);
+    border-left: 3px solid var(--bronze);
+    padding: 1.1rem 1.25rem;
+    margin: 1rem 0 0;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+  ol.steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 1rem 2.75rem;
+  }
+  ol.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: -0.2rem;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--bronze);
+  }
+
+  .contact {
+    border-top: 1px solid var(--ink);
+    padding-top: 2rem;
+    margin-top: 3rem;
+  }
+  .email {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .site-footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 560px) {
+    .glance { grid-template-columns: 1fr; }
+    .glance li, .glance li + li { padding: 1rem 0; border-left: 0; }
+    .glance li + li { border-top: 1px solid var(--rule); }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="/">CyRamage</a>
+  <a class="back" href="/">Back to shop</a>
+</header>
+
+<main>
+  <h1>Returns &amp; refunds</h1>
+  <p class="updated">Last updated 29 September 2026</p>
+  <p class="intro">We want you to love your CyRamage order. If something isn't right, here's how returns work.</p>
+
+  <ul class="glance" aria-label="Returns at a glance">
+    <li><strong>14 days</strong><span>to change your mind after delivery</span></li>
+    <li><strong>30 days</strong><span>to report a faulty or damaged item</span></li>
+    <li><strong>14 days</strong><span>to receive your refund once we get the item or proof of postage</span></li>
+  </ul>
+
+  <section>
+    <h2>Changed your mind?</h2>
+    <p>You can cancel your order within 14 days of receiving it, for any reason. Let us know within that window, then send the item back within 14 days of telling us. Items must be unused and in their original condition and packaging.</p>
+  </section>
+
+  <section>
+    <h2>Items we can't accept back unless faulty</h2>
+    <p>For health and hygiene reasons, we can't accept returns of these items once the seal or packaging has been opened: bath salts, bath gels, bath oils, bath teas, bath bombs, bath sponges, and Smile Ritual oral-care products.</p>
+    <p>Unopened, sealed items can be returned as normal.</p>
+  </section>
+
+  <section>
+    <h2>Faulty, damaged or incorrect items</h2>
+    <p>If your order arrives damaged, faulty or isn't what you ordered, contact us within 30 days of delivery with your order number and a photo. We'll offer a replacement or a full refund, and we'll cover the return postage.</p>
+    <div class="note"><p>This doesn't affect your statutory rights.</p></div>
+  </section>
+
+  <section>
+    <h2>How to return an item</h2>
+    <ol class="steps">
+      <li>Email us at <a href="mailto:returns@cyramage.com">returns@cyramage.com</a> with your order number and the items you're returning.</li>
+      <li>We'll reply with the return address and any instructions.</li>
+      <li>Pack the item securely and send it back. We recommend a tracked service, as we can't be responsible for items lost in transit.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Return postage</h2>
+    <p>For change-of-mind returns, you pay the return postage. For faulty or incorrect items, we cover it.</p>
+  </section>
+
+  <section>
+    <h2>Refunds</h2>
+    <p>Refunds go back to your original payment method within 14 days of us receiving the returned item, or within 14 days of you sending us proof of postage, whichever is sooner.</p>
+    <p>If you return your whole order, we'll also refund the delivery charge you paid, up to the cost of our standard delivery option.</p>
+    <p>We may reduce a refund if an item has been used or handled beyond what's needed to inspect it.</p>
+  </section>
+
+  <section>
+    <h2>Gift sets and bundles</h2>
+    <p>Gift sets, including the Signature Self-Care Box, should be returned complete. If a gift set contains opened hygiene items, the set can't be returned unless it's faulty.</p>
+  </section>
+
+  <div class="contact">
+    <h2>Questions?</h2>
+    <p>Email us and we'll be happy to help.</p>
+    <a class="email" href="mailto:returns@cyramage.com">returns@cyramage.com</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 CyRamage. Pamper Pouch &amp; CyRamage Studio.
+</footer>
+
+</body>
+</html>
