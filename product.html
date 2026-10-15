@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Loading… | CyRamage</title>
+    <meta name="description" id="pageDescription" content="Shop luxury self-care, gift sets, home fragrance, accessories and books at CyRamage. Free UK delivery over £50.">
+    <link rel="canonical" id="canonicalLink" href="https://cyramage.com/product.html">
+    <meta property="og:site_name" content="CyRamage">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" id="ogTitle" content="CyRamage">
+    <meta property="og:description" id="ogDescription" content="Shop luxury self-care, gift sets, home fragrance, accessories and books at CyRamage.">
+    <meta property="og:image" id="ogImage" content="">
+    <meta property="og:url" id="ogUrl" content="">
+    <meta property="og:type" content="product">
+    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+        /* Homepage palette: plum, gold, linen (names kept so the rest of the CSS still works) */
+        --ivory: #F6EFE7;       /* linen background */
+        --near-black: #1D1420;  /* plum */
+        --olive: #7A5C26;       /* deep gold: prices, links, hovers (readable on linen) */
+        --bronze: #C6A15B;      /* gold: badges, dots, accents */
+        --grey: #6E6472;        /* muted text */
+        --line: #E6DCCF;
+    }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: var(--ivory) !important;
+            color: var(--near-black) !important;
+        }
+
+        header, .navbar {
+            background: var(--ivory) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
+        @media (min-width: 769px) {
+            #mainNavigation {
+                display: flex;
+                align-items: center;
+                gap: 36px;
+            }
+        }
+
+        #mainNavigation a {
+            position: relative;
+            letter-spacing: 0.03em;
+            transition: color 0.2s ease;
+            padding-bottom: 4px;
+            color: var(--near-black) !important;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        #mainNavigation a:hover { color: var(--olive) !important; }
+        #mainNavigation a.active { color: var(--olive) !important; }
+
+        #mainNavigation a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: var(--olive);
+        }
+
+        .nav-cart {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+            color: var(--near-black);
+        }
+
+        .nav-cart svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            fill: none;
+            transition: stroke 0.2s ease;
+        }
+
+        .nav-cart:hover svg { stroke: var(--olive); }
+
+        .nav-cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--bronze);
+            color: var(--near-black);
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 3px 5px;
+            border-radius: 999px;
+            min-width: 16px;
+            text-align: center;
+        }
+
+        .nav-cart-badge.hidden { display: none; }
+
+        
+
+        .breadcrumb {
+            max-width: 1160px;
+            margin: 40px auto 0;
+            padding: 0 6%;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+            color: var(--grey);
+        }
+
+        .breadcrumb a { color: var(--grey); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--olive); }
+        .breadcrumb .current { color: var(--near-black); }
+
+        /* ===== Product layout ===== */
+        .product-page {
+            max-width: 1160px;
+            margin: 40px auto 130px;
+            padding: 0 6%;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 860px) {
+            .product-page {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                margin: 24px auto 90px;
+            }
+        }
+
+        .product-page-image {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            position: relative;
+        }
+
+        @media (max-width: 860px) {
+            .product-page-image { padding: 36px 24px 44px; }
+        }
+
+        .product-page-image img {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(26, 24, 22, 0.6);
+            border: none;
+            color: var(--ivory);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover { background: var(--bronze); color: var(--near-black); }
+        .gallery-arrow.prev { left: 12px; }
+        .gallery-arrow.next { right: 12px; }
+        .gallery-arrow.hidden { display: none; }
+
+        .gallery-dots {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .gallery-dots .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--line);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .gallery-dots .dot.active { background: var(--bronze); }
+        .gallery-dots.hidden { display: none; }
+
+        .product-page-details .eyebrow-static {
+            display: block;
+            color: var(--bronze);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-size: 0.75rem;
+            margin-bottom: 14px;
+        }
+
+        .product-page-details h1 {
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 2.1rem;
+            margin: 0 0 18px;
+            color: var(--near-black) !important;
+            line-height: 1.1;
+        }
+
+        .product-page-price {
+            margin: 0 0 22px;
+            font-size: 1.2rem;
+        }
+
+        .product-page-price .old-price {
+            text-decoration: line-through;
+            color: var(--grey);
+            font-size: 0.95rem;
+            margin-right: 10px;
+        }
+
+        .product-page-price .current-price {
+            color: var(--olive);
+            font-weight: 600;
+        }
+
+        .product-page-price .save-badge {
+            display: inline-block;
+            margin-left: 12px;
+            color: var(--grey);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 3px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            vertical-align: middle;
+        }
+
+        .product-page-description {
+            color: var(--grey);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .qty-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--line);
+            overflow: hidden;
+        }
+
+        .qty-selector button {
+            background: transparent;
+            border: none;
+            color: var(--near-black);
+            width: 40px;
+            height: 44px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .qty-selector button:hover { color: var(--olive); }
+
+        .qty-selector input {
+            width: 44px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            border-left: 1px solid var(--line);
+            border-right: 1px solid var(--line);
+            color: var(--near-black);
+            height: 44px;
+            font-size: 16px;
+        }
+
+        .add-to-bag-btn {
+            display: block;
+            width: 100%;
+            padding: 17px;
+            border: 1px solid var(--near-black);
+            border-radius: 0;
+            background: var(--near-black);
+            color: var(--ivory);
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            cursor: pointer;
+            margin-bottom: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .add-to-bag-btn:hover { background: var(--olive); border-color: var(--olive); }
+        .add-to-bag-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .buy-now-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: 1px solid var(--near-black);
+            border-radius: 0;
+            background: transparent;
+            color: var(--near-black);
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            cursor: pointer;
+            margin-bottom: 14px;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .buy-now-btn:hover { background: var(--near-black); color: var(--ivory); }
+        .buy-now-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .add-to-bag-confirm {
+            font-size: 13px;
+            color: var(--olive);
+            min-height: 18px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-bag-confirm a { color: var(--olive); }
+
+        /* Reassurance right under the buttons, where people decide */
+        .trust-list {
+            list-style: none;
+            margin: 0 0 30px;
+            padding: 16px 0 0;
+            border-top: 1px solid var(--line);
+            display: grid;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--grey);
+        }
+
+        .trust-list li::before {
+            content: "✓";
+            color: var(--bronze);
+            margin-right: 10px;
+        }
+
+        .accordion { border-top: 1px solid var(--line); }
+        .accordion-item { border-bottom: 1px solid var(--line); }
+
+        .accordion-header {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--near-black);
+            text-align: left;
+            padding: 19px 0;
+            font-size: 0.88rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:hover { color: var(--olive); }
+
+        .accordion-icon {
+            transition: transform 0.2s ease;
+            color: var(--bronze);
+        }
+
+        .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+
+        .accordion-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+        }
+
+        .accordion-item.open .accordion-panel { max-height: 1200px; }
+
+        .accordion-panel-inner {
+            padding: 0 0 22px;
+            color: var(--grey);
+            line-height: 1.7;
+            font-size: 0.9rem;
+            white-space: pre-line;
+        }
+
+        /* ===== Related products ===== */
+        .related-products {
+            max-width: 1160px;
+            margin: 0 auto 130px;
+            padding: 0 6%;
+        }
+
+        .related-products h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.9rem;
+            color: var(--near-black) !important;
+            margin-bottom: 44px;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .related-grid .related-card:nth-child(3) { display: none; }
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .related-card:hover { border-color: var(--near-black); }
+
+        .related-card-image {
+            background: #ffffff;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .related-card-image img {
+            max-width: 140px;
+            width: 100%;
+            height: auto;
+        }
+
+        .related-card-details { padding: 16px 16px 20px; }
+
+        .related-card-details h3 {
+            font-size: 0.95rem;
+            color: var(--near-black) !important;
+            margin: 0 0 10px;
+            font-weight: 500;
+        }
+
+        .related-card-price .old-price {
+            text-decoration: line-through;
+            color: var(--grey);
+            font-size: 13px;
+            margin-right: 8px;
+        }
+
+        .related-card-price .current-price {
+            color: var(--olive);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .product-page-loading, .product-page-error {
+            max-width: 1160px;
+            margin: 100px auto;
+            padding: 0 6%;
+            text-align: center;
+            color: var(--grey);
+        }
+
+        .product-page-error a { color: var(--olive); }
+
+        /* Variant selector */
+        .variant-selector { margin-bottom: 22px; }
+
+        .variant-label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--grey);
+            margin-bottom: 12px;
+        }
+
+        .variant-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .variant-btn {
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--near-black);
+            padding: 10px 16px;
+            border-radius: 0;
+            font-size: 13px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+        }
+
+        .variant-btn:hover { border-color: var(--olive); color: var(--olive); }
+
+        .variant-btn.active {
+            background: var(--near-black);
+            border-color: var(--near-black);
+            color: var(--ivory);
+            font-weight: 600;
+        }
+
+        .contents-list { list-style: none; margin: 0; padding: 0; white-space: normal; }
+        .contents-list li { padding: 7px 0; border-bottom: 1px solid var(--line); }
+        .contents-list li:last-child { border-bottom: none; }
+
+        .footer {
+            background: var(--near-black) !important;
+            color: rgba(245,242,236,0.7) !important;
+        }
+        .footer h3 {
+            color: var(--ivory) !important;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .footer a { color: rgba(245,242,236,0.75) !important; }
+        .footer a:hover { color: var(--bronze) !important; }
+        .footer-bottom {
+            color: rgba(245,242,236,0.5) !important;
+            border-top: 1px solid rgba(245,242,236,0.15);
+        }
+    
+    /* ===== Match the homepage: fonts, focus, full-screen plum mobile menu ===== */
+    body { font-family: 'Work Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 500; }
+    #mainNavigation a { font-family: 'Work Sans', sans-serif; }
+    .footer { font-family: 'Work Sans', sans-serif; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+        outline: 2px solid var(--bronze);
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+        body.menu-open { overflow: hidden; }
+
+        .mobile-menu-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1001;
+        }
+        .mobile-menu-button span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            margin: 0;
+            background: var(--near-black);
+            transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
+        }
+        body.menu-open .mobile-menu-button span { background: var(--ivory); }
+        body.menu-open .mobile-menu-button span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        body.menu-open .mobile-menu-button span:nth-child(2) { opacity: 0; }
+        body.menu-open .mobile-menu-button span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+        #mainNavigation.open {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            padding: 110px 24px 40px;
+            background: var(--near-black);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        #mainNavigation.open a {
+            color: var(--ivory) !important;
+            font-family: 'Fraunces', serif;
+            font-size: 1.55rem;
+            letter-spacing: 0.01em;
+            text-transform: none;
+            padding: 0;
+            border: none;
+        }
+        #mainNavigation.open a:hover,
+        #mainNavigation.open a.active { color: var(--bronze) !important; }
+        #mainNavigation.open a.active::after { display: none; }
+        #mainNavigation.open .nav-cart { margin-left: 0; gap: 10px; }
+        #mainNavigation.open .nav-cart svg { stroke: var(--ivory); }
+        #mainNavigation.open .nav-cart::after {
+            content: "Cart";
+            font-family: 'Fraunces', serif;
+            font-size: 1.55rem;
+        }
+    }
+
+    /* ===== Running delivery banner (same on every page) ===== */
+    .top-bar {
+        background: #1D1420 !important;
+        color: #F6EFE7 !important;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 38px;
+        display: flex;
+        align-items: center;
+    }
+    .top-bar-track {
+        display: flex;
+        width: max-content;
+        flex-shrink: 0;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.03em;
+        animation: cyramage-marquee 30s linear infinite;
+    }
+    /* Spacing sits on each item (not a gap) so both halves are identical
+       and the loop has no jump */
+    .top-bar-track span { flex-shrink: 0; padding-right: 60px; }
+    @keyframes cyramage-marquee {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .top-bar-track { animation: none; }
+    }
+</style>
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-track" aria-hidden="false">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+  </div>
+
+<header>
+    <div class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="CyRamage home">
+        </a>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNavigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#shop" class="active">Shop</a>
+            <a href="gift-sets.html">Gift Sets</a>
+            <a href="books.html">Books</a>
+            <a href="digital-products.html">Digital</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html" class="nav-cart" aria-label="View cart">
+                <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 6h15l-1.5 9h-12z"></path>
+                    <path d="M6 6L5 3H2"></path>
+                    <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                    <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb" id="breadcrumbNav">
+      <a href="index.html">Home</a> &rsaquo;
+      <a href="index.html#shop" id="breadcrumbCategory">Shop</a> &rsaquo;
+      <span class="current" id="breadcrumbCurrent">Loading…</span>
+  </nav>
+
+  <div class="product-page-loading" id="loadingState">Loading product…</div>
+
+  <div class="product-page-error" id="errorState" style="display:none;">
+      We couldn't find that product. It may have sold out or moved. <a href="index.html#shop">Browse all categories</a>
+  </div>
+
+  <main class="product-page" id="productPage" style="display:none;">
+
+      <div class="product-page-image">
+          <img id="productImage" src="" alt="">
+
+          <button type="button" class="gallery-arrow prev" id="galleryPrev" aria-label="Previous image">&#8249;</button>
+          <button type="button" class="gallery-arrow next" id="galleryNext" aria-label="Next image">&#8250;</button>
+
+          <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+
+      <div class="product-page-details">
+          <span class="eyebrow-static" id="productEyebrow">CyRamage Signature</span>
+          <h1 id="productName"></h1>
+
+          <div class="variant-selector" id="variantSelector" style="display:none;">
+              <span class="variant-label" id="variantLabel">Choose an option</span>
+              <div class="variant-options" id="variantOptions"></div>
+          </div>
+
+          <p class="product-page-price">
+              <span class="old-price" id="priceOld"></span>
+              <span class="current-price" id="priceCurrent"></span>
+              <span class="save-badge" id="priceSave"></span>
+          </p>
+
+          <p class="product-page-description" id="productDescription"></p>
+
+          <div class="qty-row">
+              <div class="qty-selector">
+                  <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                  <input type="text" id="qtyInput" value="1" inputmode="numeric" aria-label="Quantity">
+                  <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+          </div>
+
+          <button type="button" class="add-to-bag-btn" id="addToBagBtn">Add to Bag</button>
+          <button type="button" class="buy-now-btn" id="buyNowBtn">Buy Now</button>
+          <p class="add-to-bag-confirm" id="addToBagConfirm" role="status"></p>
+
+          <ul class="trust-list">
+              <li>Free UK delivery on orders over £50</li>
+              <li>Secure checkout by Stripe</li>
+              <li>Questions? <a href="contact.html" style="color:var(--olive);">Contact us</a> before you buy</li>
+          </ul>
+
+          <div class="accordion">
+              <div class="accordion-item">
+                  <button type="button" class="accordion-header">
+                      Details
+                      <span class="accordion-icon">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                      <div class="accordion-panel-inner" id="accordionDetails"></div>
+                  </div>
+              </div>
+
+              <div class="accordion-item" id="ingredientsItem">
+                  <button type="button" class="accordion-header">
+                      <span id="accordionIngredientsLabel">Ingredients</span>
+                      <span class="accordion-icon">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                      <div class="accordion-panel-inner" id="accordionIngredients"></div>
+                  </div>
+              </div>
+
+              <div class="accordion-item">
+                  <button type="button" class="accordion-header">
+                      Delivery &amp; Returns
+                      <span class="accordion-icon">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                      <div class="accordion-panel-inner">Free UK delivery on orders over £50. Standard delivery 3&ndash;5 working days.
+See our <a href="delivery.html" style="color:var(--olive);">Delivery</a> and <a href="returns.html" style="color:var(--olive);">Returns</a> pages for full details.</div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+  </main>
+
+
+  <section class="related-products" id="relatedSection" style="display:none;">
+      <h2>You May Also Like</h2>
+      <div class="related-grid" id="relatedGrid"></div>
+  </section>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <img src="images/logo.png" alt="CyRamage" class="footer-logo">
+            <p>
+                Luxury self-care, elegant gifts and lifestyle essentials
+                designed to bring beauty to every moment.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <a href="gift-sets.html">Gift Sets</a>
+            <a href="self-care.html">Self-Care</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="books.html">Books</a>
+            <a href="digital-products.html">Digital Products</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Care</h3>
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <a href="https://www.instagram.com/shopcyramage/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/share/18PWg41pTh/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://pin.it/2q386TJOE" target="_blank" rel="noopener">Pinterest</a>
+            <a href="https://www.tiktok.com/@shopcyramage" target="_blank" rel="noopener">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CyRamage. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+    // ===== Load product data from products.json based on ?id= (and optional ?variant=) =====
+    let CURRENT_PRODUCT = null;
+    let CURRENT_CART_ITEM = null;
+    let ALL_PRODUCTS = [];
+    let CURRENT_IMAGES = [];
+    let currentImageIndex = 0;
+
+    const SITE = "https://cyramage.com/";
+
+    // Category id -> page and label, used for the breadcrumb and eyebrow
+    const CATEGORY_INFO = {
+        "self-care":      { label: "Pamper Pouch",   page: "self-care.html" },
+        "gift-sets":      { label: "Gift Sets",      page: "gift-sets.html" },
+        "home-fragrance": { label: "Home Fragrance", page: "home-fragrance.html" },
+        "accessories":    { label: "Accessories",    page: "accessories.html" },
+        "smile-ritual":   { label: "Smile Ritual",   page: "smile-ritual.html" },
+        "books":          { label: "CyRamage Studio", page: "books.html" }
+    };
+
+    function getParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
+    }
+
+    function formatPrice(n) {
+        return "£" + Number(n).toFixed(2);
+    }
+
+    // Works out sale info from the real prices, so a book at £9.99 with no
+    // discount shows just "£9.99" instead of "£9.99 £9.99 SAVE £0".
+    function priceInfo(item) {
+        const current = Number(item.priceCurrent) || 0;
+        const old = Number(item.priceOld) || 0;
+        const onSale = old > current;
+        return { current: current, old: old, onSale: onSale, save: onSale ? old - current : 0 };
+    }
+
+    function firstImageOf(p) {
+        if (Array.isArray(p.images) && p.images.length) return p.images[0];
+        if (Array.isArray(p.variants) && p.variants.length) {
+            const v = p.variants[0];
+            return Array.isArray(v.images) ? v.images[0] : v.image;
+        }
+        return "";
+    }
+
+    function imageUrl(file) {
+        return SITE + "images/" + encodeURI(file);
+    }
+
+    function shuffleArray(array) {
+        const result = array.slice();
+        for (let i = result.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = result[i];
+            result[i] = result[j];
+            result[j] = temp;
+        }
+        return result;
+    }
+
+    async function loadProduct() {
+        const id = getParam("id");
+        const loadingState = document.getElementById("loadingState");
+        const errorState = document.getElementById("errorState");
+        const productPage = document.getElementById("productPage");
+        const relatedSection = document.getElementById("relatedSection");
+
+        if (!id) {
+            loadingState.style.display = "none";
+            errorState.style.display = "block";
+            return;
+        }
+
+        try {
+            const response = await fetch("products.json");
+            if (!response.ok) throw new Error("Failed to load products.json");
+            const data = await response.json();
+            ALL_PRODUCTS = Array.isArray(data.products) ? data.products : [];
+
+            const product = ALL_PRODUCTS.find(function (p) { return p.id === id; });
+
+            if (!product) {
+                loadingState.style.display = "none";
+                errorState.style.display = "block";
+                return;
+            }
+
+            CURRENT_PRODUCT = product;
+            renderProduct(product);
+
+            loadingState.style.display = "none";
+            productPage.style.display = "grid";
+            relatedSection.style.display = "block";
+        } catch (error) {
+            console.error("Unable to load product:", error);
+            loadingState.style.display = "none";
+            errorState.style.display = "block";
+        }
+    }
+
+    function renderProduct(product) {
+        const category = CATEGORY_INFO[product.category];
+        const productUrl = SITE + "product.html?id=" + encodeURIComponent(product.id);
+        const description = product.description
+            || (product.variants && product.variants[0] && product.variants[0].description)
+            || "";
+
+        document.getElementById("pageTitle").textContent = product.name + " | CyRamage";
+        document.getElementById("breadcrumbCurrent").textContent = product.name;
+        document.getElementById("productName").textContent = product.name;
+
+        if (category) {
+            const crumb = document.getElementById("breadcrumbCategory");
+            crumb.textContent = category.label === "CyRamage Studio" ? "Books" : category.label;
+            crumb.href = category.page;
+            document.getElementById("productEyebrow").textContent = category.label;
+        }
+
+        // ---- SEO: description, canonical and social sharing tags ----
+        document.getElementById("pageDescription").setAttribute("content", description);
+        document.getElementById("canonicalLink").setAttribute("href", productUrl);
+        document.getElementById("ogTitle").setAttribute("content", product.name + " | CyRamage");
+        document.getElementById("ogDescription").setAttribute("content", description);
+        document.getElementById("ogImage").setAttribute("content", imageUrl(firstImageOf(product)));
+        document.getElementById("ogUrl").setAttribute("content", productUrl);
+
+        const variantSelector = document.getElementById("variantSelector");
+        const variantOptions = document.getElementById("variantOptions");
+
+        if (Array.isArray(product.variants) && product.variants.length > 0) {
+            variantSelector.style.display = "block";
+            variantOptions.innerHTML = "";
+            document.getElementById("variantLabel").textContent =
+                product.category === "gift-sets" ? "Choose your box" : "Choose an option";
+
+            // A link can pick the variant: product.html?id=gift-box&variant=relax-unwind
+            const requested = getParam("variant");
+            const defaultVariant =
+                product.variants.find(function (v) { return v.id === requested; }) ||
+                product.variants.find(function (v) { return v.badge; }) ||
+                product.variants[0];
+
+            product.variants.forEach(function (variant) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "variant-btn" + (variant.id === defaultVariant.id ? " active" : "");
+                btn.textContent = variant.name;
+                btn.setAttribute("aria-pressed", variant.id === defaultVariant.id ? "true" : "false");
+                btn.addEventListener("click", function () {
+                    document.querySelectorAll(".variant-btn").forEach(function (b) {
+                        b.classList.remove("active");
+                        b.setAttribute("aria-pressed", "false");
+                    });
+                    btn.classList.add("active");
+                    btn.setAttribute("aria-pressed", "true");
+                    selectVariant(product, variant);
+
+                    // Keep the address bar in step so a shared link opens this option
+                    try {
+                        const url = new URL(window.location.href);
+                        url.searchParams.set("variant", variant.id);
+                        history.replaceState(null, "", url.toString());
+                    } catch (e) { /* older browsers: ignore */ }
+                });
+                variantOptions.appendChild(btn);
+            });
+
+            selectVariant(product, defaultVariant);
+        } else {
+            variantSelector.style.display = "none";
+            selectVariant(product, null);
+        }
+
+        renderRelated(product);
+    }
+
+    function selectVariant(product, variant) {
+        const active = variant || product;
+        const prices = priceInfo(active);
+
+        document.getElementById("productDescription").textContent =
+            active.description || product.description || "";
+
+        const priceOldEl = document.getElementById("priceOld");
+        const priceSaveEl = document.getElementById("priceSave");
+        document.getElementById("priceCurrent").textContent = formatPrice(prices.current);
+
+        if (prices.onSale) {
+            priceOldEl.textContent = formatPrice(prices.old);
+            priceOldEl.style.display = "";
+            priceSaveEl.textContent = "Save " + formatPrice(prices.save);
+            priceSaveEl.style.display = "";
+        } else {
+            priceOldEl.textContent = "";
+            priceOldEl.style.display = "none";
+            priceSaveEl.textContent = "";
+            priceSaveEl.style.display = "none";
+        }
+
+        document.getElementById("accordionDetails").textContent =
+            (product.accordion && product.accordion.details) || active.description || product.description || "";
+
+        const ingredientsItem = document.getElementById("ingredientsItem");
+        const ingredientsLabel = document.getElementById("accordionIngredientsLabel");
+        const ingredientsPanel = document.getElementById("accordionIngredients");
+        ingredientsItem.style.display = "";
+
+        if (variant && Array.isArray(variant.contents)) {
+            ingredientsLabel.textContent = "What's Inside";
+            ingredientsPanel.innerHTML = "";
+            const list = document.createElement("ul");
+            list.className = "contents-list";
+            variant.contents.forEach(function (item) {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+            ingredientsPanel.appendChild(list);
+        } else if (variant && variant.materials) {
+            ingredientsLabel.textContent = "Materials";
+            ingredientsPanel.textContent = variant.materials;
+        } else if (product.accordion && product.accordion.ingredients) {
+            ingredientsLabel.textContent = product.category === "books" ? "Format"
+                : (["accessories", "smile-ritual", "home-fragrance"].indexOf(product.category) > -1 &&
+                   !/aqua|oil|wax|salt/i.test(product.accordion.ingredients) ? "Materials" : "Ingredients");
+            ingredientsPanel.textContent = product.accordion.ingredients;
+        } else {
+            // Nothing to show: hide the empty section rather than leave it blank
+            ingredientsItem.style.display = "none";
+        }
+
+        CURRENT_IMAGES = variant
+            ? (Array.isArray(variant.images) ? variant.images : [variant.image])
+            : product.images;
+        currentImageIndex = 0;
+
+        const imageEl = document.getElementById("productImage");
+        imageEl.src = "images/" + CURRENT_IMAGES[0];
+        imageEl.alt = variant ? product.name + ", " + variant.name : product.name;
+
+        const dotsContainer = document.getElementById("galleryDots");
+        const prevBtn = document.getElementById("galleryPrev");
+        const nextBtn = document.getElementById("galleryNext");
+        dotsContainer.innerHTML = "";
+
+        if (CURRENT_IMAGES.length < 2) {
+            dotsContainer.classList.add("hidden");
+            prevBtn.classList.add("hidden");
+            nextBtn.classList.add("hidden");
+        } else {
+            dotsContainer.classList.remove("hidden");
+            prevBtn.classList.remove("hidden");
+            nextBtn.classList.remove("hidden");
+            CURRENT_IMAGES.forEach(function (_, i) {
+                const dot = document.createElement("span");
+                dot.className = "dot" + (i === 0 ? " active" : "");
+                dot.addEventListener("click", function () { showImage(i); });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        CURRENT_CART_ITEM = variant
+            ? { id: product.id + "-" + variant.id, productId: product.id, variantId: variant.id, name: variant.name === product.name ? product.name : product.name + " - " + variant.name, price: prices.current, image: "images/" + CURRENT_IMAGES[0] }
+            : { id: product.id, productId: product.id, variantId: null, name: product.name, price: prices.current, image: "images/" + CURRENT_IMAGES[0] };
+
+        updateProductSchema(product, variant, prices);
+    }
+
+    // ===== Google product data: lets Google show price and stock in search and Shopping =====
+    function updateProductSchema(product, variant, prices) {
+        const url = SITE + "product.html?id=" + encodeURIComponent(product.id) +
+            (variant ? "&variant=" + encodeURIComponent(variant.id) : "");
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": variant ? product.name + " - " + variant.name : product.name,
+            "image": CURRENT_IMAGES.map(imageUrl),
+            "description": (variant && variant.description) || product.description || "",
+            "sku": variant ? product.id + "-" + variant.id : product.id,
+            "brand": { "@type": "Brand", "name": product.category === "books" ? "CyRamage Studio" : "CyRamage" },
+            "category": (CATEGORY_INFO[product.category] || {}).label || "",
+            "offers": {
+                "@type": "Offer",
+                "url": url,
+                "priceCurrency": "GBP",
+                "price": prices.current.toFixed(2),
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "seller": { "@type": "Organization", "name": "CyRamage" }
+            }
+        };
+
+        let el = document.getElementById("productSchema");
+        if (!el) {
+            el = document.createElement("script");
+            el.type = "application/ld+json";
+            el.id = "productSchema";
+            document.head.appendChild(el);
+        }
+        el.textContent = JSON.stringify(schema);
+    }
+
+    function showImage(index) {
+        if (!CURRENT_IMAGES.length) return;
+        currentImageIndex = (index + CURRENT_IMAGES.length) % CURRENT_IMAGES.length;
+
+        document.getElementById("productImage").src = "images/" + CURRENT_IMAGES[currentImageIndex];
+
+        document.querySelectorAll("#galleryDots .dot").forEach(function (dot, i) {
+            dot.classList.toggle("active", i === currentImageIndex);
+        });
+    }
+
+    // Swipe left/right on the photo (phones)
+    (function enableSwipe() {
+        const box = document.querySelector(".product-page-image");
+        let startX = null;
+        box.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        box.addEventListener("touchend", function (e) {
+            if (startX === null) return;
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 40) showImage(currentImageIndex + (dx < 0 ? 1 : -1));
+            startX = null;
+        });
+    })();
+
+    function renderRelated(product) {
+        const grid = document.getElementById("relatedGrid");
+        grid.innerHTML = "";
+
+        const sameCategory = ALL_PRODUCTS.filter(function (p) {
+            return p.id !== product.id && p.category === product.category;
+        });
+        const others = ALL_PRODUCTS.filter(function (p) {
+            return p.id !== product.id && p.category !== product.category;
+        });
+
+        const related = shuffleArray(sameCategory).concat(shuffleArray(others)).slice(0, 3);
+
+        related.forEach(function (p) {
+            const source = p.priceCurrent !== undefined ? p : p.variants[0];
+            const prices = priceInfo(source);
+
+            const card = document.createElement("a");
+            card.href = "product.html?id=" + encodeURIComponent(p.id);
+            card.className = "related-card";
+
+            const imgWrap = document.createElement("div");
+            imgWrap.className = "related-card-image";
+            const img = document.createElement("img");
+            img.src = "images/" + firstImageOf(p);
+            img.alt = p.name;
+            img.loading = "lazy";
+            imgWrap.appendChild(img);
+
+            const details = document.createElement("div");
+            details.className = "related-card-details";
+            const h3 = document.createElement("h3");
+            h3.textContent = p.name;
+            const priceP = document.createElement("p");
+            priceP.className = "related-card-price";
+            priceP.innerHTML =
+                (prices.onSale ? '<span class="old-price">' + formatPrice(prices.old) + '</span>' : '') +
+                '<span class="current-price">' + formatPrice(prices.current) + '</span>';
+            details.appendChild(h3);
+            details.appendChild(priceP);
+
+            card.appendChild(imgWrap);
+            card.appendChild(details);
+            grid.appendChild(card);
+        });
+    }
+
+    document.getElementById("galleryPrev").addEventListener("click", function () {
+        showImage(currentImageIndex - 1);
+    });
+    document.getElementById("galleryNext").addEventListener("click", function () {
+        showImage(currentImageIndex + 1);
+    });
+
+    loadProduct();
+</script>
+<script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    if (mobileMenuButton && mainNavigation) {
+        mobileMenuButton.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+            document.body.classList.toggle("menu-open", isOpen);
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+            mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+        });
+
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mainNavigation.classList.remove("open");
+                document.body.classList.remove("menu-open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && mainNavigation.classList.contains("open")) {
+                mainNavigation.classList.remove("open");
+                document.body.classList.remove("menu-open");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
+    function updateNavCartBadge() {
+        try {
+            const savedCart =
+                localStorage.getItem("cyramageCart") ||
+                localStorage.getItem("cart") ||
+                "[]";
+
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+
+            const count = items.reduce(function (total, item) {
+                return total + (Number(item.quantity) || 1);
+            }, 0);
+
+            const badge = document.getElementById("navCartBadge");
+
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = String(count);
+                    badge.classList.remove("hidden");
+                } else {
+                    badge.classList.add("hidden");
+                }
+            }
+        } catch (error) {
+            console.error("Unable to read cart for nav badge:", error);
+        }
+    }
+
+    updateNavCartBadge();
+
+    // Accordion
+    document.querySelectorAll(".accordion-header").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            btn.closest(".accordion-item").classList.toggle("open");
+        });
+    });
+
+    // Quantity selector
+    const qtyInput = document.getElementById("qtyInput");
+    const qtyMinus = document.getElementById("qtyMinus");
+    const qtyPlus = document.getElementById("qtyPlus");
+
+    if (qtyInput && qtyMinus && qtyPlus) {
+        qtyMinus.addEventListener("click", function () {
+            qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1);
+        });
+        qtyPlus.addEventListener("click", function () {
+            qtyInput.value = Math.min(99, (parseInt(qtyInput.value, 10) || 1) + 1);
+        });
+    }
+
+    // ---- Shared cart-add logic, used by both Add to Bag and Buy Now ----
+    function addCurrentItemToCart() {
+        if (!CURRENT_CART_ITEM) return null;
+
+        const savedCart =
+            localStorage.getItem("cyramageCart") ||
+            localStorage.getItem("cart") ||
+            "[]";
+
+        let cart = JSON.parse(savedCart);
+        if (!Array.isArray(cart)) cart = [];
+
+        const quantity = Math.min(99, Math.max(1, parseInt(qtyInput ? qtyInput.value : "1", 10) || 1));
+
+        const existing = cart.find(function (item) {
+            return item.id === CURRENT_CART_ITEM.id;
+        });
+
+        if (existing) {
+            existing.quantity = (Number(existing.quantity) || 1) + quantity;
+        } else {
+            cart.push({
+                id: CURRENT_CART_ITEM.id,
+                productId: CURRENT_CART_ITEM.productId,
+                variantId: CURRENT_CART_ITEM.variantId,
+                name: CURRENT_CART_ITEM.name,
+                price: CURRENT_CART_ITEM.price,
+                image: CURRENT_CART_ITEM.image,
+                quantity: quantity
+            });
+        }
+
+        localStorage.setItem("cyramageCart", JSON.stringify(cart));
+        updateNavCartBadge();
+
+        return cart;
+    }
+
+    // Add to Bag
+    const addToBagBtn = document.getElementById("addToBagBtn");
+    const addToBagConfirm = document.getElementById("addToBagConfirm");
+
+    if (addToBagBtn) {
+        addToBagBtn.addEventListener("click", function () {
+            try {
+                const cart = addCurrentItemToCart();
+                if (!cart) return;
+
+                if (addToBagConfirm) {
+                    addToBagConfirm.innerHTML = 'Added to your bag. <a href="cart.html">View bag</a>';
+                    setTimeout(function () { addToBagConfirm.textContent = ""; }, 4000);
+                }
+            } catch (error) {
+                console.error("Unable to add to bag:", error);
+                if (addToBagConfirm) {
+                    addToBagConfirm.textContent = "That item couldn't be added. Refresh the page and try again.";
+                }
+            }
+        });
+    }
+
+    // Buy Now: adds to bag, then goes straight to checkout
+    const buyNowBtn = document.getElementById("buyNowBtn");
+
+    if (buyNowBtn) {
+        buyNowBtn.addEventListener("click", function () {
+            if (!CURRENT_CART_ITEM) return;
+
+            buyNowBtn.disabled = true;
+
+            try {
+                const cart = addCurrentItemToCart();
+
+                if (!cart || cart.length === 0) {
+                    buyNowBtn.disabled = false;
+                    return;
+                }
+
+                const cartData = encodeURIComponent(JSON.stringify(cart));
+                window.location.href = `checkout.html?cart=${cartData}`;
+            } catch (error) {
+                console.error("Unable to buy now:", error);
+                if (addToBagConfirm) {
+                    addToBagConfirm.textContent = "Checkout couldn't open. Refresh the page and try again.";
+                }
+                buyNowBtn.disabled = false;
+            }
+        });
+    }
+</script>
+</body>
+</html>
