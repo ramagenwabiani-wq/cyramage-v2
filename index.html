@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="SVeMk2icIfyURcE7n1pb66pftqvgzKFz4CxV_R-0PFU" />
+    <meta name="p:domain_verify" content="dc9bcc2b2e7ea5d8e94d4dee0a68fd21"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO: what Google shows in search results ===== -->
+    <title>CyRamage | Luxury Self-Care Gifts &amp; Home Fragrance UK</title>
+    <meta name="description" content="Luxury bath and self-care gift boxes, hand-poured candles, jewellery gift sets and books by CyRamage. Free UK delivery over £50.">
+    <link rel="canonical" href="https://cyramage.com/">
+
+    <!-- ===== Social sharing: how the link looks on Facebook, WhatsApp, Pinterest ===== -->
+    <meta property="og:site_name" content="CyRamage">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="CyRamage | Luxury Self-Care Gifts &amp; Home Fragrance">
+    <meta property="og:description" content="Self-care gift boxes, home fragrance, jewellery and books, beautifully packaged and ready to give.">
+    <meta property="og:image" content="https://cyramage.com/images/hero-lavender-bathsalt.png">
+    <meta property="og:image:alt" content="CyRamage lavender bath salt">
+    <meta property="og:url" content="https://cyramage.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ===== Brand info for Google: name, logo, social accounts ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://cyramage.com/#org",
+          "name": "CyRamage",
+          "alternateName": ["shopcyramage", "CyRamage Studio", "Pamper Pouch by CyRamage"],
+          "url": "https://cyramage.com/",
+          "logo": "https://cyramage.com/images/logo.png",
+          "description": "Luxury self-care, home fragrance, gift sets and books, based in the UK.",
+          "founder": { "@type": "Person", "name": "Nwabiani Cynthia Ramage" },
+          "sameAs": [
+            "https://www.instagram.com/shopcyramage/",
+            "https://www.tiktok.com/@shopcyramage",
+            "https://www.facebook.com/share/18PWg41pTh/",
+            "https://pin.it/2q386TJOE"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://cyramage.com/#website",
+          "name": "CyRamage",
+          "url": "https://cyramage.com/",
+          "inLanguage": "en-GB",
+          "publisher": { "@id": "https://cyramage.com/#org" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css?v=10">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --plum: #1D1420;
+            --gold: #C6A15B;
+            --linen: #F6EFE7;
+            --clay: #D9A79C;
+            --text: #2B2230;
+            --muted: #8C8290;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; }
+
+        /* Anything you jump to with a link stops below the fixed header */
+        [id] { scroll-margin-top: 110px; }
+
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 101;
+            background: var(--plum);
+            color: var(--linen);
+            overflow: hidden;
+            white-space: nowrap;
+            height: 38px;
+            display: flex;
+            align-items: center;
+        }
+        .top-bar-track {
+            display: flex;
+            gap: 60px;
+            padding-left: 40px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.03em;
+            animation: marquee 18s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .top-bar-track { animation: none; }
+        }
+
+        body {
+            background: var(--linen) !important;
+            color: var(--text) !important;
+            font-family: 'Work Sans', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body.menu-open { overflow: hidden; }
+
+        h1, h2, h3, h4 {
+            color: var(--plum) !important;
+            margin: 0;
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+        }
+
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        /* ===== Signature thread motif ===== */
+        .thread-divider {
+            position: relative;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(198,161,91,0.5) 50%, transparent 100%);
+        }
+        .thread-divider::after {
+            content: "";
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            transform: translate(-50%, -50%);
+        }
+
+        /* ===== Header ===== */
+        .site-nav {
+            position: fixed;
+            top: 38px; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 26px 6%;
+            background: transparent !important;
+            transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+        }
+        .site-nav.scrolled {
+            background: var(--linen) !important;
+            padding: 16px 6%;
+            box-shadow: 0 1px 0 rgba(29,20,32,0.08);
+        }
+        .site-nav .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .site-nav .logo-mark img {
+            display: block;
+            width: 160px;
+            height: auto;
+            filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0,0,0,0.35));
+            transition: filter 0.35s ease, width 0.35s ease;
+        }
+        .site-nav.scrolled .logo-mark img {
+            width: 130px;
+            filter: none;
+        }
+
+        .site-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .site-nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.35s ease, opacity 0.2s ease;
+            opacity: 0.92;
+        }
+        .site-nav.scrolled .site-nav-links a { color: var(--plum); }
+        .site-nav-links a:hover { opacity: 1; border-bottom: 1px solid currentColor; }
+        .nav-cart-mark {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-cart-label { display: none; }
+        .nav-cart-badge {
+            position: absolute; top: -9px; left: 13px;
+            background: var(--gold); color: var(--plum);
+            font-size: 10px; font-weight: 700; line-height: 1;
+            padding: 3px 5px; border-radius: 999px; min-width: 15px; text-align: center;
+        }
+        .nav-cart-badge.hidden { display: none; }
+
+        .mobile-menu-button { display: none; }
+
+        @media (max-width: 900px) {
+            .site-nav-links { display: none; }
+
+            /* Menu button: always sits above the open menu, turns into an X */
+            .mobile-menu-button {
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                gap: 5px; width: 44px; height: 44px; margin-right: -10px;
+                background: none; border: none; cursor: pointer; padding: 0;
+                position: relative; z-index: 102;
+            }
+            .mobile-menu-button span {
+                display: block; width: 22px; height: 1.5px; background: #fff;
+                transition: transform 0.3s ease, opacity 0.2s ease, background 0.35s ease;
+            }
+            .site-nav.scrolled .mobile-menu-button span { background: var(--plum); }
+            body.menu-open .mobile-menu-button span,
+            body.menu-open .site-nav.scrolled .mobile-menu-button span { background: var(--linen); }
+            body.menu-open .mobile-menu-button span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+            body.menu-open .mobile-menu-button span:nth-child(2) { opacity: 0; }
+            body.menu-open .mobile-menu-button span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+            /* Open menu: covers the whole screen, nothing peeking out behind it */
+            .site-nav-links.open {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 22px;
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                background: var(--plum);
+                padding: 110px 24px 40px;
+                z-index: 101;
+                overflow-y: auto;
+            }
+            .site-nav-links.open a,
+            .site-nav.scrolled .site-nav-links.open a {
+                color: var(--linen);
+                font-family: 'Fraunces', serif;
+                font-size: 1.55rem;
+                letter-spacing: 0.01em;
+                text-transform: none;
+                opacity: 1;
+            }
+            .site-nav-links.open a:hover { border-bottom: none; color: var(--gold); }
+            .site-nav-links.open .nav-cart-label { display: inline; }
+            .site-nav-links.open .nav-cart-mark svg { width: 24px; height: 24px; }
+
+            .scroll-cue { display: none; }
+        }
+
+        /* ===== Hero ===== */
+        .hero-full {
+            position: relative;
+            height: 100vh;
+            min-height: 640px;
+            background-image: url('images/hero-lavender-bathsalt.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .hero-full::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(29,20,32,0.18) 0%, rgba(29,20,32,0.68) 100%);
+        }
+        .hero-full-content {
+            position: relative; z-index: 2;
+            max-width: 640px;
+            padding: 0 6% 56px;
+        }
+        .hero-full-content .eyebrow {
+            color: var(--gold); text-transform: uppercase; letter-spacing: 0.18em;
+            font-size: 0.76rem; margin-bottom: 18px; display: block;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .hero-full-content h1 {
+            font-size: clamp(2.6rem, 5vw, 4.4rem);
+            font-weight: 500;
+            line-height: 1.05;
+            color: #fff !important;
+            margin-bottom: 20px;
+        }
+        .hero-full-content p {
+            color: rgba(246,239,231,0.85);
+            font-size: 1.05rem;
+            max-width: 440px;
+            margin-bottom: 36px;
+        }
+        .hero-full-content .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--plum);
+            padding: 15px 38px;
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .hero-full-content .btn-primary:hover { background: var(--linen); }
+
+        .hero-trust {
+            position: relative; z-index: 2;
+            display: flex;
+            gap: 10px 26px;
+            flex-wrap: wrap;
+            padding: 20px 6% 34px;
+            border-top: 1px solid rgba(246,239,231,0.18);
+        }
+        .hero-trust span {
+            color: rgba(246,239,231,0.78);
+            font-size: 0.76rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .scroll-cue {
+            position: absolute; bottom: 116px; right: 6%;
+            z-index: 2; color: rgba(246,239,231,0.75); font-size: 0.7rem;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            text-decoration: none;
+        }
+        .scroll-cue::after {
+            content: ""; width: 1px; height: 34px; background: rgba(246,239,231,0.6);
+            animation: scrollpulse 1.8s ease-in-out infinite;
+        }
+        @keyframes scrollpulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+        /* ===== Shop by category ===== */
+        .category-grid-section {
+            padding: 90px 6% 70px;
+        }
+        .category-grid-section h2 {
+            text-align: center;
+            font-size: clamp(1.7rem, 3vw, 2.2rem);
+            margin-bottom: 44px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 34px 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .category-tile {
+            display: block;
+            text-decoration: none;
+            color: var(--plum);
+        }
+        .category-tile img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 14px;
+            background: #e9e1d6;
+        }
+        .category-tile h3 {
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+        .category-tile p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+        @media (max-width: 700px) {
+            .category-grid-section { padding: 70px 5% 50px; }
+            .category-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 14px; }
+            .category-tile h3 { font-size: 1rem; }
+            .category-tile p { font-size: 0.8rem; }
+        }
+
+        .manifesto {
+            padding: 100px 8% 90px;
+            text-align: center;
+        }
+        .manifesto p {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: clamp(1.6rem, 3vw, 2.7rem);
+            line-height: 1.35;
+            color: var(--plum);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .manifesto .rule {
+            width: 44px; height: 1px; background: var(--gold); margin: 34px auto 0;
+        }
+
+        .ritual-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 640px;
+        }
+        .ritual-panel.reverse { direction: rtl; }
+        .ritual-panel.reverse > * { direction: ltr; }
+        .ritual-panel-image {
+            background-size: cover;
+            background-position: center;
+        }
+        .ritual-panel-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 9%;
+        }
+        .ritual-panel-text .eyebrow {
+            color: var(--gold); text-transform: uppercase; letter-spacing: 0.14em;
+            font-size: 0.75rem; margin-bottom: 16px; display: block;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .ritual-panel-text h2 {
+            font-weight: 500;
+            font-size: clamp(1.9rem, 3vw, 2.7rem);
+            margin-bottom: 18px;
+        }
+        .ritual-panel-text p {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 400px;
+            margin-bottom: 30px;
+            line-height: 1.65;
+        }
+        .ritual-panel-text a.panel-link {
+            color: var(--plum);
+            text-decoration: none;
+            border-bottom: 1px solid var(--plum);
+            padding-bottom: 4px;
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            width: fit-content;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .ritual-panel-text a.panel-link:hover { color: var(--gold); border-color: var(--gold); }
+
+        @media (max-width: 900px) {
+            .ritual-panel, .ritual-panel.reverse { grid-template-columns: 1fr; direction: ltr; min-height: 0; }
+            .ritual-panel-image { min-height: 340px; }
+        }
+
+        /* ===== Gifting spotlight ===== */
+        .spotlight {
+            padding: 120px 8% 60px;
+        }
+        .spotlight-heading { text-align: center; margin-bottom: 60px; }
+        .spotlight-heading .eyebrow {
+            color: var(--gold); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; display: block; margin-bottom: 14px;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .spotlight-heading h2 { font-weight: 500; font-size: clamp(1.8rem, 3vw, 2.3rem); }
+
+        .spotlight-main {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .spotlight-main img { width: 100%; display: block; }
+        .spotlight-main h3 {
+            font-weight: 500;
+            font-size: 1.95rem;
+            margin-bottom: 16px;
+        }
+        .spotlight-main p.desc {
+            color: var(--muted);
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+        .spotlight-price {
+            font-size: 1.3rem;
+            margin-bottom: 26px;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .spotlight-price .old { color: var(--muted); text-decoration: line-through; margin-right: 10px; font-size: 1rem; }
+        .spotlight-price .now { color: var(--plum); font-weight: 600; }
+        .spotlight-main .btn-primary {
+            display: inline-block;
+            background: var(--plum);
+            color: var(--linen);
+            padding: 14px 36px;
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: background 0.25s ease;
+        }
+        .spotlight-main .btn-primary:hover { background: var(--gold); color: var(--plum); }
+
+        @media (max-width: 900px) {
+            .spotlight { padding: 90px 6% 40px; }
+            .spotlight-main { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        .spotlight-secondary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .spotlight-secondary-item img { width: 100%; margin-bottom: 18px; display: block; }
+        .spotlight-secondary-item h4 { font-weight: 500; font-size: 1.18rem; margin-bottom: 8px; }
+        .spotlight-secondary-item p { color: var(--muted); font-size: 0.9rem; margin: 0 0 10px; font-family: 'Work Sans', sans-serif; }
+        .spotlight-secondary-item a {
+            color: var(--plum); text-decoration: none; font-size: 0.78rem;
+            letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid var(--plum);
+        }
+        .spotlight-secondary-item a:hover { color: var(--gold); border-color: var(--gold); }
+        @media (max-width: 700px) {
+            .spotlight-secondary { grid-template-columns: 1fr; }
+        }
+
+        .single-quote {
+            background: var(--plum);
+            padding: 110px 8%;
+            text-align: center;
+        }
+        .single-quote p.quote-text {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--linen);
+            max-width: 760px;
+            margin: 0 auto 24px;
+            line-height: 1.4;
+        }
+        .single-quote .attribution {
+            color: rgba(246,239,231,0.65);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        /* ===== Newsletter ===== */
+        .newsletter-bar {
+            background: var(--plum);
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(246,239,231,0.12);
+        }
+        .newsletter-copy { max-width: 400px; }
+        .newsletter-bar h2 { color: var(--linen) !important; font-weight: 500; font-size: 1.55rem; margin-bottom: 8px; }
+        .newsletter-copy p { margin: 0; color: rgba(246,239,231,0.7); font-size: 0.92rem; line-height: 1.55; }
+        .newsletter-bar form {
+            display: flex; gap: 10px; flex: 1; max-width: 420px; min-width: 260px; flex-wrap: wrap;
+        }
+        .newsletter-bar input[type="email"] {
+            flex: 1; min-width: 200px; padding: 13px 18px; border: 1px solid rgba(246,239,231,0.35);
+            background: transparent; color: var(--linen); font-family: 'Work Sans', sans-serif; font-size: 16px;
+        }
+        .newsletter-bar button {
+            background: var(--gold); color: var(--plum); border: none;
+            padding: 13px 26px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+            font-size: 0.78rem; cursor: pointer; font-family: 'Work Sans', sans-serif;
+        }
+        .newsletter-bar button:hover { background: var(--clay); }
+        .newsletter-bar button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .newsletter-message {
+            width: 100%;
+            margin: 14px 0 0;
+            font-size: 0.85rem;
+            color: var(--gold);
+            min-height: 18px;
+        }
+        .newsletter-message.error { color: var(--clay); }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: var(--plum);
+            color: rgba(246,239,231,0.7);
+            padding: 70px 8% 30px;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .site-footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        .site-footer h3 {
+            color: var(--linen) !important;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .site-footer a {
+            display: block; color: rgba(246,239,231,0.7); text-decoration: none;
+            font-size: 0.88rem; margin-bottom: 10px; transition: color 0.2s ease;
+        }
+        .site-footer a:hover { color: var(--gold); }
+        .site-footer-bottom {
+            border-top: 1px solid rgba(246,239,231,0.15);
+            padding-top: 24px;
+            font-size: 0.78rem;
+            color: rgba(246,239,231,0.5);
+        }
+        @media (max-width: 700px) {
+            .site-footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+        <span>🚚 Free UK Delivery on Orders Over £50</span>
+    </div>
+</div>
+
+<nav class="site-nav" id="siteNav" aria-label="Main">
+    <a href="#top" class="logo-mark"><img src="images/logo.png" alt="CyRamage home"></a>
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNavLinks">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="site-nav-links" id="siteNavLinks">
+        <a href="#top">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="gift-sets.html">Gift Sets</a>
+        <a href="books.html">Books</a>
+        <a href="digital-products.html">Digital</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="nav-cart-mark" aria-label="View cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 6h15l-1.5 9h-12z"></path>
+                <path d="M6 6L5 3H2"></path>
+                <circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+                <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none"></circle>
+            </svg>
+            <span class="nav-cart-label">Cart</span>
+            <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+        </a>
+    </div>
+</nav>
+
+<!-- Older pages link to index.html#home -->
+<div id="home"></div>
+
+<section class="hero-full" id="top">
+    <div class="hero-full-content">
+        <span class="eyebrow">CyRamage Signature</span>
+        <h1>Luxury for Every Moment</h1>
+        <p>Self-care gift boxes, home fragrance, jewellery and books, beautifully packaged and ready to give.</p>
+        <a href="#shop" class="btn-primary">Shop the Collection</a>
+    </div>
+    <div class="hero-trust">
+        <span>Free UK Delivery Over £50</span>
+        <span>Hand-Finished Packaging</span>
+        <span>Secure Checkout by Stripe</span>
+    </div>
+    <a href="#collections" class="scroll-cue">Scroll</a>
+</section>
+
+<!-- ===== Shop by category: every collection, one tap away ===== -->
+<section class="category-grid-section" id="shop">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+        <a href="gift-sets.html" class="category-tile">
+            <img src="images/collection-gift-sets.png" alt="CyRamage gift sets" loading="lazy">
+            <h3>Gift Sets</h3>
+            <p>Boxed, ribboned, ready to give</p>
+        </a>
+        <a href="self-care.html" class="category-tile">
+            <img src="images/collection-pamper-pouch.png" alt="Pamper Pouch bath and self-care" loading="lazy">
+            <h3>Pamper Pouch</h3>
+            <p>Bath salts, oils, teas and bombs</p>
+        </a>
+        <a href="home-fragrance.html" class="category-tile">
+            <img src="images/collection-home-fragrance.png" alt="Candles and home fragrance" loading="lazy">
+            <h3>Home Fragrance</h3>
+            <p>Candles, diffusers and mists</p>
+        </a>
+        <a href="accessories.html" class="category-tile">
+            <img src="images/collection-accessories.png" alt="Jewellery, watches and sunglasses" loading="lazy">
+            <h3>Accessories</h3>
+            <p>Jewellery, watches, sunglasses</p>
+        </a>
+        <a href="smile-ritual.html" class="category-tile">
+            <img src="images/smile-ritual-banner.png" alt="Smile Ritual oral care" loading="lazy">
+            <h3>Smile Ritual</h3>
+            <p>Elegant everyday oral care</p>
+        </a>
+        <a href="books.html" class="category-tile">
+            <img src="images/collection-books.png" alt="Books by Nwabiani C. Ramage" loading="lazy">
+            <h3>Books</h3>
+            <p>Picture books, journals, planners</p>
+        </a>
+    </div>
+</section>
+
+<!-- ===== Gifting spotlight ===== -->
+<section class="spotlight" id="spotlight">
+    <div class="spotlight-heading reveal">
+        <span class="eyebrow">Ready to Gift</span>
+        <h2>Wrapped, Ribboned, Done.</h2>
+    </div>
+
+    <div class="spotlight-main reveal">
+        <img src="images/gift-box-signature.png" alt="The Signature Self-Care Box by CyRamage">
+        <div>
+            <h3>The Signature Self-Care Box</h3>
+            <p class="desc">Bath gel, bath oil, lavender bath salt, chamomile bath tea, a flower candle, three bath bombs and a sponge, in a black magnetic gift box with gold ribbon and a gift card.</p>
+            <p class="spotlight-price"><span class="old">£26.99</span><span class="now">£24.99</span></p>
+            <a href="product.html?id=gift-box&amp;variant=signature-self-care" class="btn-primary">Shop the Box</a>
+        </div>
+    </div>
+
+    <div class="spotlight-secondary reveal">
+        <div class="spotlight-secondary-item">
+            <img src="images/gift-box-relax-unwind.png" alt="The Relax and Unwind Box" loading="lazy">
+            <h4>The Relax &amp; Unwind Box</h4>
+            <p>£20.67, a calming lavender set with a dried lavender bundle.</p>
+            <a href="product.html?id=gift-box&amp;variant=relax-unwind">Shop Now</a>
+        </div>
+        <div class="spotlight-secondary-item">
+            <img src="images/cyramage-luxury-home-fragrance-gift-set.png" alt="Luxury Home Fragrance Gift Set" loading="lazy">
+            <h4>Luxury Home Fragrance Gift Set</h4>
+            <p>£37.76, candle, room mist and reed diffuser in one box.</p>
+            <a href="product.html?id=luxury-home-fragrance-gift-set">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="manifesto reveal">
+    <p>"Luxury isn't about having more. It's about experiencing life more deeply, one quiet ritual at a time."</p>
+    <div class="rule"></div>
+</section>
+
+<div class="thread-divider"></div>
+
+<div id="collections">
+    <div class="ritual-panel reveal">
+        <div class="ritual-panel-image" style="background-image:url('images/collection-home-fragrance.png');"></div>
+        <div class="ritual-panel-text">
+            <span class="eyebrow">The CyRamage Ritual</span>
+            <h2>Light. Breathe. Unwind.</h2>
+            <p>Hand-poured candles and home fragrance, designed to turn any room into a moment of calm.</p>
+            <a href="home-fragrance.html" class="panel-link">Discover Home Fragrance</a>
+        </div>
+    </div>
+
+    <div class="thread-divider"></div>
+
+    <div class="ritual-panel reverse reveal">
+        <div class="ritual-panel-image" style="background-image:url('images/smile-ritual-banner.png');"></div>
+        <div class="ritual-panel-text">
+            <span class="eyebrow">Smile Ritual</span>
+            <h2>Brighten. Refresh. Glow.</h2>
+            <p>Elegant oral care, designed as a daily ritual, not a chore. Tongue care, sonic cleaning and UV sterilising, all in one place.</p>
+            <a href="smile-ritual.html" class="panel-link">Discover Smile Ritual</a>
+        </div>
+    </div>
+
+    <div class="thread-divider"></div>
+
+    <div class="ritual-panel reveal">
+        <div class="ritual-panel-image" style="background-image:url('images/collection-gift-sets.png');"></div>
+        <div class="ritual-panel-text">
+            <span class="eyebrow">Gifting</span>
+            <h2>Beautifully Given.</h2>
+            <p>Curated gift sets for Christmas, birthdays, anniversaries and every occasion worth celebrating.</p>
+            <a href="gift-sets.html" class="panel-link">Discover Gift Sets</a>
+        </div>
+    </div>
+
+    <div class="thread-divider"></div>
+
+    <div class="ritual-panel reverse reveal">
+        <div class="ritual-panel-image" style="background-image:url('images/collection-books.png'); background-position: 20% center;"></div>
+        <div class="ritual-panel-text">
+            <span class="eyebrow">CyRamage Studio</span>
+            <h2>Pages Worth Keeping.</h2>
+            <p>Printed children's picture books, journals and planners by Nwabiani C. Ramage, the same CyRamage standard, now on your shelf.</p>
+            <a href="books.html" class="panel-link">Discover Books</a>
+        </div>
+    </div>
+</div>
+
+<section class="single-quote reveal">
+    <p class="quote-text">"Beautiful products and lovely packaging. It felt like opening a luxury gift."</p>
+    <p class="attribution">Emma R. Verified Customer</p>
+</section>
+
+<div class="ritual-panel reveal">
+    <div class="ritual-panel-image" style="background-image:url('images/100-ai-side-hustles.png'); background-size:contain; background-repeat:no-repeat; background-color:var(--plum);"></div>
+    <div class="ritual-panel-text">
+        <span class="eyebrow">Books &amp; Digital</span>
+        <h2>100 AI Side Hustles</h2>
+        <p>Guided planners, journals and digital guides, the same CyRamage standard, delivered instantly as a PDF.</p>
+        <a href="digital-products.html" class="panel-link">Discover Digital Guides</a>
+    </div>
+</div>
+
+<section class="newsletter-bar">
+    <div class="newsletter-copy">
+        <h2>Join the CyRamage List</h2>
+        <p>Be first to hear about new gift sets, new books and seasonal offers.</p>
+    </div>
+    <form id="newsletterForm" action="https://formspree.io/f/xjgnjbzk" method="POST">
+        <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required>
+        <input type="hidden" name="_subject" value="New CyRamage Newsletter Signup">
+        <button type="submit" id="newsletterSubmit">Join</button>
+    </form>
+    <p class="newsletter-message" id="newsletterMessage" role="status"></p>
+</section>
+
+<footer class="site-footer">
+    <div class="site-footer-grid">
+        <div>
+            <h3>CyRamage</h3>
+            <p style="font-size:0.88rem; line-height:1.6; max-width:260px;">Luxury self-care, elegant gifts and lifestyle essentials designed to bring beauty to every moment.</p>
+        </div>
+        <div>
+            <h3>Shop</h3>
+            <a href="gift-sets.html">Gift Sets</a>
+            <a href="self-care.html">Self-Care</a>
+            <a href="home-fragrance.html">Home Fragrance</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="smile-ritual.html">Smile Ritual</a>
+            <a href="books.html">Books</a>
+            <a href="digital-products.html">Digital Products</a>
+        </div>
+        <div>
+            <h3>Customer Care</h3>
+            <a href="contact.html">Contact Us</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="returns.html">Returns</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <a href="https://www.instagram.com/shopcyramage/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/share/18PWg41pTh/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://pin.it/2q386TJOE" target="_blank" rel="noopener">Pinterest</a>
+            <a href="https://www.tiktok.com/@shopcyramage" target="_blank" rel="noopener">TikTok</a>
+        </div>
+    </div>
+    <div class="site-footer-bottom">&copy; 2026 CyRamage. All Rights Reserved.</div>
+</footer>
+
+<script>
+    // Header changes colour once you scroll
+    (function () {
+        const nav = document.getElementById('siteNav');
+        function onScroll() {
+            if (window.scrollY > 60) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    })();
+
+    // Mobile menu: full screen, X to close, Escape closes, page can't scroll behind it
+    (function () {
+        const btn = document.getElementById('mobileMenuButton');
+        const links = document.getElementById('siteNavLinks');
+        if (!btn || !links) return;
+
+        function setMenu(open) {
+            links.classList.toggle('open', open);
+            document.body.classList.toggle('menu-open', open);
+            btn.setAttribute('aria-expanded', String(open));
+            btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+
+        btn.addEventListener('click', function () {
+            setMenu(!links.classList.contains('open'));
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () { setMenu(false); });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') setMenu(false);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 900) setMenu(false);
+        });
+    })();
+
+    (function updateNavCartBadge() {
+        try {
+            const savedCart = localStorage.getItem('cyramageCart') || localStorage.getItem('cart') || '[]';
+            const cart = JSON.parse(savedCart);
+            const items = Array.isArray(cart) ? cart : [];
+            const count = items.reduce(function (total, item) { return total + (Number(item.quantity) || 1); }, 0);
+            const badge = document.getElementById('navCartBadge');
+            if (badge) {
+                if (count > 0) { badge.textContent = String(count); badge.classList.remove('hidden'); }
+                else { badge.classList.add('hidden'); }
+            }
+        } catch (error) {
+            console.error('Unable to read cart for nav badge:', error);
+        }
+    })();
+
+    (function scrollReveal() {
+        const revealEls = document.querySelectorAll('.reveal');
+        if (!revealEls.length) return;
+        if (!('IntersectionObserver' in window)) {
+            revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+            return;
+        }
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+        revealEls.forEach(function (el) { observer.observe(el); });
+    })();
+
+    (function newsletterAjaxSubmit() {
+        const form = document.getElementById('newsletterForm');
+        const submitBtn = document.getElementById('newsletterSubmit');
+        const message = document.getElementById('newsletterMessage');
+        if (!form || !message) return;
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining…';
+            message.textContent = '';
+            message.classList.remove('error');
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    message.textContent = "You're on the list. Look out for our first email.";
+                    form.reset();
+                } else {
+                    const data = await response.json().catch(function () { return null; });
+                    const errorText = data && Array.isArray(data.errors) && data.errors.length
+                        ? data.errors.map(function (e) { return e.message; }).join(', ')
+                        : 'That didn\u2019t go through. Check your email address and try again.';
+                    message.textContent = errorText;
+                    message.classList.add('error');
+                }
+            } catch (error) {
+                console.error('Newsletter signup error:', error);
+                message.textContent = 'That didn\u2019t go through. Check your connection and try again.';
+                message.classList.add('error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join';
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>
