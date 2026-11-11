@@ -1,0 +1,172 @@
+/* CyRamage / Pamper Pouch – Christmas theme
+   Loads AFTER your existing stylesheet. Remove the two include lines to switch it off.
+   Palette: Pine Ink, Cranberry, Antique Gold, Soft Linen, Blush Clay */
+
+:root {
+  --xm-pine: #14301f;
+  --xm-pine-deep: #0d2015;
+  --xm-cranberry: #8e1f35;
+  --xm-cranberry-deep: #6f1628;
+  --xm-gold: #c9a24a;
+  --xm-gold-soft: #e3c887;
+  --xm-linen: #f6efe4;
+  --xm-blush: #ead3c6;
+  --xm-text: #1d2a22;
+
+  /* Re-point common variable names if your CSS uses them */
+  --ink-plum: var(--xm-pine);
+  --plum: var(--xm-pine);
+  --antique-gold: var(--xm-gold);
+  --gold: var(--xm-gold);
+  --soft-linen: var(--xm-linen);
+  --linen: var(--xm-linen);
+  --blush-clay: var(--xm-blush);
+  --blush: var(--xm-blush);
+}
+
+html.xmas body {
+  background-color: var(--xm-linen);
+  color: var(--xm-text);
+}
+
+/* Header and footer: deep pine with a gold edge */
+html.xmas header,
+html.xmas .site-header,
+html.xmas .navbar,
+html.xmas nav {
+  background-color: var(--xm-pine);
+  color: var(--xm-linen);
+  border-bottom: 2px solid var(--xm-gold);
+}
+html.xmas header a,
+html.xmas .site-header a,
+html.xmas .navbar a,
+html.xmas nav a {
+  color: var(--xm-linen);
+}
+html.xmas header a:hover,
+html.xmas nav a:hover {
+  color: var(--xm-gold-soft);
+}
+
+html.xmas footer,
+html.xmas .site-footer {
+  background-color: var(--xm-pine-deep);
+  color: var(--xm-linen);
+  border-top: 2px solid var(--xm-gold);
+}
+html.xmas footer a,
+html.xmas .site-footer a {
+  color: var(--xm-gold-soft);
+}
+
+/* Hero: pine to cranberry glow */
+html.xmas .hero,
+html.xmas .hero-section,
+html.xmas .banner,
+html.xmas main > section:first-of-type {
+  background-image:
+    radial-gradient(ellipse at 85% 10%, rgba(201, 162, 74, 0.28), transparent 55%),
+    linear-gradient(160deg, var(--xm-pine) 0%, var(--xm-pine-deep) 55%, var(--xm-cranberry-deep) 130%);
+  color: var(--xm-linen);
+}
+html.xmas .hero h1,
+html.xmas .hero-section h1,
+html.xmas .banner h1 {
+  color: var(--xm-linen);
+}
+
+/* Headings */
+html.xmas h1,
+html.xmas h2,
+html.xmas h3 {
+  color: var(--xm-pine);
+}
+html.xmas .hero h1,
+html.xmas .hero h2,
+html.xmas .hero p,
+html.xmas footer h2,
+html.xmas footer h3 {
+  color: var(--xm-linen);
+}
+
+/* Buttons: cranberry with a gold outline */
+html.xmas .btn,
+html.xmas .button,
+html.xmas button.add-to-cart,
+html.xmas .add-to-cart,
+html.xmas .cta,
+html.xmas a.cta,
+html.xmas button[type="submit"],
+html.xmas .checkout-btn {
+  background-color: var(--xm-cranberry);
+  color: var(--xm-linen);
+  border: 1.5px solid var(--xm-gold);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+html.xmas .btn:hover,
+html.xmas .button:hover,
+html.xmas .add-to-cart:hover,
+html.xmas .cta:hover,
+html.xmas button[type="submit"]:hover,
+html.xmas .checkout-btn:hover {
+  background-color: var(--xm-gold);
+  color: var(--xm-pine-deep);
+}
+
+/* Product cards: linen with a thin gold frame */
+html.xmas .card,
+html.xmas .product-card,
+html.xmas .product,
+html.xmas .product-item {
+  background-color: #fffaf1;
+  border: 1px solid var(--xm-gold-soft);
+  box-shadow: 0 6px 18px rgba(20, 48, 31, 0.1);
+}
+html.xmas .price,
+html.xmas .product-price {
+  color: var(--xm-cranberry);
+}
+
+/* Links in body copy */
+html.xmas main a:not(.btn):not(.button):not(.cta) {
+  color: var(--xm-cranberry);
+}
+
+/* Your existing delivery bar, restyled for Christmas (tagged by christmas.js) */
+.xm-bar {
+  background-color: var(--xm-cranberry) !important;
+  color: #fff7ea !important;
+  border-bottom: 2px solid var(--xm-gold);
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 12px, transparent 12px 24px);
+}
+.xm-bar * { color: #fff7ea !important; }
+
+/* Secondary Christmas button added beside the hero button */
+.xm-gift-btn {
+  margin-left: 0.75rem;
+  background-color: transparent !important;
+  color: var(--xm-gold-soft) !important;
+  border: 1.5px solid var(--xm-gold) !important;
+}
+.xm-gift-btn:hover {
+  background-color: var(--xm-gold) !important;
+  color: var(--xm-pine-deep) !important;
+}
+@media (max-width: 520px) {
+  .xm-gift-btn { margin-left: 0; margin-top: 0.75rem; display: inline-block; }
+}
+
+/* Snow canvas */
+#xm-snow {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 40;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #xm-snow { display: none; }
+}
